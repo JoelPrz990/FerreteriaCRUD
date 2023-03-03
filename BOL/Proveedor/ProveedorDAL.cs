@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BOL.Proveedor
 {
-    internal class ProveedorDAL
+    public class ProveedorDAL
     {
+        
     }
 }

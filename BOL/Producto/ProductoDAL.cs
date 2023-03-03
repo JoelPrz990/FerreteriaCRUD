@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BOL.Producto
 {
-    internal class ProductoDAL
+    public class ProductoDAL
     {
+
     }
 }

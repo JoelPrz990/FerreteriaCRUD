@@ -44,7 +44,6 @@
     <Compile Include="Categoria\Categoria.cs" />
     <Compile Include="Categoria\CategoriaDAL.cs" />
     <Compile Include="Categoria\Categorias.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Cliente\Cliente.cs" />
     <Compile Include="Cliente\ClienteDAL.cs" />
     <Compile Include="Cliente\Clientes.cs" />
@@ -65,6 +64,11 @@
     <Compile Include="Venta\VentaDAL.cs" />
     <Compile Include="Venta\Ventas.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{BC6DDB39-5918-4322-B891-DF7F599D9997}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
