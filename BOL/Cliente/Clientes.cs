@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BOL.Cliente
 {
-    public class Class1
+    public class Clientes : BindingList<Cliente>
     {
     }
 }

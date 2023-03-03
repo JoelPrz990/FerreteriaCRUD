@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BOL
+namespace BOL.Proveedor
 {
-    public class Class1
+    public class ProveedorDAL
     {
+        
     }
 }
