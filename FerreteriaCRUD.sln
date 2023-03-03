@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewLayer", "FerreteriaCRUD\ViewLayer.csproj", "{426D9E42-3BE0-4F9D-9FB0-FBB3BD424F61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewLayer", "FerreteriaCRUD\ViewLayer.csproj", "{426D9E42-3BE0-4F9D-9FB0-FBB3BD424F61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{BC6DDB39-5918-4322-B891-DF7F599D9997}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOL", "BOL\BOL.csproj", "{1069AB28-CC1E-4AEE-AAD9-B146991EDC73}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{8FABC626-DB12-4C0F-AE97-448A8CC90B2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Business Logic Layer", "2. Business Logic Layer", "{FC2239CE-8146-406D-BA48-8E67EFAC2AFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Business Object Layer", "3. Business Object Layer", "{5DA510D2-7B11-48B0-8677-69BF413536B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Data Access Layer", "4. Data Access Layer", "{FB7FCC69-0E8A-411F-BE62-DA5EBAC8C64F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. View Layer", "1. View Layer", "{6E355077-496D-47A0-AA6C-593AE19378C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +44,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{426D9E42-3BE0-4F9D-9FB0-FBB3BD424F61} = {6E355077-496D-47A0-AA6C-593AE19378C5}
+		{BC6DDB39-5918-4322-B891-DF7F599D9997} = {FB7FCC69-0E8A-411F-BE62-DA5EBAC8C64F}
+		{1069AB28-CC1E-4AEE-AAD9-B146991EDC73} = {5DA510D2-7B11-48B0-8677-69BF413536B2}
+		{8FABC626-DB12-4C0F-AE97-448A8CC90B2A} = {FC2239CE-8146-406D-BA48-8E67EFAC2AFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E29250E5-6E65-4B55-8B39-1C29A3E88B9A}
