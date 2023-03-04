@@ -15,7 +15,7 @@ namespace BOL.Producto
         public string Marca_Producto { get; set; }
         public SqlMoney Precio_Producto { get; set; }
         public int ID_Categoria { get; set; }
-        public string Stock_Disponible { get; set; }
+        public int Stock_Disponible { get; set; }
         public int ID_Marca { get; set; }
         public bool activo { get; set; }
     }
