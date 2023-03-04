@@ -134,14 +134,15 @@ namespace BOL.Producto
         {
             try
             {
-                SqlParameter[] parameters = new SqlParameter[7];
-                parameters[0] = new SqlParameter("@Nombre_Producto", producto.Nombre_Producto);
-                parameters[1] = new SqlParameter("@Descripcion_Producto", producto.Descripcion_Producto);
-                parameters[2] = new SqlParameter("@Marca_Producto", producto.Marca_Producto);
-                parameters[3] = new SqlParameter("@Precio_Producto", producto.Precio_Producto);
-                parameters[4] = new SqlParameter("@ID_Categoria", producto.ID_Categoria);
-                parameters[5] = new SqlParameter("@Stock_Disponible", producto.Stock_Disponible);
-                parameters[6] = new SqlParameter("@ID_Marca", producto.ID_Marca);
+                SqlParameter[] parameters = new SqlParameter[8];
+                parameters[0] = new SqlParameter("@ID_Producto", producto.ID_Producto);
+                parameters[1] = new SqlParameter("@Nombre_Producto", producto.Nombre_Producto);
+                parameters[2] = new SqlParameter("@Descripcion_Producto", producto.Descripcion_Producto);
+                parameters[3] = new SqlParameter("@Marca_Producto", producto.Marca_Producto);
+                parameters[4] = new SqlParameter("@Precio_Producto", producto.Precio_Producto);
+                parameters[5] = new SqlParameter("@ID_Categoria", producto.ID_Categoria);
+                parameters[6] = new SqlParameter("@Stock_Disponible", producto.Stock_Disponible);
+                parameters[7] = new SqlParameter("@ID_Marca", producto.ID_Marca);
                 string query = "stp_producto_update";
                 return dataAccess.Execute(query, parameters);
             }
