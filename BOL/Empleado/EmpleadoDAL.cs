@@ -151,5 +151,34 @@ namespace BOL.Empleado
             }
         }
         #endregion
+        #region login
+        public Empleado Login(Empleado empleado)
+        {
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[2];
+                parameters[0] = new SqlParameter("@Nombre_Usuario", empleado.Nombre_Usuario);
+                parameters[1] = new SqlParameter("@password", empleado.password);
+                String query = "stp_empleado_login";
+                DataTable resultado = dataAccess.Query(query, parameters);
+                if (resultado.Rows.Count > 0)
+                {
+                    Empleado empleadoLog = new Empleado()
+                    {
+                        ID_Empleado = (int)resultado.Rows[0]["ID_Empleado"],
+                        Nombre_Usuario = (string)resultado.Rows[0]["Nombre_Usuario"],
+                        password = (string)resultado.Rows[0]["password"],
+                        activo = (bool)resultado.Rows[0]["activo"]
+                    };
+                    return empleadoLog;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+            return null;
+        }
+        #endregion
     }
 }

@@ -50,5 +50,11 @@
     <Compile Include="ProveedorBLL.cs" />
     <Compile Include="VentaBLL.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BOL\BOL.csproj">
+      <Project>{1069AB28-CC1E-4AEE-AAD9-B146991EDC73}</Project>
+      <Name>BOL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
