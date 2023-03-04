@@ -9,7 +9,6 @@ namespace BLL
 {
     public class ProductoBLL
     {
-
         #region Singleton
         private static volatile ProductoBLL instance = null;
         private static readonly object padlock = new object();

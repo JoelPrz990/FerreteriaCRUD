@@ -9,7 +9,6 @@ namespace BLL
 {
     public class MarcaBLL
     {
-
         #region Singleton
         private static volatile MarcaBLL instance = null;
         private static readonly object padlock = new object();

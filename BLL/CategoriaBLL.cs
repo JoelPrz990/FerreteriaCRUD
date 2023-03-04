@@ -9,7 +9,6 @@ namespace BLL
 {
     public class CategoriaBLL
     {
-
         #region Singleton
         private static volatile CategoriaBLL instance = null;
         private static readonly object padlock = new object();
