@@ -1,29 +1,16 @@
-﻿using BLL;
+using BLL;
 using BOL.Empleado;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ViewLayer
 {
-    public partial class LoginForm : Form
+    public partial class frmLogin : Form
     {
         private EmpleadoBLL empleadoBLL = EmpleadoBLL.Instance();
-        public LoginForm()
+        public frmLogin()
         {
             InitializeComponent();
         }
 
-        private void btnAcceder_Click(object sender, EventArgs e)
-        {
-            IniciarSesion();
-        }
         public void IniciarSesion()
         {
             try
@@ -36,9 +23,9 @@ namespace ViewLayer
                 {
                     MessageBox.Show("Accedido correctamente", Application.ProductName,
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Dispose();
-                    SplashForm sf = new SplashForm();
-                    sf.Show();
+                    txtUsr.Clear();
+                    txtPass.Clear();
+                    txtUsr.Focus();
                 }
                 else
                 {
@@ -54,9 +41,9 @@ namespace ViewLayer
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
-            this.Close();
+            IniciarSesion();
         }
     }
 }

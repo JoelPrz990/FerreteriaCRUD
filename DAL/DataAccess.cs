@@ -14,9 +14,7 @@ namespace DAL
 
         private static volatile DataAccess instance = null;
         private static readonly object padlock = new object();
-        private string connString = "Data Source = PC-Joel;" +
-            " Initial Catalog = ferropapus;" +
-            " Integrated Security = true";
+        private string connString = "Data Source = PC-Joel; Initial Catalog = ferropapus; Integrated Security = true";
         private DataAccess() { }
 
         public static DataAccess Instance() {
