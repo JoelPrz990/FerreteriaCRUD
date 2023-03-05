@@ -25,15 +25,18 @@ namespace ViewLayer
                     password = txtPass.Text
                 }))
                 {
-                    MessageBox.Show("Accedido correctamente", Application.ProductName,
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Accedido correctamente", "Sesion Abierta",
+                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     txtUsr.Clear();
                     txtPass.Clear();
-                    txtUsr.Focus();
+                    this.Close();
+                    frmSplash splashForm = new frmSplash();
+                    Thread splashThread = new Thread(() => Application.Run(splashForm));
+                    splashThread.Start();
                 }
                 else
                 {
-                    MessageBox.Show("Credenciales incorrectas", Application.ProductName,
+                    MessageBox.Show("Credenciales incorrectas", "Error de Autenticacion",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtPass.Clear();
                     txtPass.Focus();
@@ -42,6 +45,13 @@ namespace ViewLayer
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void btnAcc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ') { 
+                e.Handled = true;
             }
         }
     }
