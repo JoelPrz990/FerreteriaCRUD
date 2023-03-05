@@ -1,6 +1,6 @@
 ﻿namespace ViewLayer
 {
-    partial class Form1
+    partial class frmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnAcc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,6 +99,7 @@
             this.btnCan.TabIndex = 6;
             this.btnCan.Text = "Cancelar";
             this.btnCan.UseVisualStyleBackColor = true;
+            this.btnCan.Click += new System.EventHandler(this.btnCan_Click_1);
             // 
             // groupBox1
             // 
@@ -125,7 +126,7 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // frmLogin
             // 
             this.AcceptButton = this.btnAcc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -137,7 +138,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             this.groupBox1.ResumeLayout(false);

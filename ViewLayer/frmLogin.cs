@@ -4,10 +4,10 @@ using System.Data.SqlClient;
 
 namespace ViewLayer
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
         EmpleadoBLL empleadoBLL = EmpleadoBLL.Instance(); 
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -52,6 +52,47 @@ namespace ViewLayer
         {
             if (e.KeyChar == ' ') { 
                 e.Handled = true;
+            }
+        }
+        private void btnCan_Click (object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtPass.Text) && String.IsNullOrEmpty(txtUsr.Text))
+            {
+                this.Close();
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Desea Salir", Application.ProductName, MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (result == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    btnAcc.Focus();
+                }
+            }
+        }
+
+        private void btnCan_Click_1(object sender, EventArgs e)
+        {
+                if (String.IsNullOrEmpty(txtPass.Text) && String.IsNullOrEmpty(txtUsr.Text))
+                {
+                    this.Close();
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Desea Salir", "FerrePapus", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        btnAcc.Focus();
+                    }
             }
         }
     }
