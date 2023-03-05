@@ -1,4 +1,5 @@
-﻿using BOL.Empleado;
+﻿using BOL;
+using BOL.Empleado;
 using System;
 using System.Collections.Generic;
 using System.Linq;

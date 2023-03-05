@@ -9,9 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj" />
     <ProjectReference Include="..\BOL\BOL.csproj" />
-    <ProjectReference Include="..\DAL\DAL.csproj" />
   </ItemGroup>
 
 </Project>
