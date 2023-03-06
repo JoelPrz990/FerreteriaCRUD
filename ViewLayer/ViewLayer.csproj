@@ -33,7 +33,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="nuevoList\" />
+    <Folder Include="eliminarList\" />
+    <Folder Include="actualizarList\" />
   </ItemGroup>
 
 </Project>

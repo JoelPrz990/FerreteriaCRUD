@@ -51,6 +51,22 @@
             this.verProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.eliminarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.actualizarCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -61,11 +77,11 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1003, 628);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(993, 623);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.toolStripContainer1.Padding = new System.Windows.Forms.Padding(5);
             this.toolStripContainer1.Size = new System.Drawing.Size(1003, 660);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
@@ -90,10 +106,16 @@
             this.toolStripSeparator4,
             this.toolStripDropDownButton1,
             this.toolStripSeparator2,
-            this.toolStripDropDownButton2});
+            this.toolStripDropDownButton2,
+            this.toolStripSeparator5,
+            this.toolStripButton1,
+            this.toolStripSeparator6,
+            this.toolStripButton2,
+            this.toolStripSeparator7,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(4, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(501, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(970, 27);
             this.toolStrip1.TabIndex = 0;
             // 
             // inicio
@@ -201,8 +223,8 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(85, 24);
-            this.toolStripDropDownButton2.Text = "Consultar";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(158, 24);
+            this.toolStripDropDownButton2.Text = "Consultar Elementos";
             // 
             // verClientesToolStripMenuItem
             // 
@@ -239,6 +261,123 @@
             this.verEmpleadosToolStripMenuItem.Name = "verEmpleadosToolStripMenuItem";
             this.verEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.verEmpleadosToolStripMenuItem.Text = "Ver Empleados";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarClientesToolStripMenuItem,
+            this.eliminarProductosToolStripMenuItem,
+            this.eliminarProveedoresToolStripMenuItem,
+            this.eliminarToolStripMenuItem,
+            this.eliminarVentasToolStripMenuItem});
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(150, 24);
+            this.toolStripButton1.Text = "Eliminar Elementos";
+            // 
+            // eliminarClientesToolStripMenuItem
+            // 
+            this.eliminarClientesToolStripMenuItem.Name = "eliminarClientesToolStripMenuItem";
+            this.eliminarClientesToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.eliminarClientesToolStripMenuItem.Text = "Eliminar Clientes";
+            // 
+            // eliminarProductosToolStripMenuItem
+            // 
+            this.eliminarProductosToolStripMenuItem.Name = "eliminarProductosToolStripMenuItem";
+            this.eliminarProductosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.eliminarProductosToolStripMenuItem.Text = "Eliminar Productos";
+            // 
+            // eliminarProveedoresToolStripMenuItem
+            // 
+            this.eliminarProveedoresToolStripMenuItem.Name = "eliminarProveedoresToolStripMenuItem";
+            this.eliminarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.eliminarProveedoresToolStripMenuItem.Text = "Eliminar Proveedores";
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.eliminarToolStripMenuItem.Text = "Eliminar Categorias";
+            // 
+            // eliminarVentasToolStripMenuItem
+            // 
+            this.eliminarVentasToolStripMenuItem.Name = "eliminarVentasToolStripMenuItem";
+            this.eliminarVentasToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.eliminarVentasToolStripMenuItem.Text = "Eliminar Ventas";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actualizarCategoriasToolStripMenuItem,
+            this.actualizarClienteToolStripMenuItem,
+            this.actualizarMarcaToolStripMenuItem,
+            this.actualizarProductosToolStripMenuItem,
+            this.actualizarProveedoresToolStripMenuItem});
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(162, 24);
+            this.toolStripButton2.Text = "Actualizar Elementos";
+            // 
+            // actualizarCategoriasToolStripMenuItem
+            // 
+            this.actualizarCategoriasToolStripMenuItem.Name = "actualizarCategoriasToolStripMenuItem";
+            this.actualizarCategoriasToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.actualizarCategoriasToolStripMenuItem.Text = "Actualizar Categorias";
+            // 
+            // actualizarClienteToolStripMenuItem
+            // 
+            this.actualizarClienteToolStripMenuItem.Name = "actualizarClienteToolStripMenuItem";
+            this.actualizarClienteToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.actualizarClienteToolStripMenuItem.Text = "Actualizar Cliente";
+            // 
+            // actualizarMarcaToolStripMenuItem
+            // 
+            this.actualizarMarcaToolStripMenuItem.Name = "actualizarMarcaToolStripMenuItem";
+            this.actualizarMarcaToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.actualizarMarcaToolStripMenuItem.Text = "Actualizar Marca";
+            // 
+            // actualizarProductosToolStripMenuItem
+            // 
+            this.actualizarProductosToolStripMenuItem.Name = "actualizarProductosToolStripMenuItem";
+            this.actualizarProductosToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.actualizarProductosToolStripMenuItem.Text = "Actualizar Productos";
+            // 
+            // actualizarProveedoresToolStripMenuItem
+            // 
+            this.actualizarProveedoresToolStripMenuItem.Name = "actualizarProveedoresToolStripMenuItem";
+            this.actualizarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.actualizarProveedoresToolStripMenuItem.Text = "Actualizar Proveedores";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.BackColor = System.Drawing.Color.IndianRed;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(105, 24);
+            this.toolStripButton3.Text = "Cerrar Sesion";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // frmMain
             // 
@@ -286,5 +425,21 @@
         private ToolStripMenuItem verProveedoresToolStripMenuItem;
         private ToolStripMenuItem verCategoriasToolStripMenuItem;
         private ToolStripMenuItem verEmpleadosToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripSeparator toolStripSeparator7;
+        private ToolStripButton toolStripButton3;
+        private ToolStripDropDownButton toolStripButton1;
+        private ToolStripDropDownButton toolStripButton2;
+        private ToolStripMenuItem eliminarClientesToolStripMenuItem;
+        private ToolStripMenuItem eliminarProductosToolStripMenuItem;
+        private ToolStripMenuItem eliminarProveedoresToolStripMenuItem;
+        private ToolStripMenuItem eliminarToolStripMenuItem;
+        private ToolStripMenuItem eliminarVentasToolStripMenuItem;
+        private ToolStripMenuItem actualizarCategoriasToolStripMenuItem;
+        private ToolStripMenuItem actualizarClienteToolStripMenuItem;
+        private ToolStripMenuItem actualizarMarcaToolStripMenuItem;
+        private ToolStripMenuItem actualizarProductosToolStripMenuItem;
+        private ToolStripMenuItem actualizarProveedoresToolStripMenuItem;
     }
 }

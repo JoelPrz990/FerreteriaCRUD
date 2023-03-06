@@ -67,5 +67,18 @@ namespace ViewLayer
             // Muestra el formulario
             formToShow.Show();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Cerrar Sesion?", "FerrePapus", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frmLogin loginFrame = new frmLogin();
+                Thread mainThread = new Thread(() => Application.Run(loginFrame));
+                mainThread.Start();
+            }
+        }
     }
 }
