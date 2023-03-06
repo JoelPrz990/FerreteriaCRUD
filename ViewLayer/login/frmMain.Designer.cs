@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.tscMain = new System.Windows.Forms.ToolStripContainer();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.inicio = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -67,30 +67,30 @@
             this.actualizarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
+            this.tscMain.TopToolStripPanel.SuspendLayout();
+            this.tscMain.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStripContainer1
+            // tscMain
             // 
             // 
-            // toolStripContainer1.ContentPanel
+            // tscMain.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(993, 623);
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Padding = new System.Windows.Forms.Padding(5);
-            this.toolStripContainer1.Size = new System.Drawing.Size(1003, 660);
-            this.toolStripContainer1.TabIndex = 0;
-            this.toolStripContainer1.Text = "toolStripContainer1";
+            this.tscMain.ContentPanel.Size = new System.Drawing.Size(993, 623);
+            this.tscMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tscMain.Location = new System.Drawing.Point(0, 0);
+            this.tscMain.Name = "tscMain";
+            this.tscMain.Padding = new System.Windows.Forms.Padding(5);
+            this.tscMain.Size = new System.Drawing.Size(1003, 660);
+            this.tscMain.TabIndex = 0;
+            this.tscMain.Text = "toolStripContainer1";
             // 
-            // toolStripContainer1.TopToolStripPanel
+            // tscMain.TopToolStripPanel
             // 
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
-            this.toolStripContainer1.TopToolStripPanel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.toolStripContainer1.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.tscMain.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            this.tscMain.TopToolStripPanel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.tscMain.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             // 
             // toolStrip1
             // 
@@ -384,17 +384,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 660);
-            this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.tscMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Ferropapus";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
-            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
+            this.tscMain.TopToolStripPanel.ResumeLayout(false);
+            this.tscMain.TopToolStripPanel.PerformLayout();
+            this.tscMain.ResumeLayout(false);
+            this.tscMain.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -403,7 +403,7 @@
 
         #endregion
 
-        private ToolStripContainer toolStripContainer1;
+        private ToolStripContainer tscMain;
         private ToolStrip toolStrip1;
         private ToolStripButton nuevaVenta;
         private ToolStripButton verVentas;

@@ -22,6 +22,7 @@ namespace ViewLayer.consultaList
         private void frmProveedores_Load(object sender, EventArgs e)
         {
             dgvProveedores.DataSource = proveedorBLL.GetAll();
+            dgvProveedores.Columns["ID_Proveedor"].Visible= false;
         }
     }
 }

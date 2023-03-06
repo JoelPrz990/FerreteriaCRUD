@@ -22,6 +22,8 @@ namespace ViewLayer.consultaList
         private void frmCategorias_Load(object sender, EventArgs e)
         {
             dgvCategorias.DataSource = categoriaBLL.GetAll();
+            dgvCategorias.Columns["ID_Categoria"].Visible= false;
+            dgvCategorias.Columns["activo"].Visible = false;
         }
     }
 }

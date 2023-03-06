@@ -25,9 +25,6 @@ namespace ViewLayer.consultaList
             dgvMarcas.DataSource = marcaBLL.GetAll();
             dgvMarcas.Columns["Nombre_Marca"].HeaderText= "Nombre de la marca";
 
-            DataTable dt = dgvMarcas.DataSource as DataTable;
-            DataView dv = new DataView(dt);
-            dv.RowFilter = "activo = 1";
 
             dgvMarcas.Columns["ID_Marca"].Visible = false;
             dgvMarcas.Columns["activo"].Visible = false;

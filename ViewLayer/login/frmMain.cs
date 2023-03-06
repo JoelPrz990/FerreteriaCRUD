@@ -21,14 +21,16 @@ namespace ViewLayer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            // Habilitar la navegación con la tecla Tab en el ToolStripContainer
+
 
             frmLogin loginform = new frmLogin();
             frmProductos frmProductos = new frmProductos();
             frmStartup frmStartup = new frmStartup();
             frmCategorias frmCategorias = new frmCategorias();
             frmClientes frmClientes = new frmClientes();
-            frmEmpleados frmEmpleados = new frmEmpleados();
-            frmMarcas frmMarcas = new frmMarcas();
+            frmEmpleados frmEmpleados = new();
+            frmMarcas frmMarcas = new();
             frmProveedores frmProveedores= new frmProveedores();
             frmVentas frmVentas = new frmVentas();
             frmNVenta frmNVenta = new frmNVenta();
@@ -57,7 +59,7 @@ namespace ViewLayer
 
         private void ShowFormInContentPanel(Form formToShow)
         {
-            Panel contentPanel = toolStripContainer1.ContentPanel;
+            Panel contentPanel = tscMain.ContentPanel;
             // Elimina cualquier control existente del ContentPanel
             contentPanel.Controls.Clear();
             // Ajusta el formulario para que se muestre en el ContentPanel
