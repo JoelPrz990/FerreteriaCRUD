@@ -71,7 +71,7 @@ namespace BOL.Categoria
                     categoria.Add(new Categoria()
                     {
                         ID_Categoria = (int)item["ID_Categoria"],
-                        Nombre_Categoria = (string)item["Nombre_categoria"],
+                        Nombre_Categoria = (string)item["Nombre_Categoria"],
                         activo = (bool)item["activo"]
                     });
                 }

@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Unispace", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(107, 32);
+            this.label1.Location = new System.Drawing.Point(92, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(423, 77);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(156, 109);
+            this.label2.Location = new System.Drawing.Point(141, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(310, 75);
             this.label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(471, 240);
+            this.label3.Location = new System.Drawing.Point(460, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 27);
             this.label3.TabIndex = 2;
@@ -81,6 +81,7 @@
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSplash";
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplash";
             this.Load += new System.EventHandler(this.frmSplash_Load);
