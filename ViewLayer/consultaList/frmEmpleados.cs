@@ -23,6 +23,8 @@ namespace ViewLayer.consultaList
         {
             dgvEmpleados.DataSource = empleadoBLL.GetAll();
             dgvEmpleados.Columns["ID_Empleado"].Visible= false;
+            dgvEmpleados.Columns["activo"].Visible = false;
+            dgvEmpleados.Columns["password"].Visible = false;
         }
     }
 }

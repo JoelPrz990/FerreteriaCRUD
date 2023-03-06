@@ -10,8 +10,8 @@ namespace BOL.Venta
     public class Venta
     {
         public int ID_Venta { get; set; }
-        public string Fecha_Venta { get; set; }
-        public SqlMoney Total_Venta { get; set;}
+        public DateTime Fecha_Venta { get; set; }
+        public decimal Total_Venta { get; set;}
         public int ID_Cliente { get; set; }
         public int ID_Empleado { get; set; }
         public bool activo { get; set; }

@@ -1,4 +1,5 @@
 ﻿using BOL;
+using BOL.Cliente;
 using BOL.Empleado;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,10 @@ namespace BLL
                 return true;
             else
                 return false;
+        }
+        public Empleado getByName(Empleado empleado)
+        {
+            return empleadoDAL.GetByNombre(empleado);
         }
     }
 }

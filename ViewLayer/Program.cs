@@ -1,7 +1,13 @@
+using ViewLayer.agregarList;
+
 namespace ViewLayer
 {
     internal static class Program
     {
+
+        public static string UsuarioActual;
+        public static DateTime FechaHoy;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

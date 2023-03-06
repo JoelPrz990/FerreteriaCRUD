@@ -139,5 +139,34 @@ namespace BOL.Cliente
             }
         }
         #endregion
+        #region
+        public Cliente GetByNombre(Cliente cliente)
+        {
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[1];
+                parameters[0] = new SqlParameter("@Nombre_Cliente", cliente.Nombre_Cliente);
+                string query = "stp_clientes_getbyname";
+                DataTable resultado = dataAccess.Query(query, parameters);
+                if (resultado.Rows.Count > 0)
+                {
+                    cliente = new Cliente()
+                    {
+                        ID_Cliente = (int)resultado.Rows[0]["ID_Cliente"],
+                        Nombre_Cliente = (string)resultado.Rows[0]["Nombre_Cliente"],
+                        Direccion_Cliente = (string)resultado.Rows[0]["Direccion_Cliente"],
+                        Telefono_Cliente = (string)resultado.Rows[0]["Telefono_Cliente"],
+                        Email_Cliente = (string)resultado.Rows[0]["Email_Cliente"],
+                        activo = (bool)resultado.Rows[0]["activo"]
+                    };
+                }
+                return cliente;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        #endregion
     }
 }

@@ -179,5 +179,37 @@ namespace BOL.Empleado
             return null;
         }
         #endregion
+        #region
+        public Empleado GetByNombre(Empleado empleado)
+        {
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[1];
+                parameters[0] = new SqlParameter("@Nombre_Usuario", empleado.Nombre_Usuario);
+                string query = "stp_empleado_getbynombre";
+                DataTable resultado = dataAccess.Query(query, parameters);
+                if (resultado.Rows.Count > 0)
+                {
+                    empleado = new Empleado()
+                    {
+                        ID_Empleado = (int)resultado.Rows[0]["ID_Empleado"],
+                        Nombre_Empleado = (string)resultado.Rows[0]["Nombre_Empleado"],
+                        Direccion_Empleado = (string)resultado.Rows[0]["Direccion_Empleado"],
+                        Telefono_Empleado = (string)resultado.Rows[0]["Telefono_Empleado"],
+                        Email_Empleado = (string)resultado.Rows[0]["Email_Empleado"],
+                        Cargo_Empleado = (string)resultado.Rows[0]["Cargo_Empleado"],
+                        activo = (bool)resultado.Rows[0]["activo"],
+                        password = (string)resultado.Rows[0]["password"],
+                        Nombre_Usuario = (string)resultado.Rows[0]["Nombre_Usuario"]
+                    };
+                }
+                return empleado;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        #endregion
     }
 }

@@ -16,5 +16,10 @@ namespace ViewLayer
         {
             InitializeComponent();
         }
+
+        private void frmStartup_Load(object sender, EventArgs e)
+        {
+            label1.Text = "¡Bienvenido "+Program.UsuarioActual+"!";
+        }
     }
 }

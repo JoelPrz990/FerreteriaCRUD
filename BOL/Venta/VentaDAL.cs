@@ -32,7 +32,7 @@ namespace BOL.Venta
         {
             try
             {
-                SqlParameter[] parameters = new SqlParameter[2];
+                SqlParameter[] parameters = new SqlParameter[4];
                 parameters[0] = new SqlParameter("@Fecha_Venta", venta.Fecha_Venta);
                 parameters[1] = new SqlParameter("@Total_Venta", venta.Total_Venta);
                 parameters[2] = new SqlParameter("@ID_Cliente", venta.ID_Cliente);
@@ -75,8 +75,8 @@ namespace BOL.Venta
                     venta.Add(new Venta()
                     {
                         ID_Venta = (int)item["ID_Venta"],
-                        Fecha_Venta = (string)item["Fecha_Venta"],
-                        Total_Venta = (SqlMoney)item["Total_Venta"],
+                        Fecha_Venta = (DateTime)item["Fecha_Venta"],
+                        Total_Venta = (decimal)item["Total_Venta"],
                         ID_Cliente= (int)item["ID_Cliente"],
                         ID_Empleado= (int)item["ID_Empleado"],
                         activo = (bool)item["activo"]
@@ -104,8 +104,8 @@ namespace BOL.Venta
                     venta = new Venta()
                     {
                         ID_Venta = (int)resultado.Rows[0]["ID_Venta"],
-                        Fecha_Venta = (string)resultado.Rows[0]["Fecha_Venta"],
-                        Total_Venta = (SqlMoney)resultado.Rows[0]["Total_Venta"],
+                        Fecha_Venta = (DateTime)resultado.Rows[0]["Fecha_Venta"],
+                        Total_Venta = (decimal)resultado.Rows[0]["Total_Venta"],
                         ID_Cliente= (int)resultado.Rows[0]["ID_Cliente"],
                         ID_Empleado = (int)resultado.Rows[0]["ID_Empleado"],
                         activo = (bool)resultado.Rows[0]["activo"]

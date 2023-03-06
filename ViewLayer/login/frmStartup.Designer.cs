@@ -75,6 +75,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmStartup";
             this.Text = "frmStartup";
+            this.Load += new System.EventHandler(this.frmStartup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

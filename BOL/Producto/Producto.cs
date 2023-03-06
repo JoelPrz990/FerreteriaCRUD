@@ -13,7 +13,7 @@ namespace BOL.Producto
         public string Nombre_Producto { get; set; }
         public string Descripcion_Producto { get; set; }
         public string Marca_Producto { get; set; }
-        public SqlMoney Precio_Producto { get; set; }
+        public decimal Precio_Producto { get; set; }
         public int ID_Categoria { get; set; }
         public int Stock_Disponible { get; set; }
         public int ID_Marca { get; set; }

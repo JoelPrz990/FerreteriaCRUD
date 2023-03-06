@@ -1,4 +1,5 @@
-﻿using BOL.Cliente;
+﻿using BOL.Categoria;
+using BOL.Cliente;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,10 @@ namespace BLL
             }
             else
                 return false;
+        }
+        public Cliente getByName(Cliente cliente)
+        {
+            return clienteDAL.GetByNombre(cliente);
         }
     }
 }

@@ -24,7 +24,8 @@ namespace ViewLayer
                     Nombre_Usuario = txtUsr.Text,
                     password = txtPass.Text
                 }))
-                {
+                { 
+                    Program.UsuarioActual = txtUsr.Text;
                     MessageBox.Show("Accedido correctamente", "Sesion Abierta",
                         MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     txtUsr.Clear();

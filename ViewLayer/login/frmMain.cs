@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewLayer.agregarList;
 using ViewLayer.consultaList;
 
 namespace ViewLayer
@@ -30,6 +31,7 @@ namespace ViewLayer
             frmMarcas frmMarcas = new frmMarcas();
             frmProveedores frmProveedores= new frmProveedores();
             frmVentas frmVentas = new frmVentas();
+            frmNVenta frmNVenta = new frmNVenta();
 
             //ToolStripButton toolStripButton1 = new ToolStripButton("Formulario 1");
             //ToolStripButton toolStripButton2 =  new ToolStripButton("Ver Productos");
@@ -45,7 +47,7 @@ namespace ViewLayer
             verProveedoresToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmProveedores);
 
             //botones
-            nuevaVenta.Click += (s, ea) => ShowFormInContentPanel(loginform);
+            nuevaVenta.Click += (s, ea) => ShowFormInContentPanel(frmNVenta);
             verVentas.Click += (s, ea) => ShowFormInContentPanel(frmVentas);
             inicio.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
 
