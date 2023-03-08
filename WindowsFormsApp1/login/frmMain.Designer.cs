@@ -31,7 +31,6 @@ namespace ViewLayer
         private void InitializeComponent()
         {
             this.tscMain = new System.Windows.Forms.ToolStripContainer();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,40 +61,33 @@ namespace ViewLayer
             this.acutalizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tscMain.ContentPanel.SuspendLayout();
             this.tscMain.SuspendLayout();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tscMain
             // 
+            this.tscMain.BottomToolStripPanelVisible = false;
             // 
             // tscMain.ContentPanel
             // 
-            this.tscMain.ContentPanel.Controls.Add(this.splitter1);
+            this.tscMain.ContentPanel.BackColor = System.Drawing.Color.Linen;
             this.tscMain.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tscMain.ContentPanel.Size = new System.Drawing.Size(1021, 642);
-            this.tscMain.ContentPanel.Load += new System.EventHandler(this.tscMain_ContentPanel_Load);
-            this.tscMain.Location = new System.Drawing.Point(0, 25);
+            this.tscMain.ContentPanel.Size = new System.Drawing.Size(1023, 542);
+            this.tscMain.LeftToolStripPanelVisible = false;
+            this.tscMain.Location = new System.Drawing.Point(0, 30);
             this.tscMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tscMain.Name = "tscMain";
             this.tscMain.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tscMain.Size = new System.Drawing.Size(1031, 675);
+            this.tscMain.RightToolStripPanelVisible = false;
+            this.tscMain.Size = new System.Drawing.Size(1033, 550);
             this.tscMain.TabIndex = 2;
             // 
             // tscMain.TopToolStripPanel
             // 
             this.tscMain.TopToolStripPanel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.tscMain.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 642);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
+            this.tscMain.TopToolStripPanelVisible = false;
             // 
             // menu
             // 
@@ -116,29 +108,28 @@ namespace ViewLayer
             this.menu.Stretch = false;
             this.menu.TabIndex = 1;
             this.menu.TabStop = true;
-            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
-            this.menu.Enter += new System.EventHandler(this.menu_Enter);
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.ShortcutKeyDisplayString = "I";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
-            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Text = "&Inicio";
             // 
             // nuevaVentaToolStripMenuItem
             // 
             this.nuevaVentaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.nuevaVentaToolStripMenuItem.Name = "nuevaVentaToolStripMenuItem";
             this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.nuevaVentaToolStripMenuItem.Text = "Nueva Venta";
+            this.nuevaVentaToolStripMenuItem.Text = "&Nueva Venta";
             // 
             // verVentasToolStripMenuItem
             // 
             this.verVentasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.verVentasToolStripMenuItem.Name = "verVentasToolStripMenuItem";
             this.verVentasToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
-            this.verVentasToolStripMenuItem.Text = "Ver Ventas";
+            this.verVentasToolStripMenuItem.Text = "&Ver Ventas";
             // 
             // agregarNuevoToolStripMenuItem
             // 
@@ -151,7 +142,7 @@ namespace ViewLayer
             this.agregarNuevoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.agregarNuevoToolStripMenuItem.Name = "agregarNuevoToolStripMenuItem";
             this.agregarNuevoToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
-            this.agregarNuevoToolStripMenuItem.Text = "Agregar Nuevo";
+            this.agregarNuevoToolStripMenuItem.Text = "&Agregar Nuevo";
             // 
             // nuevaCategoriaToolStripMenuItem
             // 
@@ -162,7 +153,7 @@ namespace ViewLayer
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             // 
             // nuevaMarcaToolStripMenuItem
@@ -195,7 +186,7 @@ namespace ViewLayer
             this.consultarElementosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.consultarElementosToolStripMenuItem.Name = "consultarElementosToolStripMenuItem";
             this.consultarElementosToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
-            this.consultarElementosToolStripMenuItem.Text = "Consultar Elementos";
+            this.consultarElementosToolStripMenuItem.Text = "&Consultar Elementos";
             // 
             // verClientesToolStripMenuItem1
             // 
@@ -244,7 +235,7 @@ namespace ViewLayer
             this.eliminarElementosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.eliminarElementosToolStripMenuItem.Name = "eliminarElementosToolStripMenuItem";
             this.eliminarElementosToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
-            this.eliminarElementosToolStripMenuItem.Text = "Eliminar Elementos";
+            this.eliminarElementosToolStripMenuItem.Text = "&Eliminar Elementos";
             // 
             // eliminarClientesToolStripMenuItem1
             // 
@@ -287,7 +278,7 @@ namespace ViewLayer
             this.actualizarElementosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.actualizarElementosToolStripMenuItem.Name = "actualizarElementosToolStripMenuItem";
             this.actualizarElementosToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
-            this.actualizarElementosToolStripMenuItem.Text = "Actualizar Registro";
+            this.actualizarElementosToolStripMenuItem.Text = "Actualizar &Registro";
             // 
             // actualizarCategoriaToolStripMenuItem
             // 
@@ -325,14 +316,14 @@ namespace ViewLayer
             this.cerrarSesionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar &Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 699);
+            this.ClientSize = new System.Drawing.Size(1033, 591);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tscMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -342,8 +333,8 @@ namespace ViewLayer
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Ferropapus";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.tscMain.ContentPanel.ResumeLayout(false);
             this.tscMain.ResumeLayout(false);
             this.tscMain.PerformLayout();
             this.menu.ResumeLayout(false);
@@ -354,8 +345,6 @@ namespace ViewLayer
         }
 
         #endregion
-
-        private ToolStripContainer tscMain;
         private MenuStrip menu;
         private ToolStripMenuItem inicioToolStripMenuItem;
         private ToolStripMenuItem nuevaVentaToolStripMenuItem;
@@ -381,11 +370,11 @@ namespace ViewLayer
         private ToolStripMenuItem actualizarMarcasToolStripMenuItem;
         private ToolStripMenuItem acutalizarProductosToolStripMenuItem;
         private ToolStripMenuItem actualizarProveedoresToolStripMenuItem1;
-        private Splitter splitter1;
         private ToolStripMenuItem nuevaCategoriaToolStripMenuItem;
         private ToolStripMenuItem nuevoClienteToolStripMenuItem;
         private ToolStripMenuItem nuevaMarcaToolStripMenuItem;
         private ToolStripMenuItem nuevoProductoToolStripMenuItem;
         private ToolStripMenuItem nuevoProveedorToolStripMenuItem;
+        public ToolStripContainer tscMain;
     }
 }

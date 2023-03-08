@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Data;      
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,6 +36,8 @@ namespace ViewLayer
             void timer_Tick(object sender, EventArgs e)
             {
                 ((Timer)sender).Stop();
+
+            //iniciar frame con hilos
                 this.Close();
                 frmMain mainFrame = new frmMain();
                 Thread mainThread = new Thread(() => Application.Run(mainFrame));

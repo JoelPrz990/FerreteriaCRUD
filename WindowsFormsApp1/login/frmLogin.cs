@@ -10,7 +10,8 @@ namespace ViewLayer
 {
     public partial class frmLogin : Form
     {
-        EmpleadoBLL empleadoBLL = EmpleadoBLL.Instance(); 
+        EmpleadoBLL empleadoBLL = EmpleadoBLL.Instance();
+        private bool mostrarMensaje = true;
         public frmLogin()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace ViewLayer
                         MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     txtUsr.Clear();
                     txtPass.Clear();
+                    mostrarMensaje = false;
                     this.Close();
                     frmSplash splashForm = new frmSplash();
                     Thread splashThread = new Thread(() => Application.Run(splashForm));
@@ -62,8 +64,9 @@ namespace ViewLayer
         }
         private void btnCan_Click (object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtPass.Text) && String.IsNullOrEmpty(txtUsr.Text))
+            if (mostrarMensaje && String.IsNullOrEmpty(txtPass.Text) && String.IsNullOrEmpty(txtUsr.Text))
             {
+                mostrarMensaje=false;
                 this.Close();
             }
             else
@@ -72,6 +75,7 @@ namespace ViewLayer
                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (result == DialogResult.Yes)
                 {
+                    mostrarMensaje = false;
                     this.Close();
                 }
                 else
@@ -83,8 +87,9 @@ namespace ViewLayer
 
         private void btnCan_Click_1(object sender, EventArgs e)
         {
-                if (String.IsNullOrEmpty(txtPass.Text) && String.IsNullOrEmpty(txtUsr.Text))
+                if (mostrarMensaje && String.IsNullOrEmpty(txtPass.Text) && String.IsNullOrEmpty(txtUsr.Text))
                 {
+                    mostrarMensaje = false;
                     this.Close();
                 }
                 else
@@ -93,12 +98,21 @@ namespace ViewLayer
                     MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (result == DialogResult.Yes)
                     {
+                        mostrarMensaje = false;
                         this.Close();
                     }
                     else
                     {
                         btnAcc.Focus();
                     }
+            }
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (mostrarMensaje && MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true; // Cancelar el cierre del formulario
             }
         }
     }

@@ -25,6 +25,7 @@ namespace ViewLayer
             dgvProductos.Columns["ID_Producto"].Visible =  false;
             dgvProductos.Columns["ID_Marca"].Visible = false;
             dgvProductos.Columns["ID_Categoria"].Visible = false;
+            dgvProductos.Columns["activo"].Visible = false;
         }
     }
 }

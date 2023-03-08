@@ -26,6 +26,7 @@ namespace ViewLayer.agregarList
         public int idCliente;
         public decimal total;
         public int idEmpleado;
+        DateTime fecha;
 
 
         public frmNVenta()
@@ -67,7 +68,6 @@ namespace ViewLayer.agregarList
                     Nombre_Usuario = Program.UsuarioActual
                 }).ID_Empleado;
 
-            DateTime fecha;
             DateTime.TryParseExact(txtFecha.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out fecha);
             if (ventaBLL.Add(new Venta()
             {   
@@ -87,42 +87,76 @@ namespace ViewLayer.agregarList
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verificar si se hizo clic en la columna de precio
             // e.ColumnIndex == dgvProductos.Columns["Precio_Producto"].Index && 
             if (e.RowIndex >= 0)
             {
-                // Obtener el valor de la columna de stock
                 int stock = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value);
-
-                // Mostrar un cuadro de diálogo personalizado para permitir al usuario ingresar la cantidad de productos que desea agregar
                 using (cantidadDialog cantidadDlg = new cantidadDialog(stock))
                 {
                     if (cantidadDlg.ShowDialog() == DialogResult.OK)
                     {
-                        // Obtener la cantidad ingresada por el usuario
                         int cantidad = cantidadDlg.Cantidad;
-
-                        // Verificar si la cantidad ingresada es mayor que el stock disponible
                         if (cantidad > stock)
                         {
                             MessageBox.Show("No hay suficiente stock disponible para agregar " + cantidad + " productos.");
                         }
                         else
                         {
-                            // Calcular el precio total
                             decimal precioUnitario = Convert.ToDecimal(dgvProductos.Rows[e.RowIndex].Cells["Precio_Producto"].Value);
                             decimal subtotal = precioUnitario * cantidad;
                             total += subtotal;
                             lblTotal.Text = total.ToString();
-
-                            // Mostrar el precio total en un cuadro de mensaje
                             MessageBox.Show("El precio total es: $" + total.ToString("0.00"));
 
-                            // Actualizar el valor de la celda de cantidad en el DataGridView
                             int cantidadDisp = 0;
                             cantidadDisp = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value);
                             cantidadDisp = cantidadDisp - cantidad;
                             dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value = cantidadDisp;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DateTime.TryParseExact(txtFecha.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out fecha);
+            boxCliente.SelectedIndex = -1;
+            lblTotal.Text = "00.00";
+            dgvProductos.DataSource = productoBLL.GetAll();
+        }
+
+        private void dgvProductos_KeyDown(object sender, DataGridViewCellEventArgs e, KeyEventArgs a)
+        {
+            DataGridViewCell currentCell = dgvProductos.CurrentCell;
+            if (a.KeyCode == Keys.Enter)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    int stock = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value);
+                    using (cantidadDialog cantidadDlg = new cantidadDialog(stock))
+                    {
+                        if (cantidadDlg.ShowDialog() == DialogResult.OK)
+                        {
+                            int cantidad = cantidadDlg.Cantidad;
+                            if (cantidad > stock)
+                            {
+                                MessageBox.Show("No hay suficiente stock disponible para agregar " + cantidad + " productos.");
+                            }
+                            else
+                            {
+                                decimal precioUnitario = Convert.ToDecimal(dgvProductos.Rows[e.RowIndex].Cells["Precio_Producto"].Value);
+                                decimal subtotal = precioUnitario * cantidad;
+                                total += subtotal;
+                                lblTotal.Text = total.ToString();
+                                MessageBox.Show("El precio total es: $" + total.ToString("0.00"));
+
+                                int cantidadDisp = 0;
+                                cantidadDisp = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value);
+                                cantidadDisp = cantidadDisp - cantidad;
+                                dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value = cantidadDisp;
+                            }
                         }
                     }
                 }

@@ -23,6 +23,8 @@ namespace ViewLayer.consultaList
         {
             dgvClientes.DataSource = clienteBLL.GetAll();
             dgvClientes.Columns["ID_Cliente"].Visible = false;
+            dgvClientes.Columns["ID_Cliente"].Visible = false;
+            dgvClientes.Columns["activo"].Visible = false;
         }
     }
 }

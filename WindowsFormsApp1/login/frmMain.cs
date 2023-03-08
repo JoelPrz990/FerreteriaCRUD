@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,11 +11,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewLayer.agregarList;
 using ViewLayer.consultaList;
+using WindowsFormsApp1.agregarList;
 
 namespace ViewLayer
 {
     public partial class frmMain : Form
     {
+        private bool mostrarMensaje = true;
         public frmMain()
         {
             InitializeComponent();
@@ -22,8 +25,8 @@ namespace ViewLayer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            // Habilitar la navegación con la tecla Tab en el ToolStripContainer
-            menu.TabStop = true;
+
+
 
             frmLogin loginform = new frmLogin();
             frmProductos frmProductos = new frmProductos();
@@ -35,6 +38,7 @@ namespace ViewLayer
             frmProveedores frmProveedores= new frmProveedores();
             frmVentas frmVentas = new frmVentas();
             frmNVenta frmNVenta = new frmNVenta();
+            frmNCliente frmNCliente = new frmNCliente();
 
             //ToolStripButton toolStripButton1 = new ToolStripButton("Formulario 1");
             //ToolStripButton toolStripButton2 =  new ToolStripButton("Ver Productos");
@@ -54,12 +58,35 @@ namespace ViewLayer
             verVentasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmVentas);
             inicioToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
 
+            //botones de startup
+            frmStartup.btnVenta.Click += (s, ea) => ShowFormInContentPanel(frmNVenta);
+            frmStartup.btnVerClientes.Click += (s, ea) => ShowFormInContentPanel(frmClientes);
+            frmStartup.btnVerVenta.Click += (s, ea) =>  ShowFormInContentPanel(frmVentas);
+            frmStartup.btnAgregarCliente.Click += (s, ea) => ShowFormInContentPanel(frmNCliente);
 
             ShowFormInContentPanel(frmStartup);
         }
 
+        private Form currentForm = null;
+        public void ShowFormInContentPanel(Form formToShow)
+        {
+            Panel contentPanel = tscMain.ContentPanel;
+            // Elimina cualquier control existente del ContentPanel
+            contentPanel.Controls.Clear();
 
-        private void ShowFormInContentPanel(Form formToShow)
+            // Ajusta el formulario para que se muestre en el ContentPanel
+            formToShow.TopLevel = false;
+            formToShow.FormBorderStyle = FormBorderStyle.None;
+            formToShow.Dock = DockStyle.Fill;
+
+            // Agrega el formulario al ContentPanel y establece la variable currentForm
+            contentPanel.Controls.Add(formToShow);
+            currentForm = formToShow;
+
+            // Muestra el formulario
+            formToShow.Show();
+        }
+        /*public void ShowFormInContentPanel(Form formToShow)
         {
             Panel contentPanel = tscMain.ContentPanel;
             // Elimina cualquier control existente del ContentPanel
@@ -72,20 +99,7 @@ namespace ViewLayer
             contentPanel.Controls.Add(formToShow);
             // Muestra el formulario
             formToShow.Show();
-        }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("¿Desea Cerrar Sesion?", "FerrePapus", MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-                frmLogin loginFrame = new frmLogin();
-                Thread mainThread = new Thread(() => Application.Run(loginFrame));
-                mainThread.Start();
-            }
-        }
+        }*/
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -93,6 +107,7 @@ namespace ViewLayer
             MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
+                mostrarMensaje = false;
                 this.Close();
                 frmLogin loginFrame = new frmLogin();
                 Thread mainThread = new Thread(() => Application.Run(loginFrame));
@@ -100,19 +115,19 @@ namespace ViewLayer
             }
         }
 
-        private void tscMain_ContentPanel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void menu_Enter(object sender, EventArgs e)
         {
             menu.Focus();             
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            {
+                if (mostrarMensaje && MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    e.Cancel = true; // Cancelar el cierre del formulario
+                }
+            }
         }
     }
 }

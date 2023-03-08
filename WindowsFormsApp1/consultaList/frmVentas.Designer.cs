@@ -40,8 +40,8 @@ namespace ViewLayer.consultaList
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 26);
             this.label1.TabIndex = 7;
@@ -50,9 +50,11 @@ namespace ViewLayer.consultaList
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvVentas);
-            this.groupBox1.Location = new System.Drawing.Point(12, 65);
+            this.groupBox1.Location = new System.Drawing.Point(12, 52);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(961, 496);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(961, 397);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ventas registradas";
@@ -66,22 +68,25 @@ namespace ViewLayer.consultaList
             this.dgvVentas.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvVentas.Location = new System.Drawing.Point(3, 23);
+            this.dgvVentas.Location = new System.Drawing.Point(3, 17);
+            this.dgvVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.RowHeadersWidth = 51;
             this.dgvVentas.RowTemplate.Height = 29;
-            this.dgvVentas.Size = new System.Drawing.Size(955, 470);
+            this.dgvVentas.Size = new System.Drawing.Size(955, 378);
             this.dgvVentas.TabIndex = 0;
             this.dgvVentas.TabStop = false;
             // 
             // frmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 588);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(985, 470);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmVentas";
             this.Text = "frmVentas";
             this.Load += new System.EventHandler(this.frmVentas_Load);

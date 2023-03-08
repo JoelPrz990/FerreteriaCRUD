@@ -39,25 +39,27 @@ namespace ViewLayer.agregarList
             // 
             // updCantidad
             // 
-            this.updCantidad.Location = new System.Drawing.Point(247, 67);
+            this.updCantidad.Location = new System.Drawing.Point(247, 54);
+            this.updCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updCantidad.Name = "updCantidad";
-            this.updCantidad.Size = new System.Drawing.Size(150, 27);
+            this.updCantidad.Size = new System.Drawing.Size(150, 22);
             this.updCantidad.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 69);
+            this.label1.Location = new System.Drawing.Point(52, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(144, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cantidad de Productos";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(94, 156);
+            this.btnAceptar.Location = new System.Drawing.Point(94, 125);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
+            this.btnAceptar.Size = new System.Drawing.Size(94, 23);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@ namespace ViewLayer.agregarList
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(261, 156);
+            this.btnCancelar.Location = new System.Drawing.Point(261, 125);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 23);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -75,19 +78,22 @@ namespace ViewLayer.agregarList
             // 
             // cantidadDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 238);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(458, 190);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.updCantidad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "cantidadDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cantidad de Productos";
+            this.Load += new System.EventHandler(this.cantidadDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.updCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

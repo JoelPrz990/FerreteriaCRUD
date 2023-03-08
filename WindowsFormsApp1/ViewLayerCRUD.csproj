@@ -46,11 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actualizarList\frmACategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarList\frmACategoria.Designer.cs">
+      <DependentUpon>frmACategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actualizarList\frmACliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarList\frmACliente.Designer.cs">
+      <DependentUpon>frmACliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actualizarList\frmAMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarList\frmAMarca.Designer.cs">
+      <DependentUpon>frmAMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actualizarList\frmAProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarList\frmAProducto.Designer.cs">
+      <DependentUpon>frmAProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actualizarList\frmAProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarList\frmAProveedor.Designer.cs">
+      <DependentUpon>frmAProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="agregarList\cantidadDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="agregarList\cantidadDialog.Designer.cs">
       <DependentUpon>cantidadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarList\frmACategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarList\frmACategoria.Designer.cs">
+      <DependentUpon>frmACategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarList\frmNCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarList\frmNCliente.Designer.cs">
+      <DependentUpon>frmNCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarList\frmNMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarList\frmNMarca.Designer.cs">
+      <DependentUpon>frmNMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarList\frmNProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarList\frmNProducto.Designer.cs">
+      <DependentUpon>frmNProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarList\frmNProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarList\frmNProveedor.Designer.cs">
+      <DependentUpon>frmNProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="agregarList\frmNVenta.cs">
       <SubType>Form</SubType>
@@ -100,6 +160,36 @@
     <Compile Include="consultaList\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="eliminarList\frmECategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarList\frmECategoria.Designer.cs">
+      <DependentUpon>frmECategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarList\frmECliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarList\frmECliente.Designer.cs">
+      <DependentUpon>frmECliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarList\frmEMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarList\frmEMarca.Designer.cs">
+      <DependentUpon>frmEMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarList\frmEProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarList\frmEProducto.Designer.cs">
+      <DependentUpon>frmEProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarList\frmEProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarList\frmEProveedor.Designer.cs">
+      <DependentUpon>frmEProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +218,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agregarList\cantidadDialog.resx">
       <DependentUpon>cantidadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarList\frmNCliente.resx">
+      <DependentUpon>frmNCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="agregarList\frmNVenta.resx">
       <DependentUpon>frmNVenta.cs</DependentUpon>
@@ -187,10 +280,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="actualizarList\" />
-    <Folder Include="eliminarList\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{8fabc626-db12-4c0f-ae97-448a8cc90b2a}</Project>

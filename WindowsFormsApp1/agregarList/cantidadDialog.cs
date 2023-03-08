@@ -33,5 +33,10 @@ namespace ViewLayer.agregarList
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+        private void cantidadDialog_Load(object sender, EventArgs e)
+        {
+            updCantidad.Select(0,1);
+        }
     }
 }

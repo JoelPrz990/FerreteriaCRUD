@@ -39,10 +39,11 @@ namespace ViewLayer.agregarList
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAlmacenar = new System.Windows.Forms.Button();
             this.boxCliente = new System.Windows.Forms.ComboBox();
             this.labelEmpleado = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -84,17 +85,18 @@ namespace ViewLayer.agregarList
             this.txtFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFecha.Mask = "00/00/0000";
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(82, 22);
+            this.txtFecha.Size = new System.Drawing.Size(90, 22);
             this.txtFecha.TabIndex = 4;
             this.txtFecha.ValidatingType = typeof(System.DateTime);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnAlmacenar);
             this.groupBox1.Controls.Add(this.boxCliente);
             this.groupBox1.Controls.Add(this.labelEmpleado);
             this.groupBox1.Controls.Add(this.label1);
@@ -105,7 +107,7 @@ namespace ViewLayer.agregarList
             this.groupBox1.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.groupBox1.Size = new System.Drawing.Size(947, 386);
+            this.groupBox1.Size = new System.Drawing.Size(965, 384);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Venta";
@@ -133,11 +135,11 @@ namespace ViewLayer.agregarList
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvProductos);
-            this.groupBox2.Location = new System.Drawing.Point(13, 214);
+            this.groupBox2.Location = new System.Drawing.Point(1, 214);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(921, 162);
+            this.groupBox2.Size = new System.Drawing.Size(964, 162);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Productos Disponibles";
@@ -151,25 +153,26 @@ namespace ViewLayer.agregarList
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(3, 17);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 29;
-            this.dgvProductos.Size = new System.Drawing.Size(915, 143);
-            this.dgvProductos.TabIndex = 0;
-            this.dgvProductos.TabStop = false;
+            this.dgvProductos.Size = new System.Drawing.Size(958, 143);
+            this.dgvProductos.TabIndex = 5;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            
             // 
-            // button1
+            // btnAlmacenar
             // 
-            this.button1.Location = new System.Drawing.Point(729, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 35);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Almacenar Venta";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAlmacenar.Location = new System.Drawing.Point(660, 17);
+            this.btnAlmacenar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAlmacenar.Name = "btnAlmacenar";
+            this.btnAlmacenar.Size = new System.Drawing.Size(124, 81);
+            this.btnAlmacenar.TabIndex = 7;
+            this.btnAlmacenar.Text = "Almacenar Venta";
+            this.btnAlmacenar.UseVisualStyleBackColor = true;
+            this.btnAlmacenar.Click += new System.EventHandler(this.button1_Click);
             // 
             // boxCliente
             // 
@@ -193,21 +196,32 @@ namespace ViewLayer.agregarList
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.BackColor = System.Drawing.Color.Linen;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.label4.Location = new System.Drawing.Point(19, 47);
+            this.label4.Location = new System.Drawing.Point(15, 33);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 26);
             this.label4.TabIndex = 7;
             this.label4.Text = "Agregar una nueva venta";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(828, 17);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(124, 81);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmNVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(13)))));
-            this.ClientSize = new System.Drawing.Size(985, 470);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(1003, 470);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,11 +246,12 @@ namespace ViewLayer.agregarList
         private Label labelEmpleado;
         private Label label4;
         private ComboBox boxCliente;
-        private Button button1;
+        private Button btnAlmacenar;
         private GroupBox groupBox2;
         private DataGridView dgvProductos;
         private Label lblTotal;
         private Label label5;
         public MaskedTextBox txtFecha;
+        private Button btnCancelar;
     }
 }
