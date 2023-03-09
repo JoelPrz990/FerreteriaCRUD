@@ -60,6 +60,7 @@ namespace ViewLayer
             frmNProducto frmNProducto = new frmNProducto();
             frmNProveedor frmNProveedor = new frmNProveedor();
             frmNMarca frmNMarca = new frmNMarca();
+            frmNEmpleado frmNEmpleado = new frmNEmpleado();
 
             //frames Eliminar
             frmECategoria frmECategoria = new frmECategoria();
@@ -84,6 +85,7 @@ namespace ViewLayer
             nuevaMarcaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNMarca);
             nuevoProductoToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNProducto);
             nuevoProveedorToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNProveedor);
+            nuevoEmpleadoToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNEmpleado);
 
             //lista eliminar
             eliminarCategoriasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmECategoria);

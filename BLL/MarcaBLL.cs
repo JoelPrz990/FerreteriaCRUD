@@ -1,4 +1,5 @@
-﻿using BOL.Marca;
+﻿using BOL.Empleado;
+using BOL.Marca;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,10 @@ namespace BLL
             }
             else
                 return false;
+        }
+        public Marca getByName(Marca marca)
+        {
+            return marcaDAL.GetByNombre(marca);
         }
     }
 }

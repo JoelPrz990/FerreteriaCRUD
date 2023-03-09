@@ -55,7 +55,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1003, 169);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Categorias Disponibles";
+            this.groupBox2.Text = "Proveedores Disponibles";
             // 
             // dgvProveedor
             // 
@@ -63,6 +63,7 @@
             this.dgvProveedor.AllowUserToDeleteRows = false;
             this.dgvProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvProveedor.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProveedor.Location = new System.Drawing.Point(3, 18);
@@ -76,6 +77,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtTelefono);
@@ -201,6 +203,7 @@
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(1028, 535);
             this.Controls.Add(this.groupBox2);

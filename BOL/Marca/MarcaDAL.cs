@@ -131,5 +131,30 @@ namespace BOL.Marca
             }
         }
         #endregion
+        public Marca GetByNombre(Marca marca)
+        {
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[1];
+                parameters[0] = new SqlParameter("@Nombre_Marca", marca.Nombre_Marca);
+                string query = "stp_marca_getbynombre";
+                DataTable resultado = dataAccess.Query(query, parameters);
+                if (resultado.Rows.Count > 0)
+                {
+                    marca = new Marca()
+                    {
+                        ID_Marca = (int)resultado.Rows[0]["ID_Marca"],
+                        ID_Proveedor = (int)resultado.Rows[0]["ID_Proveedor"],
+                        Nombre_Marca = (string)resultado.Rows[0]["Nombre_Marca"],
+                        activo = (bool)resultado.Rows[0]["activo"]
+                    };
+                }
+                return marca;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

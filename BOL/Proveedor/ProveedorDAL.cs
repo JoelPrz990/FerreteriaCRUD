@@ -139,5 +139,32 @@ namespace BOL.Proveedor
             }
         }
         #endregion
+        public Proveedor GetByNombre(Proveedor proveedor)
+        {
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[1];
+                parameters[0] = new SqlParameter("@Nombre_Proveedor", proveedor.Nombre_Proveedor);
+                string query = "stp_proveedor_getbynombre";
+                DataTable resultado = dataAccess.Query(query, parameters);
+                if (resultado.Rows.Count > 0)
+                {
+                    proveedor = new Proveedor()
+                    {
+                        ID_Proveedor = (int)resultado.Rows[0]["ID_Proveedor"],
+                        Nombre_Proveedor = (string)resultado.Rows[0]["Nombre_Proveedor"],
+                        Direccion_Proveedor = (string)resultado.Rows[0]["Direccion_Proveedor"],
+                        Telefono_Proveedor = (string)resultado.Rows[0]["Telefono_Proveedor"],
+                        Email_Proveedor = (string)resultado.Rows[0]["Email_Proveedor"],
+                        activo = (bool)resultado.Rows[0]["activo"]
+                    };
+                }
+                return proveedor;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

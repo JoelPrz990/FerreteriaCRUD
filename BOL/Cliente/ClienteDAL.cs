@@ -33,7 +33,7 @@ namespace BOL.Cliente
             try
             {
                 SqlParameter[] parameters = new SqlParameter[4];
-                parameters[0] = new SqlParameter("@Nombre_Cliente", cliente.Direccion_Cliente);
+                parameters[0] = new SqlParameter("@Nombre_Cliente", cliente.Nombre_Cliente);
                 parameters[1] = new SqlParameter("@Direccion_Cliente", cliente.Direccion_Cliente);
                 parameters[2] = new SqlParameter("@Telefono_Cliente", cliente.Telefono_Cliente);
                 parameters[3] = new SqlParameter("@Email_Cliente", cliente.Email_Cliente);

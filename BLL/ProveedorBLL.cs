@@ -1,4 +1,5 @@
-﻿using BOL.Proveedor;
+﻿using BOL.Empleado;
+using BOL.Proveedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,10 @@ namespace BLL
             }
             else
                 return false;
+        }
+        public Proveedor getByName(Proveedor proveedor)
+        {
+            return proveedorDAL.GetByNombre(proveedor);
         }
     }
 }
