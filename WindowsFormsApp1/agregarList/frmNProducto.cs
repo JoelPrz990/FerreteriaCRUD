@@ -32,46 +32,55 @@ namespace WindowsFormsApp1.agregarList
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (!cboxMarca.Text.Equals(""))
+            if (String.IsNullOrEmpty(txtDesc.Text) || String.IsNullOrEmpty(txtNombre.Text)
+                || String.IsNullOrEmpty(txtPrecio.Text) || String.IsNullOrEmpty(txtStock.Text)
+                || String.IsNullOrEmpty(cboxCategoria.Text) || String.IsNullOrEmpty(cboxMarca.Text))
             {
-                idMarca = MarcaBLL.getByName(new Marca()
+                MessageBox.Show("Llene los campos", "Ferropapus");
+            }
+            else {
+
+                if (!cboxMarca.Text.Equals(""))
                 {
-                    Nombre_Marca = cboxMarca.Text
-                }).ID_Marca;
-            }
-            if (!cboxCategoria.Text.Equals(""))
-            {
-                idCategoria = categoriaBLL.getByDescripcion(new Categoria()
+                    idMarca = MarcaBLL.getByName(new Marca()
+                    {
+                        Nombre_Marca = cboxMarca.Text
+                    }).ID_Marca;
+                }
+                if (!cboxCategoria.Text.Equals(""))
                 {
-                    Nombre_Categoria = cboxCategoria.Text
-                }).ID_Categoria;
+                    idCategoria = categoriaBLL.getByDescripcion(new Categoria()
+                    {
+                        Nombre_Categoria = cboxCategoria.Text
+                    }).ID_Categoria;
+                }
+                string unitario = txtPrecio.Text;
+                decimal.TryParse(unitario, out precio);
+
+                string stockD = txtStock.Text;
+                int.TryParse(stockD, out stock);
+
+                if (productoBLL.Add(new Producto()
+                {
+                    Nombre_Producto = txtNombre.Text,
+                    Descripcion_Producto = txtDesc.Text,
+                    Marca_Producto = cboxMarca.Text,
+                    Precio_Producto = precio,
+                    ID_Categoria = idCategoria,
+                    Stock_Disponible = stock,
+                    ID_Marca = idMarca
+                }))
+                {
+                    MessageBox.Show("Producto Ingresado Correctamente", "FerroPapus",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvProducto.DataSource = productoBLL.GetAll();
+                    dgvProducto.Columns["ID_Producto"].Visible = false;
+                    dgvProducto.Columns["ID_Marca"].Visible = false;
+                    dgvProducto.Columns["ID_Categoria"].Visible = false;
+                    dgvProducto.Columns["activo"].Visible = false;
+                }
+
             }
-            string unitario = txtPrecio.Text;
-            decimal.TryParse(unitario, out precio);
-
-            string stockD = txtStock.Text;
-            int.TryParse(stockD, out stock);
-
-            if (productoBLL.Add(new Producto()
-            {
-                Nombre_Producto = txtNombre.Text,
-                Descripcion_Producto = txtDesc.Text,
-                Marca_Producto = cboxMarca.Text,
-                Precio_Producto = precio,
-                ID_Categoria = idCategoria,
-                Stock_Disponible = stock,
-                ID_Marca = idMarca
-            }))
-            {
-                MessageBox.Show("Producto Ingresado Correctamente", "FerroPapus",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvProducto.DataSource = productoBLL.GetAll();
-                dgvProducto.Columns["ID_Producto"].Visible = false;
-                dgvProducto.Columns["ID_Marca"].Visible = false;
-                dgvProducto.Columns["ID_Categoria"].Visible = false;
-                dgvProducto.Columns["activo"].Visible = false;
-            }
-
         }
 
         private void frmNProducto_Enter(object sender, EventArgs e)

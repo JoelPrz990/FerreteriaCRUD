@@ -29,27 +29,35 @@ namespace WindowsFormsApp1.agregarList
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (!cboxProveedor.Text.Equals(""))
+            if (String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(cboxProveedor.Text))
             {
-                idProveedor = proveedorBLL.getByName(new Proveedor()
+                MessageBox.Show("Llene los campos", "Ferropapus");
+            }
+            else {
+
+                if (!cboxProveedor.Text.Equals(""))
                 {
-                    Nombre_Proveedor = cboxProveedor.Text
-                }).ID_Proveedor;
+                    idProveedor = proveedorBLL.getByName(new Proveedor()
+                    {
+                        Nombre_Proveedor = cboxProveedor.Text
+                    }).ID_Proveedor;
+                }
+
+                if (marcaBLL.Add(new Marca()
+                {
+                    Nombre_Marca = txtNombre.Text,
+                    ID_Proveedor = idProveedor
+                }))
+                {
+                    MessageBox.Show("Marca Ingresada Correctamente", "FerroPapus",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvMarca.DataSource = marcaBLL.GetAll();
+                    dgvMarca.Columns["ID_Marca"].Visible = false;
+                    dgvMarca.Columns["activo"].Visible = false;
+                    dgvMarca.Columns["ID_Proveedor"].Visible = false;
+                }
             }
 
-            if (marcaBLL.Add(new Marca()
-            {
-                Nombre_Marca = txtNombre.Text,
-                ID_Proveedor = idProveedor
-            }))
-            {
-                MessageBox.Show("Marca Ingresada Correctamente", "FerroPapus",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvMarca.DataSource = marcaBLL.GetAll();
-                dgvMarca.Columns["ID_Marca"].Visible = false;
-                dgvMarca.Columns["activo"].Visible = false;
-                dgvMarca.Columns["ID_Proveedor"].Visible = false;
-            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -63,6 +71,7 @@ namespace WindowsFormsApp1.agregarList
         private void frmNMarca_Enter(object sender, EventArgs e)
         {
             Proveedores proveedores = proveedorBLL.GetAll();
+            cboxProveedor.Items.Clear();
             foreach (Proveedor proveedor in proveedores)
             {
                 cboxProveedor.Items.Add(proveedor.Nombre_Proveedor);

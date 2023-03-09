@@ -46,7 +46,7 @@ namespace ViewLayer
             // btnAcc
             // 
             this.btnAcc.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.btnAcc.Location = new System.Drawing.Point(6, 179);
+            this.btnAcc.Location = new System.Drawing.Point(65, 228);
             this.btnAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAcc.Name = "btnAcc";
             this.btnAcc.Size = new System.Drawing.Size(118, 36);
@@ -60,7 +60,7 @@ namespace ViewLayer
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 14F);
-            this.label1.Location = new System.Drawing.Point(114, 18);
+            this.label1.Location = new System.Drawing.Point(146, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 29);
             this.label1.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace ViewLayer
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14F);
-            this.label2.Location = new System.Drawing.Point(97, 90);
+            this.label2.Location = new System.Drawing.Point(130, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 29);
             this.label2.TabIndex = 3;
@@ -78,28 +78,30 @@ namespace ViewLayer
             // 
             // txtUsr
             // 
+            this.txtUsr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUsr.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtUsr.Location = new System.Drawing.Point(45, 49);
+            this.txtUsr.Location = new System.Drawing.Point(65, 72);
             this.txtUsr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsr.Name = "txtUsr";
-            this.txtUsr.Size = new System.Drawing.Size(229, 34);
+            this.txtUsr.Size = new System.Drawing.Size(272, 34);
             this.txtUsr.TabIndex = 2;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtPass.Location = new System.Drawing.Point(41, 121);
+            this.txtPass.Location = new System.Drawing.Point(65, 165);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(233, 34);
+            this.txtPass.Size = new System.Drawing.Size(272, 34);
             this.txtPass.TabIndex = 4;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnCan
             // 
             this.btnCan.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCan.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.btnCan.Location = new System.Drawing.Point(198, 179);
+            this.btnCan.Location = new System.Drawing.Point(217, 228);
             this.btnCan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCan.Name = "btnCan";
             this.btnCan.Size = new System.Drawing.Size(120, 36);
@@ -117,11 +119,11 @@ namespace ViewLayer
             this.groupBox1.Controls.Add(this.btnAcc);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(25, 80);
+            this.groupBox1.Location = new System.Drawing.Point(12, 107);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(324, 238);
+            this.groupBox1.Size = new System.Drawing.Size(415, 301);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -129,10 +131,10 @@ namespace ViewLayer
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(338, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -144,7 +146,7 @@ namespace ViewLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.CancelButton = this.btnCan;
-            this.ClientSize = new System.Drawing.Size(373, 340);
+            this.ClientSize = new System.Drawing.Size(439, 430);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

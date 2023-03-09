@@ -1,5 +1,6 @@
 ﻿using BLL;
 using BOL.Categoria;
+using BOL.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,20 +30,26 @@ namespace WindowsFormsApp1.actualizarList
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            idCategoria = categoriaBLL.getByDescripcion(new Categoria()
+            if (String.IsNullOrEmpty(txtNombre.Text))
             {
-                Nombre_Categoria = cboxCategoria.Text
-            }).ID_Categoria;
+                MessageBox.Show("Llene los campos", "Ferrepapus");
+            }
+            else {
+                idCategoria = categoriaBLL.getByDescripcion(new Categoria()
+                {
+                    Nombre_Categoria = cboxCategoria.Text
+                }).ID_Categoria;
 
-            if (categoriaBLL.Update(new Categoria()
-            {
-                ID_Categoria = idCategoria,
-                Nombre_Categoria = txtNombre.Text
-            }))
-            {
-                MessageBox.Show("Categoria Eliminada Correctamente", "FerroPapus",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                reload();
+                if (categoriaBLL.Update(new Categoria()
+                {
+                    ID_Categoria = idCategoria,
+                    Nombre_Categoria = txtNombre.Text
+                }))
+                {
+                    MessageBox.Show("Categoria Actualizada Correctamente", "FerroPapus",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    reload();
+                }
             }
         }
 
@@ -54,6 +61,7 @@ namespace WindowsFormsApp1.actualizarList
         }
         public void reload() {
             Categorias categorias = categoriaBLL.GetAll();
+            cboxCategoria.Items.Clear();
             foreach (Categoria categoria in categorias)
             {
                 cboxCategoria.Items.Add(categoria.Nombre_Categoria);

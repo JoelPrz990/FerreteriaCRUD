@@ -133,14 +133,15 @@ namespace BOL.Empleado
         {
             try
             {
-                SqlParameter[] parameters = new SqlParameter[7];
-                parameters[0] = new SqlParameter("@Nombre_Empleado", empleado.Nombre_Empleado);
-                parameters[1] = new SqlParameter("@Direccion_Empleado", empleado.Direccion_Empleado);
-                parameters[2] = new SqlParameter("@Telefono_Empleado", empleado.Telefono_Empleado);
-                parameters[3] = new SqlParameter("@Email_Empleado", empleado.Email_Empleado);
-                parameters[4] = new SqlParameter("@Cargo_Empleado", empleado.Cargo_Empleado);
-                parameters[5] = new SqlParameter("@password", empleado.password);
-                parameters[6] = new SqlParameter("@Nombre_Usuario", empleado.Nombre_Usuario);
+                SqlParameter[] parameters = new SqlParameter[8];
+                parameters[0] = new SqlParameter("@ID_Empleado", empleado.ID_Empleado);
+                parameters[1] = new SqlParameter("@Nombre_Empleado", empleado.Nombre_Empleado);
+                parameters[2] = new SqlParameter("@Direccion_Empleado", empleado.Direccion_Empleado);
+                parameters[3] = new SqlParameter("@Telefono_Empleado", empleado.Telefono_Empleado);
+                parameters[4] = new SqlParameter("@Email_Empleado", empleado.Email_Empleado);
+                parameters[5] = new SqlParameter("@Cargo_Empleado", empleado.Cargo_Empleado);
+                parameters[6] = new SqlParameter("@password", empleado.password);
+                parameters[7] = new SqlParameter("@Nombre_Usuario", empleado.Nombre_Usuario);
                 string query = "stp_empleado_update";
                 return dataAccess.Execute(query, parameters);
             }

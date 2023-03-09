@@ -30,18 +30,26 @@ namespace WindowsFormsApp1.agregarList
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (categoriaBLL.Add(new Categoria()
+            if (String.IsNullOrEmpty(txtNombre.Text))
             {
-                Nombre_Categoria = txtNombre.Text
-            }))
-            {
-                MessageBox.Show("Categoria Ingresada Correctamente", "FerroPapus",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNombre.Clear();
+                MessageBox.Show("Llene el campo", "Ferropapus");
             }
-            dgvCategoria.DataSource = categoriaBLL.GetAll();
-            dgvCategoria.Columns["ID_Categoria"].Visible = false;
-            dgvCategoria.Columns["activo"].Visible = false;
+            else {
+
+                if (categoriaBLL.Add(new Categoria()
+                {
+                    Nombre_Categoria = txtNombre.Text
+                }))
+                {
+                    MessageBox.Show("Categoria Ingresada Correctamente", "FerroPapus",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNombre.Clear();
+                }
+                dgvCategoria.DataSource = categoriaBLL.GetAll();
+                dgvCategoria.Columns["ID_Categoria"].Visible = false;
+                dgvCategoria.Columns["activo"].Visible = false;
+
+            }
 
         }
 

@@ -22,23 +22,30 @@ namespace WindowsFormsApp1.agregarList
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (clienteBLL.Add(new Cliente()
+            if (String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtDireccion.Text)
+                || String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtTelefono.Text))
             {
-                Nombre_Cliente = txtNombre.Text,
-                Direccion_Cliente = txtDireccion.Text,
-                Telefono_Cliente = txtTelefono.Text,
-                Email_Cliente = txtEmail.Text
-            }))
-            {
-                MessageBox.Show("Cliente Ingresado Correctamente", "FerroPapus",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvCliente.DataSource = clienteBLL.GetAll();
-                dgvCliente.Columns["activo"].Visible = false;
-                dgvCliente.Columns["ID_Cliente"].Visible = false;
-                txtDireccion.Clear();
-                txtTelefono.Clear();
-                txtEmail.Clear();
-                txtNombre.Clear();
+                MessageBox.Show("Llene los campos", "Ferropapus");
+            }
+            else {
+                if (clienteBLL.Add(new Cliente()
+                {
+                    Nombre_Cliente = txtNombre.Text,
+                    Direccion_Cliente = txtDireccion.Text,
+                    Telefono_Cliente = txtTelefono.Text,
+                    Email_Cliente = txtEmail.Text
+                }))
+                {
+                    MessageBox.Show("Cliente Ingresado Correctamente", "FerroPapus",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvCliente.DataSource = clienteBLL.GetAll();
+                    dgvCliente.Columns["activo"].Visible = false;
+                    dgvCliente.Columns["ID_Cliente"].Visible = false;
+                    txtDireccion.Clear();
+                    txtTelefono.Clear();
+                    txtEmail.Clear();
+                    txtNombre.Clear();
+                }
             }
         }
 

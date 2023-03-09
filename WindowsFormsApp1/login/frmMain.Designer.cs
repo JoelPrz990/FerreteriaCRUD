@@ -63,6 +63,8 @@ namespace ViewLayer
             this.acutalizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscMain.SuspendLayout();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -241,7 +243,8 @@ namespace ViewLayer
             this.eliminarCategoriasToolStripMenuItem,
             this.eliminarMarcasToolStripMenuItem,
             this.eliminarProductosToolStripMenuItem1,
-            this.eliminarProveedoresToolStripMenuItem1});
+            this.eliminarProveedoresToolStripMenuItem1,
+            this.eliminarEmpleadoToolStripMenuItem});
             this.eliminarElementosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.eliminarElementosToolStripMenuItem.Name = "eliminarElementosToolStripMenuItem";
             this.eliminarElementosToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
@@ -284,7 +287,8 @@ namespace ViewLayer
             this.actualizarClienteToolStripMenuItem1,
             this.actualizarMarcasToolStripMenuItem,
             this.acutalizarProductosToolStripMenuItem,
-            this.actualizarProveedoresToolStripMenuItem1});
+            this.actualizarProveedoresToolStripMenuItem1,
+            this.actualizarEmpleadoToolStripMenuItem});
             this.actualizarElementosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.actualizarElementosToolStripMenuItem.Name = "actualizarElementosToolStripMenuItem";
             this.actualizarElementosToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
@@ -328,6 +332,18 @@ namespace ViewLayer
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar &Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // eliminarEmpleadoToolStripMenuItem
+            // 
+            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
+            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado";
+            // 
+            // actualizarEmpleadoToolStripMenuItem
+            // 
+            this.actualizarEmpleadoToolStripMenuItem.Name = "actualizarEmpleadoToolStripMenuItem";
+            this.actualizarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+            this.actualizarEmpleadoToolStripMenuItem.Text = "Actualizar Empleado";
             // 
             // frmMain
             // 
@@ -388,5 +404,7 @@ namespace ViewLayer
         private ToolStripMenuItem nuevoProveedorToolStripMenuItem;
         public ToolStripContainer tscMain;
         private ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
+        private ToolStripMenuItem eliminarEmpleadoToolStripMenuItem;
+        private ToolStripMenuItem actualizarEmpleadoToolStripMenuItem;
     }
 }

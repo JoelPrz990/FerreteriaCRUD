@@ -41,6 +41,7 @@ namespace ViewLayer
             frmAMarca frmAMarca = new frmAMarca();
             frmAProducto frmAProducto = new frmAProducto();
             frmAProveedor frmAProveedor = new frmAProveedor();
+            frmAEmpleado frmAEmpleado = new frmAEmpleado();
 
             //frames Login
             frmStartup frmStartup = new frmStartup();
@@ -70,6 +71,7 @@ namespace ViewLayer
             frmEMarca frmEMarca = new frmEMarca();
             frmEProducto frmEProducto = new frmEProducto();
             frmEProveedor frmEProveedor = new frmEProveedor();
+            frmEEmpleado frmEEmpleado = new frmEEmpleado();
             #endregion
 
             #region acciones de los botones
@@ -95,6 +97,7 @@ namespace ViewLayer
             eliminarMarcasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmEMarca);
             eliminarProductosToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmEProducto);
             eliminarProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmEProveedor);
+            eliminarEmpleadoToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmEEmpleado);
 
             //lista Actualizar
             actualizarCategoriaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmACategoria);
@@ -102,6 +105,7 @@ namespace ViewLayer
             actualizarMarcasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmAMarca);
             actualizarProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmAProveedor);
             acutalizarProductosToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmProductos);
+            actualizarEmpleadoToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmAEmpleado);
 
 
             //botones menustrip
@@ -129,6 +133,8 @@ namespace ViewLayer
             {
                 nuevoEmpleadoToolStripMenuItem.Enabled = false;
                 verEmpleadosToolStripMenuItem1.Enabled = false;
+                eliminarEmpleadoToolStripMenuItem.Enabled =false;
+                actualizarEmpleadoToolStripMenuItem.Enabled = false;
             }
             else {
             }
@@ -169,7 +175,7 @@ namespace ViewLayer
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Desea Cerrar Sesion?", "FerrePapus", MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (result == DialogResult.Yes)
             {
                 mostrarMensaje = false;

@@ -24,25 +24,32 @@ namespace WindowsFormsApp1.agregarList
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (proveedorBLL.Add(new Proveedor()
+            if (String.IsNullOrEmpty(txtDireccion.Text) || String.IsNullOrEmpty(txtEmail.Text)
+                || String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtTelefono.Text))
             {
-                Nombre_Proveedor = txtNombre.Text,
-                Direccion_Proveedor = txtDireccion.Text,
-                Telefono_Proveedor = txtTelefono.Text,
-                Email_Proveedor =txtEmail.Text
-            }))
-            {
-                MessageBox.Show("Proveedor Ingresado Correctamente", "FerroPapus",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvProveedor.DataSource = proveedorBLL.GetAll();
-                dgvProveedor.Columns["activo"].Visible = false;
-                dgvProveedor.Columns["ID_Proveedor"].Visible = false;
-                txtDireccion.Clear();
-                txtTelefono.Clear();
-                txtEmail.Clear();
-                txtNombre.Clear();
+                MessageBox.Show("Llene los campos", "Ferrepapus");
             }
+            else {
 
+                if (proveedorBLL.Add(new Proveedor()
+                {
+                    Nombre_Proveedor = txtNombre.Text,
+                    Direccion_Proveedor = txtDireccion.Text,
+                    Telefono_Proveedor = txtTelefono.Text,
+                    Email_Proveedor = txtEmail.Text
+                }))
+                {
+                    MessageBox.Show("Proveedor Ingresado Correctamente", "FerroPapus",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvProveedor.DataSource = proveedorBLL.GetAll();
+                    dgvProveedor.Columns["activo"].Visible = false;
+                    dgvProveedor.Columns["ID_Proveedor"].Visible = false;
+                    txtDireccion.Clear();
+                    txtTelefono.Clear();
+                    txtEmail.Clear();
+                    txtNombre.Clear();
+                }
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

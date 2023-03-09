@@ -31,13 +31,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxCategoria = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboxCategoria = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -87,6 +87,25 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // cboxCategoria
+            // 
+            this.cboxCategoria.FormattingEnabled = true;
+            this.cboxCategoria.Location = new System.Drawing.Point(461, 75);
+            this.cboxCategoria.Name = "cboxCategoria";
+            this.cboxCategoria.Size = new System.Drawing.Size(383, 24);
+            this.cboxCategoria.TabIndex = 6;
+            this.cboxCategoria.Leave += new System.EventHandler(this.cboxCategoria_Leave);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(342, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Nombre de la categoria por actualizar";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -122,9 +141,9 @@
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.label1.Location = new System.Drawing.Point(24, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 26);
+            this.label1.Size = new System.Drawing.Size(197, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Agregar nueva categoria";
+            this.label1.Text = "Actualizar categoria";
             // 
             // label2
             // 
@@ -135,25 +154,6 @@
             this.label2.Size = new System.Drawing.Size(261, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nuevo nombre de la categoria";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Nombre de la categoria por actualizar";
-            // 
-            // cboxCategoria
-            // 
-            this.cboxCategoria.FormattingEnabled = true;
-            this.cboxCategoria.Location = new System.Drawing.Point(461, 75);
-            this.cboxCategoria.Name = "cboxCategoria";
-            this.cboxCategoria.Size = new System.Drawing.Size(383, 24);
-            this.cboxCategoria.TabIndex = 6;
-            this.cboxCategoria.Leave += new System.EventHandler(this.cboxCategoria_Leave);
             // 
             // frmACategoria
             // 

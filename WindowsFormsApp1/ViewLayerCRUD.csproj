@@ -61,6 +61,12 @@
     <Compile Include="actualizarList\frmACliente.Designer.cs">
       <DependentUpon>frmACliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="actualizarList\frmAEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarList\frmAEmpleado.Designer.cs">
+      <DependentUpon>frmAEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="actualizarList\frmAMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,12 @@
     <Compile Include="eliminarList\frmECliente.Designer.cs">
       <DependentUpon>frmECliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="eliminarList\frmEEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eliminarList\frmEEmpleado.Designer.cs">
+      <DependentUpon>frmEEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="eliminarList\frmEMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="actualizarList\frmACliente.resx">
       <DependentUpon>frmACliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarList\frmAEmpleado.resx">
+      <DependentUpon>frmAEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="actualizarList\frmAMarca.resx">
       <DependentUpon>frmAMarca.cs</DependentUpon>
@@ -290,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="eliminarList\frmECliente.resx">
       <DependentUpon>frmECliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarList\frmEEmpleado.resx">
+      <DependentUpon>frmEEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eliminarList\frmEMarca.resx">
       <DependentUpon>frmEMarca.cs</DependentUpon>
