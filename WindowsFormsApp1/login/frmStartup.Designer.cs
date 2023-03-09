@@ -40,6 +40,7 @@ namespace ViewLayer
             this.btnVerClientes = new System.Windows.Forms.Button();
             this.btnVerVenta = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -95,18 +96,18 @@ namespace ViewLayer
             this.groupBox2.Controls.Add(this.btnVerClientes);
             this.groupBox2.Controls.Add(this.btnVerVenta);
             this.groupBox2.Controls.Add(this.btnVenta);
-            this.groupBox2.Location = new System.Drawing.Point(71, 215);
+            this.groupBox2.Location = new System.Drawing.Point(18, 215);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(887, 292);
+            this.groupBox2.Size = new System.Drawing.Size(732, 228);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(0, 155);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(6, 123);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(434, 134);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(358, 91);
             this.btnAgregarCliente.TabIndex = 9;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
@@ -114,9 +115,9 @@ namespace ViewLayer
             // btnVerClientes
             // 
             this.btnVerClientes.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerClientes.Location = new System.Drawing.Point(443, 155);
+            this.btnVerClientes.Location = new System.Drawing.Point(370, 123);
             this.btnVerClientes.Name = "btnVerClientes";
-            this.btnVerClientes.Size = new System.Drawing.Size(441, 134);
+            this.btnVerClientes.Size = new System.Drawing.Size(355, 91);
             this.btnVerClientes.TabIndex = 10;
             this.btnVerClientes.Text = "Ver Clientes";
             this.btnVerClientes.UseVisualStyleBackColor = true;
@@ -124,9 +125,9 @@ namespace ViewLayer
             // btnVerVenta
             // 
             this.btnVerVenta.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerVenta.Location = new System.Drawing.Point(443, 21);
+            this.btnVerVenta.Location = new System.Drawing.Point(370, 21);
             this.btnVerVenta.Name = "btnVerVenta";
-            this.btnVerVenta.Size = new System.Drawing.Size(441, 128);
+            this.btnVerVenta.Size = new System.Drawing.Size(355, 96);
             this.btnVerVenta.TabIndex = 8;
             this.btnVerVenta.Text = "Ver Ventas";
             this.btnVerVenta.UseVisualStyleBackColor = true;
@@ -134,12 +135,23 @@ namespace ViewLayer
             // btnVenta
             // 
             this.btnVenta.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenta.Location = new System.Drawing.Point(0, 21);
+            this.btnVenta.Location = new System.Drawing.Point(6, 21);
             this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(434, 128);
+            this.btnVenta.Size = new System.Drawing.Size(358, 96);
             this.btnVenta.TabIndex = 7;
             this.btnVenta.Text = "Agregar Nueva Venta";
             this.btnVenta.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Font = new System.Drawing.Font("HP Simplified", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(797, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 200);
+            this.label3.TabIndex = 7;
+            this.label3.Text = resources.GetString("label3.Text");
             // 
             // frmStartup
             // 
@@ -147,6 +159,7 @@ namespace ViewLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1017, 562);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
@@ -174,5 +187,6 @@ namespace ViewLayer
         public Button btnVenta;
         public Button btnVerClientes;
         public Button btnAgregarCliente;
+        private Label label3;
     }
 }

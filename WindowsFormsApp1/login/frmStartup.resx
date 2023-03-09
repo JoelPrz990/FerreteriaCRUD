@@ -188,4 +188,17 @@
         8ByAkYCqhoHnAADgEJ4DAIBDeA4AAA7hOQAAuOO/2/8BE7qaQrwr66UAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Atajos del teclado:
+
+Alt+I: Inicio
+Alt+N: Nueva Venta
+Alt+V: Ver ventas
+Alt+A: Agregar Elemento
+Alt+C: Consultar Elemento
+Alt+E: Eliminar Elementos
+Alt+R: Actualizar Registros
+Alt+S: Cerrar Sesion
+</value>
+  </data>
 </root>
