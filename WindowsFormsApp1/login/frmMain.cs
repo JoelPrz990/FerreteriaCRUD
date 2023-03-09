@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewLayer.agregarList;
 using ViewLayer.consultaList;
+using WindowsFormsApp1.actualizarList;
 using WindowsFormsApp1.agregarList;
+using WindowsFormsApp1.eliminarList;
 
 namespace ViewLayer
 {
@@ -25,25 +27,40 @@ namespace ViewLayer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //frames Actualizar
+            frmACliente frmACliente= new frmACliente();
+            frmACategoria frmACategoria= new frmACategoria();
+            frmAMarca frmAMarca = new frmAMarca();
+            frmAProducto frmAProducto = new frmAProducto();
+            frmAProveedor frmAProveedor = new frmAProveedor();
 
-
-
-            frmLogin loginform = new frmLogin();
-            frmProductos frmProductos = new frmProductos();
+            //frames Login
             frmStartup frmStartup = new frmStartup();
+            frmLogin loginform = new frmLogin();
+
+            //frames consultar
+            frmProductos frmProductos = new frmProductos();
             frmCategorias frmCategorias = new frmCategorias();
             frmClientes frmClientes = new frmClientes();
             frmEmpleados frmEmpleados = new frmEmpleados();
             frmMarcas frmMarcas = new frmMarcas();
             frmProveedores frmProveedores= new frmProveedores();
             frmVentas frmVentas = new frmVentas();
+
+            //frames Agregar
             frmNVenta frmNVenta = new frmNVenta();
             frmNCliente frmNCliente = new frmNCliente();
+            frmNCategoria frmNCategoria = new frmNCategoria();
+            frmNProducto frmNProducto = new frmNProducto();
+            frmNProveedor frmNProveedor = new frmNProveedor();
+            frmNMarca frmNMarca = new frmNMarca();
 
-            //ToolStripButton toolStripButton1 = new ToolStripButton("Formulario 1");
-            //ToolStripButton toolStripButton2 =  new ToolStripButton("Ver Productos");
-            // toolStrip1.Items.Add(toolStripButton1);
-            //toolStrip1.Items.Add(toolStripButton2);
+            //frames Eliminar
+            frmECategoria frmECategoria = new frmECategoria();
+            frmECliente frmECliente = new frmECliente(); 
+            frmEMarca frmEMarca = new frmEMarca();
+            frmEProducto frmEProducto = new frmEProducto();
+            frmEProveedor frmEProveedor = new frmEProveedor();
 
             //Lista ver 
             verProductosToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmProductos); 
@@ -53,7 +70,7 @@ namespace ViewLayer
             verMarcasToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmMarcas);
             verProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmProveedores);
 
-            //botones
+            //botones menustrip
             nuevaVentaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNVenta);
             verVentasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmVentas);
             inicioToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
@@ -64,28 +81,35 @@ namespace ViewLayer
             frmStartup.btnVerVenta.Click += (s, ea) =>  ShowFormInContentPanel(frmVentas);
             frmStartup.btnAgregarCliente.Click += (s, ea) => ShowFormInContentPanel(frmNCliente);
 
-            ShowFormInContentPanel(frmStartup);
+            //mostrar pagina startup al inicio
+            //ShowFormInContentPanel(frmStartup);
         }
 
         private Form currentForm = null;
         public void ShowFormInContentPanel(Form formToShow)
         {
+            // Obtener el formulario actual
+            Form currentForm = tscMain.ContentPanel.Controls.OfType<Form>().FirstOrDefault();
+            if (currentForm != null)
+            {
+                // Cerrar el formulario actual
+                currentForm.Hide();
+            }
+
             Panel contentPanel = tscMain.ContentPanel;
             // Elimina cualquier control existente del ContentPanel
             contentPanel.Controls.Clear();
-
             // Ajusta el formulario para que se muestre en el ContentPanel
             formToShow.TopLevel = false;
             formToShow.FormBorderStyle = FormBorderStyle.None;
             formToShow.Dock = DockStyle.Fill;
-
-            // Agrega el formulario al ContentPanel y establece la variable currentForm
+            // Agrega el formulario al ContentPanel
             contentPanel.Controls.Add(formToShow);
-            currentForm = formToShow;
-
             // Muestra el formulario
             formToShow.Show();
+            formToShow.Focus();
         }
+
         /*public void ShowFormInContentPanel(Form formToShow)
         {
             Panel contentPanel = tscMain.ContentPanel;

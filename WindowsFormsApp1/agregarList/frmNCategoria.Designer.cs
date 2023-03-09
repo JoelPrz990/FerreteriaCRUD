@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.agregarList
 {
-    partial class frmACategoria
+    partial class frmNCategoria
     {
         /// <summary>
         /// Required designer variable.

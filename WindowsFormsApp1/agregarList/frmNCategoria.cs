@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.agregarList
 {
-    public partial class frmACategoria : Form
+    public partial class frmNCategoria : Form
     {
-        public frmACategoria()
+        public frmNCategoria()
         {
             InitializeComponent();
         }

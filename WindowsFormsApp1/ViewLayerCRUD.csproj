@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,11 +85,11 @@
     <Compile Include="agregarList\cantidadDialog.Designer.cs">
       <DependentUpon>cantidadDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="agregarList\frmACategoria.cs">
+    <Compile Include="agregarList\frmNCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="agregarList\frmACategoria.Designer.cs">
-      <DependentUpon>frmACategoria.cs</DependentUpon>
+    <Compile Include="agregarList\frmNCategoria.Designer.cs">
+      <DependentUpon>frmNCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="agregarList\frmNCliente.cs">
       <SubType>Form</SubType>
@@ -280,7 +283,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icono.ico" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{8fabc626-db12-4c0f-ae97-448a8cc90b2a}</Project>

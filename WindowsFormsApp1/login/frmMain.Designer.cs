@@ -30,6 +30,7 @@ namespace ViewLayer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tscMain = new System.Windows.Forms.ToolStripContainer();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,7 +108,6 @@ namespace ViewLayer
             this.menu.Size = new System.Drawing.Size(1033, 28);
             this.menu.Stretch = false;
             this.menu.TabIndex = 1;
-            this.menu.TabStop = true;
             // 
             // inicioToolStripMenuItem
             // 
@@ -153,7 +153,7 @@ namespace ViewLayer
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             // 
             // nuevaMarcaToolStripMenuItem
@@ -327,6 +327,7 @@ namespace ViewLayer
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tscMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
