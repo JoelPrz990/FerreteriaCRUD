@@ -118,6 +118,32 @@ namespace ViewLayer
             frmStartup.btnVerClientes.Click += (s, ea) => ShowFormInContentPanel(frmClientes);
             frmStartup.btnVerVenta.Click += (s, ea) =>  ShowFormInContentPanel(frmVentas);
             frmStartup.btnAgregarCliente.Click += (s, ea) => ShowFormInContentPanel(frmNCliente);
+            
+            //botones para regresar al inicio, actualizar
+            frmACategoria.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmACliente.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmAEmpleado.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmAMarca.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmAProducto.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmAProveedor.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+
+            //botones para regresar al inicio, agregar
+            frmNCategoria.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmNCliente.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmNEmpleado.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmNMarca.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmNProducto.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmNProveedor.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmNVenta.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+
+            //botones para regresar al inicio, eliminar
+            frmECategoria.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmECliente.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmEEmpleado.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmEMarca.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmEProducto.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+            frmEProveedor.btnCancelar.Click += (s, ea) => ShowFormInContentPanel(frmStartup);
+
             #endregion
 
             ShowFormInContentPanel(frmStartup);

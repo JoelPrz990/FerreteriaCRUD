@@ -31,6 +31,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboxProducto = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.MaskedTextBox();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.cboxCategoria = new System.Windows.Forms.ComboBox();
@@ -46,8 +48,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboxProducto = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -106,6 +106,25 @@
             this.groupBox1.Size = new System.Drawing.Size(1004, 356);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // cboxProducto
+            // 
+            this.cboxProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxProducto.FormattingEnabled = true;
+            this.cboxProducto.Location = new System.Drawing.Point(350, 77);
+            this.cboxProducto.Name = "cboxProducto";
+            this.cboxProducto.Size = new System.Drawing.Size(433, 24);
+            this.cboxProducto.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(216, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Producto por actualizar";
             // 
             // txtStock
             // 
@@ -251,25 +270,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre del producto";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(216, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Producto por actualizar";
-            // 
-            // cboxProducto
-            // 
-            this.cboxProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxProducto.FormattingEnabled = true;
-            this.cboxProducto.Location = new System.Drawing.Point(350, 77);
-            this.cboxProducto.Name = "cboxProducto";
-            this.cboxProducto.Size = new System.Drawing.Size(433, 24);
-            this.cboxProducto.TabIndex = 15;
-            // 
             // frmAProducto
             // 
             this.AcceptButton = this.btnAceptar;
@@ -306,12 +306,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboxProducto;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -277,7 +277,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
@@ -288,5 +287,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.MaskedTextBox txtStock;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }

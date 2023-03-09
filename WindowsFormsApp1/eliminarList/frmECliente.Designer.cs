@@ -158,10 +158,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox cboxClientes;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -35,6 +35,7 @@ namespace ViewLayer.agregarList
             this.label3 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace ViewLayer.agregarList
             this.boxCliente = new System.Windows.Forms.ComboBox();
             this.labelEmpleado = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -114,6 +114,16 @@ namespace ViewLayer.agregarList
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Venta";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            this.label6.Location = new System.Drawing.Point(0, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(435, 23);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Haga clic en los productos de la lista que desea agregar";
             // 
             // btnCancelar
             // 
@@ -222,16 +232,6 @@ namespace ViewLayer.agregarList
             this.label4.TabIndex = 0;
             this.label4.Text = "Agregar una nueva venta";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.label6.Location = new System.Drawing.Point(0, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(435, 23);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Haga clic en los productos de la lista que desea agregar";
-            // 
             // frmNVenta
             // 
             this.AcceptButton = this.btnAlmacenar;
@@ -271,7 +271,7 @@ namespace ViewLayer.agregarList
         private Label lblTotal;
         private Label label5;
         public MaskedTextBox txtFecha;
-        private Button btnCancelar;
         private Label label6;
+        public Button btnCancelar;
     }
 }
