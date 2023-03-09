@@ -91,6 +91,7 @@ namespace ViewLayer
             this.Name = "frmProductos";
             this.Text = "frmProductos";
             this.Load += new System.EventHandler(this.frmProductos_Load);
+            this.Enter += new System.EventHandler(this.frmProductos_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);

@@ -42,6 +42,7 @@ namespace ViewLayer
             this.nuevaMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarElementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verClientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.verCategoriasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,6 @@ namespace ViewLayer
             this.acutalizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscMain.SuspendLayout();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -106,15 +106,17 @@ namespace ViewLayer
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menu.ShowItemToolTips = true;
             this.menu.Size = new System.Drawing.Size(1033, 28);
             this.menu.Stretch = false;
             this.menu.TabIndex = 1;
+            this.menu.TabStop = true;
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.ShortcutKeyDisplayString = "I";
+            this.inicioToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.inicioToolStripMenuItem.Text = "&Inicio";
             // 
@@ -149,32 +151,38 @@ namespace ViewLayer
             // nuevaCategoriaToolStripMenuItem
             // 
             this.nuevaCategoriaToolStripMenuItem.Name = "nuevaCategoriaToolStripMenuItem";
-            this.nuevaCategoriaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevaCategoriaToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.nuevaCategoriaToolStripMenuItem.Text = "Nueva Categoria";
             // 
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             // 
             // nuevaMarcaToolStripMenuItem
             // 
             this.nuevaMarcaToolStripMenuItem.Name = "nuevaMarcaToolStripMenuItem";
-            this.nuevaMarcaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevaMarcaToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.nuevaMarcaToolStripMenuItem.Text = "Nueva Marca";
             // 
             // nuevoProductoToolStripMenuItem
             // 
             this.nuevoProductoToolStripMenuItem.Name = "nuevoProductoToolStripMenuItem";
-            this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.nuevoProductoToolStripMenuItem.Text = "Nuevo Producto";
             // 
             // nuevoProveedorToolStripMenuItem
             // 
             this.nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
-            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.nuevoProveedorToolStripMenuItem.Text = "Nuevo Proveedor";
+            // 
+            // nuevoEmpleadoToolStripMenuItem
+            // 
+            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
             // 
             // consultarElementosToolStripMenuItem
             // 
@@ -193,37 +201,37 @@ namespace ViewLayer
             // verClientesToolStripMenuItem1
             // 
             this.verClientesToolStripMenuItem1.Name = "verClientesToolStripMenuItem1";
-            this.verClientesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.verClientesToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
             this.verClientesToolStripMenuItem1.Text = "Ver Clientes";
             // 
             // verCategoriasToolStripMenuItem1
             // 
             this.verCategoriasToolStripMenuItem1.Name = "verCategoriasToolStripMenuItem1";
-            this.verCategoriasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.verCategoriasToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
             this.verCategoriasToolStripMenuItem1.Text = "Ver Categorias";
             // 
             // verEmpleadosToolStripMenuItem1
             // 
             this.verEmpleadosToolStripMenuItem1.Name = "verEmpleadosToolStripMenuItem1";
-            this.verEmpleadosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.verEmpleadosToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
             this.verEmpleadosToolStripMenuItem1.Text = "Ver Empleados";
             // 
             // verMarcasToolStripMenuItem1
             // 
             this.verMarcasToolStripMenuItem1.Name = "verMarcasToolStripMenuItem1";
-            this.verMarcasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.verMarcasToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
             this.verMarcasToolStripMenuItem1.Text = "Ver Marcas";
             // 
             // verProductosToolStripMenuItem1
             // 
             this.verProductosToolStripMenuItem1.Name = "verProductosToolStripMenuItem1";
-            this.verProductosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.verProductosToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
             this.verProductosToolStripMenuItem1.Text = "Ver Productos";
             // 
             // verProveedoresToolStripMenuItem1
             // 
             this.verProveedoresToolStripMenuItem1.Name = "verProveedoresToolStripMenuItem1";
-            this.verProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.verProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
             this.verProveedoresToolStripMenuItem1.Text = "Ver Proveedores";
             // 
             // eliminarElementosToolStripMenuItem
@@ -320,12 +328,6 @@ namespace ViewLayer
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar &Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
-            // 
-            // nuevoEmpleadoToolStripMenuItem
-            // 
-            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
-            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
             // 
             // frmMain
             // 

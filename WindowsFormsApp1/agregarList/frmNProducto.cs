@@ -63,7 +63,7 @@ namespace WindowsFormsApp1.agregarList
                 ID_Marca = idMarca
             }))
             {
-                MessageBox.Show("Marca Ingresada Correctamente", "FerroPapus",
+                MessageBox.Show("Producto Ingresado Correctamente", "FerroPapus",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvProducto.DataSource = productoBLL.GetAll();
                 dgvProducto.Columns["ID_Producto"].Visible = false;

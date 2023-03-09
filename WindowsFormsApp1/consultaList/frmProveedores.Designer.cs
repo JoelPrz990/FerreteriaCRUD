@@ -90,6 +90,7 @@ namespace ViewLayer.consultaList
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);
+            this.Enter += new System.EventHandler(this.frmProveedores_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);

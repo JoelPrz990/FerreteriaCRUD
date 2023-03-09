@@ -1,4 +1,5 @@
-﻿using BOL.Producto;
+﻿using BOL.Empleado;
+using BOL.Producto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,10 @@ namespace BLL
             }
             else
                 return false;
+        }
+        public Producto getByName(Producto producto)
+        {
+            return productoDAL.GetByName(producto);
         }
     }
 }

@@ -90,6 +90,7 @@ namespace ViewLayer.consultaList
             this.Name = "frmCategorias";
             this.Text = "frmCategorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
+            this.Enter += new System.EventHandler(this.frmCategorias_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);

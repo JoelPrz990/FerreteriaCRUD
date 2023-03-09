@@ -103,6 +103,7 @@ namespace ViewLayer
             // 
             // btnAgregarCliente
             // 
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.Location = new System.Drawing.Point(0, 155);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(434, 134);
@@ -112,6 +113,7 @@ namespace ViewLayer
             // 
             // btnVerClientes
             // 
+            this.btnVerClientes.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerClientes.Location = new System.Drawing.Point(443, 155);
             this.btnVerClientes.Name = "btnVerClientes";
             this.btnVerClientes.Size = new System.Drawing.Size(441, 134);
@@ -121,6 +123,7 @@ namespace ViewLayer
             // 
             // btnVerVenta
             // 
+            this.btnVerVenta.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerVenta.Location = new System.Drawing.Point(443, 21);
             this.btnVerVenta.Name = "btnVerVenta";
             this.btnVerVenta.Size = new System.Drawing.Size(441, 128);
@@ -130,6 +133,7 @@ namespace ViewLayer
             // 
             // btnVenta
             // 
+            this.btnVenta.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenta.Location = new System.Drawing.Point(0, 21);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(434, 128);

@@ -28,7 +28,9 @@ namespace ViewLayer
         public frmMain()
         {
             InitializeComponent();
+            menu.TabStop = true;
         }
+        
 
         private void frmMain_Load(object sender, EventArgs e)
         { 

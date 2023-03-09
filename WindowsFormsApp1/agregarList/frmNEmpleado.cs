@@ -33,7 +33,7 @@ namespace WindowsFormsApp1.agregarList
                 Nombre_Usuario= txtUsuario.Text
             }))
             {
-                MessageBox.Show("Cliente Ingresado Correctamente", "FerroPapus",
+                MessageBox.Show("Empleado Ingresado Correctamente", "FerroPapus",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvEmpleado.DataSource = empleadoBLL.GetAll();
                 dgvEmpleado.Columns["ID_Empleado"].Visible = false;

@@ -152,5 +152,35 @@ namespace BOL.Producto
             }
         }
         #endregion
+        public Producto GetByName(Producto producto)
+        {
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[1];
+                parameters[0] = new SqlParameter("@Nombre_Producto", producto.Nombre_Producto);
+                string query = "stp_producto_getbyname";
+                DataTable resultado = dataAccess.Query(query, parameters);
+                if (resultado.Rows.Count > 0)
+                {
+                    producto = new Producto()
+                    {
+                        ID_Producto = (int)resultado.Rows[0]["ID_Producto"],
+                        Nombre_Producto = (string)resultado.Rows[0]["Nombre_Producto"],
+                        Descripcion_Producto = (string)resultado.Rows[0]["Descripcion_Producto"],
+                        Marca_Producto = (string)resultado.Rows[0]["Marca_Producto"],
+                        Precio_Producto = (decimal)resultado.Rows[0]["Precio_Producto"],
+                        ID_Categoria = (int)resultado.Rows[0]["ID_Categoria"],
+                        Stock_Disponible = (int)resultado.Rows[0]["Stock_Disponible"],
+                        ID_Marca = (int)resultado.Rows[0]["ID_Marca"],
+                        activo = (bool)resultado.Rows[0]["activo"]
+                    };
+                }
+                return producto;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
