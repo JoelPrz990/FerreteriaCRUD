@@ -62,6 +62,7 @@ namespace ViewLayer
             this.acutalizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscMain.SuspendLayout();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +139,8 @@ namespace ViewLayer
             this.nuevoClienteToolStripMenuItem,
             this.nuevaMarcaToolStripMenuItem,
             this.nuevoProductoToolStripMenuItem,
-            this.nuevoProveedorToolStripMenuItem});
+            this.nuevoProveedorToolStripMenuItem,
+            this.nuevoEmpleadoToolStripMenuItem});
             this.agregarNuevoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.agregarNuevoToolStripMenuItem.Name = "agregarNuevoToolStripMenuItem";
             this.agregarNuevoToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
@@ -191,37 +193,37 @@ namespace ViewLayer
             // verClientesToolStripMenuItem1
             // 
             this.verClientesToolStripMenuItem1.Name = "verClientesToolStripMenuItem1";
-            this.verClientesToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
+            this.verClientesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.verClientesToolStripMenuItem1.Text = "Ver Clientes";
             // 
             // verCategoriasToolStripMenuItem1
             // 
             this.verCategoriasToolStripMenuItem1.Name = "verCategoriasToolStripMenuItem1";
-            this.verCategoriasToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
+            this.verCategoriasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.verCategoriasToolStripMenuItem1.Text = "Ver Categorias";
             // 
             // verEmpleadosToolStripMenuItem1
             // 
             this.verEmpleadosToolStripMenuItem1.Name = "verEmpleadosToolStripMenuItem1";
-            this.verEmpleadosToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
+            this.verEmpleadosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.verEmpleadosToolStripMenuItem1.Text = "Ver Empleados";
             // 
             // verMarcasToolStripMenuItem1
             // 
             this.verMarcasToolStripMenuItem1.Name = "verMarcasToolStripMenuItem1";
-            this.verMarcasToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
+            this.verMarcasToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.verMarcasToolStripMenuItem1.Text = "Ver Marcas";
             // 
             // verProductosToolStripMenuItem1
             // 
             this.verProductosToolStripMenuItem1.Name = "verProductosToolStripMenuItem1";
-            this.verProductosToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
+            this.verProductosToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.verProductosToolStripMenuItem1.Text = "Ver Productos";
             // 
             // verProveedoresToolStripMenuItem1
             // 
             this.verProveedoresToolStripMenuItem1.Name = "verProveedoresToolStripMenuItem1";
-            this.verProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(205, 26);
+            this.verProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.verProveedoresToolStripMenuItem1.Text = "Ver Proveedores";
             // 
             // eliminarElementosToolStripMenuItem
@@ -319,6 +321,12 @@ namespace ViewLayer
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar &Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
+            // nuevoEmpleadoToolStripMenuItem
+            // 
+            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,5 +385,6 @@ namespace ViewLayer
         private ToolStripMenuItem nuevoProductoToolStripMenuItem;
         private ToolStripMenuItem nuevoProveedorToolStripMenuItem;
         public ToolStripContainer tscMain;
+        private ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
     }
 }

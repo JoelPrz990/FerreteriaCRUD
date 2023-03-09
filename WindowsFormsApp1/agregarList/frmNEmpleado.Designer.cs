@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.agregarList
 {
-    partial class frmNMarca
+    partial class frmNEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // frmNMarca
+            // frmNEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 535);
-            this.Name = "frmNMarca";
-            this.Text = "frmNMarca";
+            this.Name = "frmNEmpleado";
+            this.Text = "frmNEmpleado";
             this.ResumeLayout(false);
 
         }

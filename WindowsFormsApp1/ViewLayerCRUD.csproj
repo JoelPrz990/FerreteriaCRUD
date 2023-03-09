@@ -97,6 +97,12 @@
     <Compile Include="agregarList\frmNCliente.Designer.cs">
       <DependentUpon>frmNCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarList\frmNEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarList\frmNEmpleado.Designer.cs">
+      <DependentUpon>frmNEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="agregarList\frmNMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,8 +228,23 @@
     <EmbeddedResource Include="agregarList\cantidadDialog.resx">
       <DependentUpon>cantidadDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="agregarList\frmNCategoria.resx">
+      <DependentUpon>frmNCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="agregarList\frmNCliente.resx">
       <DependentUpon>frmNCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarList\frmNEmpleado.resx">
+      <DependentUpon>frmNEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarList\frmNMarca.resx">
+      <DependentUpon>frmNMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarList\frmNProducto.resx">
+      <DependentUpon>frmNProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarList\frmNProveedor.resx">
+      <DependentUpon>frmNProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="agregarList\frmNVenta.resx">
       <DependentUpon>frmNVenta.cs</DependentUpon>

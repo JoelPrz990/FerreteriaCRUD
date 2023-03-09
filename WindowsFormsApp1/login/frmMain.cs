@@ -1,16 +1,20 @@
-﻿using System;
+﻿using BLL;
+using BOL.Empleado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewLayer.agregarList;
 using ViewLayer.consultaList;
+using WindowsFormsApp1;
 using WindowsFormsApp1.actualizarList;
 using WindowsFormsApp1.agregarList;
 using WindowsFormsApp1.eliminarList;
@@ -20,13 +24,14 @@ namespace ViewLayer
     public partial class frmMain : Form
     {
         private bool mostrarMensaje = true;
+        private string cargo;
         public frmMain()
         {
             InitializeComponent();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
-        {
+        { 
             #region importaciones de ventanas
             //frames Actualizar
             frmACliente frmACliente = new frmACliente();
@@ -107,8 +112,23 @@ namespace ViewLayer
             frmStartup.btnAgregarCliente.Click += (s, ea) => ShowFormInContentPanel(frmNCliente);
             #endregion
 
-            //mostrar pagina startup al inicio
             ShowFormInContentPanel(frmStartup);
+            EmpleadoBLL empleadoBLL = EmpleadoBLL.Instance();
+
+
+            cargo = empleadoBLL.getByName(new Empleado()
+            {
+                Nombre_Usuario = Program.UsuarioActual
+            }).Cargo_Empleado;
+
+            if (!cargo.Equals("ADMINISTRADOR"))
+            {
+                nuevoEmpleadoToolStripMenuItem.Enabled = false;
+                verEmpleadosToolStripMenuItem1.Enabled = false;
+            }
+            else {
+                MessageBox.Show("Bienvenido Administrador" + Program.UsuarioActual, "Ferropapus", MessageBoxButtons.OK);
+            }
         }
         public void ShowFormInContentPanel(Form formToShow)
         {
