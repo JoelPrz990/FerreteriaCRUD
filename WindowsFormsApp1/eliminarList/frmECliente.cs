@@ -58,6 +58,7 @@ namespace WindowsFormsApp1.eliminarList
         }
         public void reload() {
             Clientes clientes = clienteBLL.GetAll();
+            cboxClientes.Items.Clear();
             foreach (Cliente cliente in clientes)
             {
                 cboxClientes.Items.Add(cliente.Nombre_Cliente);

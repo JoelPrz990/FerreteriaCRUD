@@ -53,6 +53,7 @@ namespace WindowsFormsApp1.eliminarList
         }
         public void reload() {
             Productos productos = productoBLL.GetAll();
+            cboxProductos.Items.Clear();
             foreach (Producto producto in productos)
             {
                 cboxProductos.Items.Add(producto.Nombre_Producto);

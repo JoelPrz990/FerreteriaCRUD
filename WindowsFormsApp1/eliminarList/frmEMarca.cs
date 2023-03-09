@@ -51,6 +51,7 @@ namespace WindowsFormsApp1.eliminarList
         public void reload()
         {
             Marcas marcas = marcaBLL.GetAll();
+            cboxMarcas.Items.Clear();
             foreach (Marca marca in marcas)
             {
                 cboxMarcas.Items.Add(marca.Nombre_Marca);

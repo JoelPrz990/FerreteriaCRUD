@@ -54,6 +54,7 @@ namespace WindowsFormsApp1.eliminarList
         public void reload() {
             cboxProveedores.SelectedIndex = -1;
             Proveedores proveedores = proveedorBLL.GetAll();
+            cboxProveedores.Items.Clear();
             foreach (Proveedor proveedor in proveedores)
             {
                 cboxProveedores.Items.Add(proveedor.Nombre_Proveedor);

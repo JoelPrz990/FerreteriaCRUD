@@ -54,6 +54,7 @@ namespace WindowsFormsApp1.eliminarList
         }
         public void reload() {
             Empleados empleados = empleadoBLL.GetAll();
+            cboxEmpleado.Items.Clear();
             foreach (Empleado empleado in empleados)
             {
                 cboxEmpleado.Items.Add(empleado.Nombre_Usuario);

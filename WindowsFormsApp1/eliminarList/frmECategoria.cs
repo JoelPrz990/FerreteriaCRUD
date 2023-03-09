@@ -58,6 +58,7 @@ namespace WindowsFormsApp1.eliminarList
         }
         private void reload() {
             Categorias categorias = categoriaBLL.GetAll();
+            cboxCategorias.Items.Clear();
             foreach (Categoria categoria in categorias)
             {
                 cboxCategorias.Items.Add(categoria.Nombre_Categoria);
