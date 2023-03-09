@@ -147,31 +147,31 @@ namespace ViewLayer
             // nuevaCategoriaToolStripMenuItem
             // 
             this.nuevaCategoriaToolStripMenuItem.Name = "nuevaCategoriaToolStripMenuItem";
-            this.nuevaCategoriaToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevaCategoriaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevaCategoriaToolStripMenuItem.Text = "Nueva Categoria";
             // 
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             // 
             // nuevaMarcaToolStripMenuItem
             // 
             this.nuevaMarcaToolStripMenuItem.Name = "nuevaMarcaToolStripMenuItem";
-            this.nuevaMarcaToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevaMarcaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevaMarcaToolStripMenuItem.Text = "Nueva Marca";
             // 
             // nuevoProductoToolStripMenuItem
             // 
             this.nuevoProductoToolStripMenuItem.Name = "nuevoProductoToolStripMenuItem";
-            this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevoProductoToolStripMenuItem.Text = "Nuevo Producto";
             // 
             // nuevoProveedorToolStripMenuItem
             // 
             this.nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
-            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevoProveedorToolStripMenuItem.Text = "Nuevo Proveedor";
             // 
             // consultarElementosToolStripMenuItem

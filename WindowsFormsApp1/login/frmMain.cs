@@ -27,8 +27,9 @@ namespace ViewLayer
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            #region importaciones de ventanas
             //frames Actualizar
-            frmACliente frmACliente= new frmACliente();
+            frmACliente frmACliente = new frmACliente();
             frmACategoria frmACategoria= new frmACategoria();
             frmAMarca frmAMarca = new frmAMarca();
             frmAProducto frmAProducto = new frmAProducto();
@@ -61,7 +62,9 @@ namespace ViewLayer
             frmEMarca frmEMarca = new frmEMarca();
             frmEProducto frmEProducto = new frmEProducto();
             frmEProveedor frmEProveedor = new frmEProveedor();
+            #endregion
 
+            #region acciones de los botones
             //Lista ver 
             verProductosToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmProductos); 
             verCategoriasToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmCategorias);
@@ -69,6 +72,28 @@ namespace ViewLayer
             verEmpleadosToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmEmpleados);
             verMarcasToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmMarcas);
             verProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmProveedores);
+
+            //lista agregar
+            nuevaCategoriaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNCategoria);
+            nuevoClienteToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNCliente);
+            nuevaMarcaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNMarca);
+            nuevoProductoToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNProducto);
+            nuevoProveedorToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNProveedor);
+
+            //lista eliminar
+            eliminarCategoriasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmECategoria);
+            eliminarClientesToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmECliente);
+            eliminarMarcasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmEMarca);
+            eliminarProductosToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmEProducto);
+            eliminarProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmEProveedor);
+
+            //lista Actualizar
+            actualizarCategoriaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmACategoria);
+            actualizarClienteToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmACliente);
+            actualizarMarcasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmAMarca);
+            actualizarProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmAProveedor);
+            acutalizarProductosToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmProductos);
+
 
             //botones menustrip
             nuevaVentaToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmNVenta);
@@ -80,32 +105,25 @@ namespace ViewLayer
             frmStartup.btnVerClientes.Click += (s, ea) => ShowFormInContentPanel(frmClientes);
             frmStartup.btnVerVenta.Click += (s, ea) =>  ShowFormInContentPanel(frmVentas);
             frmStartup.btnAgregarCliente.Click += (s, ea) => ShowFormInContentPanel(frmNCliente);
+            #endregion
 
             //mostrar pagina startup al inicio
-            //ShowFormInContentPanel(frmStartup);
+            ShowFormInContentPanel(frmStartup);
         }
-
-        private Form currentForm = null;
         public void ShowFormInContentPanel(Form formToShow)
         {
-            // Obtener el formulario actual
             Form currentForm = tscMain.ContentPanel.Controls.OfType<Form>().FirstOrDefault();
             if (currentForm != null)
             {
-                // Cerrar el formulario actual
                 currentForm.Hide();
             }
 
             Panel contentPanel = tscMain.ContentPanel;
-            // Elimina cualquier control existente del ContentPanel
             contentPanel.Controls.Clear();
-            // Ajusta el formulario para que se muestre en el ContentPanel
             formToShow.TopLevel = false;
             formToShow.FormBorderStyle = FormBorderStyle.None;
             formToShow.Dock = DockStyle.Fill;
-            // Agrega el formulario al ContentPanel
             contentPanel.Controls.Add(formToShow);
-            // Muestra el formulario
             formToShow.Show();
             formToShow.Focus();
         }
@@ -139,17 +157,12 @@ namespace ViewLayer
             }
         }
 
-        private void menu_Enter(object sender, EventArgs e)
-        {
-            menu.Focus();             
-        }
-
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             {
                 if (mostrarMensaje && MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
                 {
-                    e.Cancel = true; // Cancelar el cierre del formulario
+                    e.Cancel = true;
                 }
             }
         }
