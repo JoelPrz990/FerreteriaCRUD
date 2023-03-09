@@ -76,7 +76,7 @@ namespace BOL.Proveedor
                     {
                         ID_Proveedor = (int)item["ID_Proveedor"],
                         Nombre_Proveedor = (string)item["Nombre_Proveedor"],
-                        Direccion_Proveedor = (string)item["Direccion_Provedor"],
+                        Direccion_Proveedor = (string)item["Direccion_Proveedor"],
                         Telefono_Proveedor = (string)item["Telefono_Proveedor"],
                         Email_Proveedor= (string)item["Email_Proveedor"],
                         activo = (bool)item["activo"]

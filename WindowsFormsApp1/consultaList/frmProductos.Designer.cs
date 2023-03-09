@@ -44,7 +44,7 @@ namespace ViewLayer
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(961, 397);
+            this.groupBox1.Size = new System.Drawing.Size(1004, 397);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos Disponibles";
@@ -65,7 +65,7 @@ namespace ViewLayer
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 29;
-            this.dgvProductos.Size = new System.Drawing.Size(955, 376);
+            this.dgvProductos.Size = new System.Drawing.Size(998, 376);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.TabStop = false;
             // 
@@ -84,7 +84,7 @@ namespace ViewLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(985, 470);
+            this.ClientSize = new System.Drawing.Size(1028, 535);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

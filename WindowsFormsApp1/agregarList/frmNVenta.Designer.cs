@@ -114,6 +114,7 @@ namespace ViewLayer.agregarList
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(718, 114);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
@@ -173,12 +174,12 @@ namespace ViewLayer.agregarList
             this.dgvProductos.Size = new System.Drawing.Size(983, 206);
             this.dgvProductos.StandardTab = true;
             this.dgvProductos.TabIndex = 12;
-            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);          
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // btnAlmacenar
             // 
             this.btnAlmacenar.Location = new System.Drawing.Point(718, 29);
-            this.btnAlmacenar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);                    
+            this.btnAlmacenar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAlmacenar.Name = "btnAlmacenar";
             this.btnAlmacenar.Size = new System.Drawing.Size(124, 81);
             this.btnAlmacenar.TabIndex = 13;
@@ -219,9 +220,11 @@ namespace ViewLayer.agregarList
             // 
             // frmNVenta
             // 
+            this.AcceptButton = this.btnAlmacenar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(1028, 535);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);

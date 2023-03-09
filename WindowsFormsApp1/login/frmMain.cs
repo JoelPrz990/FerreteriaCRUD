@@ -127,7 +127,6 @@ namespace ViewLayer
                 verEmpleadosToolStripMenuItem1.Enabled = false;
             }
             else {
-                MessageBox.Show("Bienvenido Administrador" + Program.UsuarioActual, "Ferropapus", MessageBoxButtons.OK);
             }
         }
         public void ShowFormInContentPanel(Form formToShow)

@@ -225,6 +225,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="actualizarList\frmACategoria.resx">
+      <DependentUpon>frmACategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarList\frmACliente.resx">
+      <DependentUpon>frmACliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarList\frmAMarca.resx">
+      <DependentUpon>frmAMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarList\frmAProducto.resx">
+      <DependentUpon>frmAProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarList\frmAProveedor.resx">
+      <DependentUpon>frmAProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="agregarList\cantidadDialog.resx">
       <DependentUpon>cantidadDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +284,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consultaList\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarList\frmECategoria.resx">
+      <DependentUpon>frmECategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarList\frmECliente.resx">
+      <DependentUpon>frmECliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarList\frmEMarca.resx">
+      <DependentUpon>frmEMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarList\frmEProducto.resx">
+      <DependentUpon>frmEProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eliminarList\frmEProveedor.resx">
+      <DependentUpon>frmEProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
