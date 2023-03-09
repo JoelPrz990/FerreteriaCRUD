@@ -58,6 +58,7 @@ namespace WindowsFormsApp1.actualizarList
             MessageBox.Show("Campos limpiados", "FerroPapus",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
             cboxCategoria.SelectedIndex = -1;
+            reload();
         }
         public void reload() {
             Categorias categorias = categoriaBLL.GetAll();

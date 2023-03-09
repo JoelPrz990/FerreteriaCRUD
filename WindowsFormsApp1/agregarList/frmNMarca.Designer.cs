@@ -31,6 +31,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvMarca = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cboxProveedor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,8 +89,19 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(239, 23);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Agregue primero el proveedor";
+            // 
             // cboxProveedor
             // 
+            this.cboxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxProveedor.FormattingEnabled = true;
             this.cboxProveedor.Location = new System.Drawing.Point(424, 150);
             this.cboxProveedor.Name = "cboxProveedor";
@@ -155,16 +166,6 @@
             this.label2.Size = new System.Drawing.Size(225, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre de la marca nueva";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Agregue primero el proveedor";
             // 
             // frmNMarca
             // 

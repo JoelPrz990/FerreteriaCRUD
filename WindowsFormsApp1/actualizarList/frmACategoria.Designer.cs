@@ -89,6 +89,7 @@
             // 
             // cboxCategoria
             // 
+            this.cboxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCategoria.FormattingEnabled = true;
             this.cboxCategoria.Location = new System.Drawing.Point(461, 75);
             this.cboxCategoria.Name = "cboxCategoria";

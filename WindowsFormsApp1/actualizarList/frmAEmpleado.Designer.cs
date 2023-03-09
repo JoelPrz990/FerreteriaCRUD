@@ -31,6 +31,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboxCargo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -44,12 +50,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cboxCargo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -111,6 +111,66 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
+            // txtPass
+            // 
+            this.txtPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPass.Location = new System.Drawing.Point(461, 336);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(383, 22);
+            this.txtPass.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(25, 338);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Contraseña";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUsuario.Location = new System.Drawing.Point(461, 306);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(383, 22);
+            this.txtUsuario.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 308);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(162, 20);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Nombre de usuario";
+            // 
+            // cboxCargo
+            // 
+            this.cboxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCargo.FormattingEnabled = true;
+            this.cboxCargo.Items.AddRange(new object[] {
+            "CAJERO",
+            "ALMACEN",
+            "ADMINISTRADOR"});
+            this.cboxCargo.Location = new System.Drawing.Point(461, 272);
+            this.cboxCargo.Name = "cboxCargo";
+            this.cboxCargo.Size = new System.Drawing.Size(383, 24);
+            this.cboxCargo.TabIndex = 6;
+            this.cboxCargo.SelectedIndexChanged += new System.EventHandler(this.cboxCargo_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(27, 272);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(225, 20);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Nuevo cargo del empleado";
+            // 
             // txtEmail
             // 
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -167,6 +227,7 @@
             // 
             // cboxEmpleado
             // 
+            this.cboxEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEmpleado.FormattingEnabled = true;
             this.cboxEmpleado.Location = new System.Drawing.Point(461, 88);
             this.cboxEmpleado.Name = "cboxEmpleado";
@@ -231,64 +292,6 @@
             this.label2.Size = new System.Drawing.Size(234, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nuevo nombre del empleado";
-            // 
-            // cboxCargo
-            // 
-            this.cboxCargo.FormattingEnabled = true;
-            this.cboxCargo.Items.AddRange(new object[] {
-            "CAJERO",
-            "ALMACEN",
-            "ADMINISTRADOR"});
-            this.cboxCargo.Location = new System.Drawing.Point(461, 272);
-            this.cboxCargo.Name = "cboxCargo";
-            this.cboxCargo.Size = new System.Drawing.Size(383, 24);
-            this.cboxCargo.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 272);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(225, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Nuevo cargo del empleado";
-            // 
-            // txtPass
-            // 
-            this.txtPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPass.Location = new System.Drawing.Point(461, 336);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(383, 22);
-            this.txtPass.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 338);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 20);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Contraseña";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUsuario.Location = new System.Drawing.Point(461, 306);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(383, 22);
-            this.txtUsuario.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 308);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 20);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Nombre de usuario";
             // 
             // frmAEmpleado
             // 

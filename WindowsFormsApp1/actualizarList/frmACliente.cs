@@ -56,6 +56,7 @@ namespace WindowsFormsApp1.actualizarList
             MessageBox.Show("Campos limpiados", "FerroPapus",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
             cboxCliente.SelectedIndex = -1;
+            reload();
         }
 
         private void frmACliente_Enter(object sender, EventArgs e)

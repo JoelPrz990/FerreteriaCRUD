@@ -104,7 +104,7 @@ namespace ViewLayer
             actualizarClienteToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmACliente);
             actualizarMarcasToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmAMarca);
             actualizarProveedoresToolStripMenuItem1.Click += (s, ea) => ShowFormInContentPanel(frmAProveedor);
-            acutalizarProductosToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmProductos);
+            acutalizarProductosToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmAProducto);
             actualizarEmpleadoToolStripMenuItem.Click += (s, ea) => ShowFormInContentPanel(frmAEmpleado);
 
 

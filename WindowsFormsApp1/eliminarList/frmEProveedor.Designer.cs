@@ -84,6 +84,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(607, 198);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(109, 57);
@@ -104,6 +105,7 @@
             // 
             // cboxProveedores
             // 
+            this.cboxProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxProveedores.FormattingEnabled = true;
             this.cboxProveedores.Location = new System.Drawing.Point(344, 96);
             this.cboxProveedores.Name = "cboxProveedores";

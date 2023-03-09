@@ -31,6 +31,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cboxCliente = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -38,12 +44,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -99,8 +99,63 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEmail.Location = new System.Drawing.Point(461, 236);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(383, 22);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(216, 20);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nuevo email del cliente";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTelefono.Location = new System.Drawing.Point(461, 201);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(383, 22);
+            this.txtTelefono.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(243, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Nuevo telefono del cliente";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDireccion.Location = new System.Drawing.Point(461, 167);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(383, 22);
+            this.txtDireccion.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(252, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nueva direccion del cliente";
+            // 
             // cboxCliente
             // 
+            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCliente.FormattingEnabled = true;
             this.cboxCliente.Location = new System.Drawing.Point(461, 88);
             this.cboxCliente.Name = "cboxCliente";
@@ -166,60 +221,6 @@
             this.label2.Size = new System.Drawing.Size(225, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nuevo nombre del cliente";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDireccion.Location = new System.Drawing.Point(461, 167);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(383, 22);
-            this.txtDireccion.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(252, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Nueva direccion del cliente";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTelefono.Location = new System.Drawing.Point(461, 201);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(383, 22);
-            this.txtTelefono.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(243, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Nuevo telefono del cliente";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEmail.Location = new System.Drawing.Point(461, 236);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(383, 22);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(216, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nuevo email del cliente";
             // 
             // frmACliente
             // 

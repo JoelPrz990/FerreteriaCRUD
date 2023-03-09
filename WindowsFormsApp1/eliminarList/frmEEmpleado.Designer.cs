@@ -95,6 +95,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnEliminar.Location = new System.Drawing.Point(437, 198);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(109, 57);
@@ -105,6 +106,7 @@
             // 
             // cboxEmpleado
             // 
+            this.cboxEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEmpleado.FormattingEnabled = true;
             this.cboxEmpleado.Location = new System.Drawing.Point(344, 96);
             this.cboxEmpleado.Name = "cboxEmpleado";
@@ -133,9 +135,11 @@
             // 
             // frmEEmpleado
             // 
+            this.AcceptButton = this.btnEliminar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(1028, 535);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

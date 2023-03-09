@@ -31,6 +31,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtStock = new System.Windows.Forms.MaskedTextBox();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
+            this.cboxCategoria = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboxMarca = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
@@ -40,12 +46,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cboxMarca = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboxCategoria = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.txtStock = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -102,6 +102,63 @@
             this.groupBox1.Size = new System.Drawing.Size(1004, 356);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(350, 298);
+            this.txtStock.Mask = "99999";
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(100, 22);
+            this.txtStock.TabIndex = 7;
+            this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStock.ValidatingType = typeof(int);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(350, 256);
+            this.txtPrecio.Mask = "000.00";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cboxCategoria
+            // 
+            this.cboxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCategoria.FormattingEnabled = true;
+            this.cboxCategoria.Location = new System.Drawing.Point(350, 215);
+            this.cboxCategoria.Name = "cboxCategoria";
+            this.cboxCategoria.Size = new System.Drawing.Size(433, 24);
+            this.cboxCategoria.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(25, 215);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(207, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Categoria del producto";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 298);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Stock disponible";
+            // 
+            // cboxMarca
+            // 
+            this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMarca.FormattingEnabled = true;
+            this.cboxMarca.Location = new System.Drawing.Point(350, 172);
+            this.cboxMarca.Name = "cboxMarca";
+            this.cboxMarca.Size = new System.Drawing.Size(433, 24);
+            this.cboxMarca.TabIndex = 4;
             // 
             // label5
             // 
@@ -189,61 +246,6 @@
             this.label2.Size = new System.Drawing.Size(180, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre del producto";
-            // 
-            // cboxMarca
-            // 
-            this.cboxMarca.FormattingEnabled = true;
-            this.cboxMarca.Location = new System.Drawing.Point(350, 172);
-            this.cboxMarca.Name = "cboxMarca";
-            this.cboxMarca.Size = new System.Drawing.Size(433, 24);
-            this.cboxMarca.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 298);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Stock disponible";
-            // 
-            // cboxCategoria
-            // 
-            this.cboxCategoria.FormattingEnabled = true;
-            this.cboxCategoria.Location = new System.Drawing.Point(350, 215);
-            this.cboxCategoria.Name = "cboxCategoria";
-            this.cboxCategoria.Size = new System.Drawing.Size(433, 24);
-            this.cboxCategoria.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 215);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(207, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Categoria del producto";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(350, 256);
-            this.txtPrecio.Mask = "000.00";
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 22);
-            this.txtPrecio.TabIndex = 6;
-            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(350, 298);
-            this.txtStock.Mask = "99999";
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(100, 22);
-            this.txtStock.TabIndex = 7;
-            this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtStock.ValidatingType = typeof(int);
             // 
             // frmNProducto
             // 

@@ -44,6 +44,7 @@ namespace ViewLayer.agregarList
             this.boxCliente = new System.Windows.Forms.ComboBox();
             this.labelEmpleado = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -85,6 +86,7 @@ namespace ViewLayer.agregarList
             this.txtFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFecha.Mask = "00/00/0000";
             this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(90, 22);
             this.txtFecha.TabIndex = 6;
             this.txtFecha.ValidatingType = typeof(System.DateTime);
@@ -92,6 +94,7 @@ namespace ViewLayer.agregarList
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.label5);
@@ -189,6 +192,7 @@ namespace ViewLayer.agregarList
             // 
             // boxCliente
             // 
+            this.boxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCliente.FormattingEnabled = true;
             this.boxCliente.Location = new System.Drawing.Point(310, 114);
             this.boxCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -217,6 +221,16 @@ namespace ViewLayer.agregarList
             this.label4.Size = new System.Drawing.Size(240, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Agregar una nueva venta";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            this.label6.Location = new System.Drawing.Point(0, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(435, 23);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Haga clic en los productos de la lista que desea agregar";
             // 
             // frmNVenta
             // 
@@ -258,5 +272,6 @@ namespace ViewLayer.agregarList
         private Label label5;
         public MaskedTextBox txtFecha;
         private Button btnCancelar;
+        private Label label6;
     }
 }

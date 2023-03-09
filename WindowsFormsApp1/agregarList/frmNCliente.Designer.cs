@@ -162,6 +162,7 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAceptar.Location = new System.Drawing.Point(412, 290);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(102, 40);
@@ -200,9 +201,11 @@
             // 
             // frmNCliente
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(1028, 535);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

@@ -62,6 +62,7 @@ namespace WindowsFormsApp1.actualizarList
             MessageBox.Show("Campos limpiados", "FerroPapus",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
             cboxEmpleado.SelectedIndex = -1;
+            reload();
         }
 
         private void frmAEmpleado_Enter(object sender, EventArgs e)
@@ -85,6 +86,11 @@ namespace WindowsFormsApp1.actualizarList
             dgvEmpleado.DataSource = empleadoBLL.GetAll();
             dgvEmpleado.Columns["ID_Empleado"].Visible = false;
             dgvEmpleado.Columns["activo"].Visible = false;
+        }
+
+        private void cboxCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -104,6 +104,8 @@ namespace WindowsFormsApp1.agregarList
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+
+            
             MessageBox.Show("Campos limpiados", "FerroPapus",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtNombre.Clear();
