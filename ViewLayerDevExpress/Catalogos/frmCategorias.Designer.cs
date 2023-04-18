@@ -43,19 +43,23 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.categoriaBLLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gcCategorias
             // 
-            this.gcCategorias.DataSource = this.categoriaBLLBindingSource;
-            this.gcCategorias.Location = new System.Drawing.Point(12, 36);
+            this.gcCategorias.DataSource = this.categoriaBLLBindingSource1;
+            this.gcCategorias.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gcCategorias.Location = new System.Drawing.Point(12, 47);
             this.gcCategorias.MainView = this.gvCategorias;
+            this.gcCategorias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcCategorias.Name = "gcCategorias";
-            this.gcCategorias.Size = new System.Drawing.Size(843, 447);
+            this.gcCategorias.Size = new System.Drawing.Size(963, 559);
             this.gcCategorias.TabIndex = 0;
             this.gcCategorias.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCategorias});
@@ -66,6 +70,7 @@
             // 
             // gvCategorias
             // 
+            this.gvCategorias.DetailHeight = 437;
             this.gvCategorias.GridControl = this.gcCategorias;
             this.gvCategorias.Name = "gvCategorias";
             // 
@@ -102,28 +107,28 @@
             // 
             this.btnNuevoCat.Caption = "Nuevo";
             this.btnNuevoCat.Id = 0;
-            this.btnNuevoCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnNuevoCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNuevoCat.ImageOptions.SvgImage")));
             this.btnNuevoCat.Name = "btnNuevoCat";
             // 
             // btnEditCat
             // 
             this.btnEditCat.Caption = "Editar";
             this.btnEditCat.Id = 1;
-            this.btnEditCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.btnEditCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditCat.ImageOptions.SvgImage")));
             this.btnEditCat.Name = "btnEditCat";
             // 
             // btnEliminarCat
             // 
             this.btnEliminarCat.Caption = "Eliminar";
             this.btnEliminarCat.Id = 2;
-            this.btnEliminarCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.btnEliminarCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminarCat.ImageOptions.SvgImage")));
             this.btnEliminarCat.Name = "btnEliminarCat";
             // 
             // btnActualizCat
             // 
             this.btnActualizCat.Caption = "Actualizar";
             this.btnActualizCat.Id = 3;
-            this.btnActualizCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
+            this.btnActualizCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnActualizCat.ImageOptions.SvgImage")));
             this.btnActualizCat.Name = "btnActualizCat";
             // 
             // barDockControlTop
@@ -132,49 +137,59 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(867, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(991, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 495);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 619);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(867, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(991, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 465);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 579);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(867, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(991, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 465);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 579);
+            // 
+            // categoriaBLLBindingSource1
+            // 
+            this.categoriaBLLBindingSource1.DataSource = typeof(BLL.CategoriaBLL);
             // 
             // frmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 495);
+            this.ClientSize = new System.Drawing.Size(991, 619);
             this.Controls.Add(this.gcCategorias);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCategorias";
             this.Text = "frmCategorias";
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +210,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private System.Windows.Forms.BindingSource categoriaBLLBindingSource1;
     }
 }

@@ -33,10 +33,18 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.topBar = new DevExpress.XtraBars.Bar();
             this.menuArchivo = new DevExpress.XtraBars.BarSubItem();
+            this.btnEmpleadoAct = new DevExpress.XtraBars.BarButtonItem();
             this.btnSalir = new DevExpress.XtraBars.BarButtonItem();
             this.btnInicio = new DevExpress.XtraBars.BarButtonItem();
             this.menuCatalogo = new DevExpress.XtraBars.BarSubItem();
             this.btnCategorias = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMarcas = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
+            this.menuEmpresa = new DevExpress.XtraBars.BarSubItem();
+            this.btnProveedor = new DevExpress.XtraBars.BarButtonItem();
+            this.btnClientes = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVentas = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEmpleados = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -44,16 +52,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnMarcas = new DevExpress.XtraBars.BarButtonItem();
-            this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.menuEmpresa = new DevExpress.XtraBars.BarSubItem();
-            this.btnProveedor = new DevExpress.XtraBars.BarButtonItem();
-            this.btnClientes = new DevExpress.XtraBars.BarButtonItem();
-            this.btnVentas = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEmpleados = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEmpleadoAct = new DevExpress.XtraBars.BarButtonItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -113,11 +113,18 @@
             // 
             this.menuArchivo.Caption = "Archivo";
             this.menuArchivo.Id = 1;
-            this.menuArchivo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem1.ImageOptions.SvgImage")));
+            this.menuArchivo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("menuArchivo.ImageOptions.SvgImage")));
             this.menuArchivo.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmpleadoAct, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSalir, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.menuArchivo.Name = "menuArchivo";
+            // 
+            // btnEmpleadoAct
+            // 
+            this.btnEmpleadoAct.Caption = "Empleado Actual";
+            this.btnEmpleadoAct.Id = 19;
+            this.btnEmpleadoAct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmpleadoAct.ImageOptions.SvgImage")));
+            this.btnEmpleadoAct.Name = "btnEmpleadoAct";
             // 
             // btnSalir
             // 
@@ -131,8 +138,8 @@
             // 
             this.btnInicio.Caption = "Inicio";
             this.btnInicio.Id = 0;
-            this.btnInicio.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnInicio.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnInicio.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.ImageOptions.Image")));
+            this.btnInicio.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInicio.ImageOptions.LargeImage")));
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
@@ -140,8 +147,8 @@
             // 
             this.menuCatalogo.Caption = "Catalogo";
             this.menuCatalogo.Id = 2;
-            this.menuCatalogo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.Image")));
-            this.menuCatalogo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.LargeImage")));
+            this.menuCatalogo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("menuCatalogo.ImageOptions.Image")));
+            this.menuCatalogo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("menuCatalogo.ImageOptions.LargeImage")));
             this.menuCatalogo.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnCategorias, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnMarcas, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -156,12 +163,66 @@
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
+            // btnMarcas
+            // 
+            this.btnMarcas.Caption = "Marcas";
+            this.btnMarcas.Id = 9;
+            this.btnMarcas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMarcas.ImageOptions.SvgImage")));
+            this.btnMarcas.Name = "btnMarcas";
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.Caption = "Productos";
+            this.btnProductos.Id = 10;
+            this.btnProductos.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProductos.ImageOptions.SvgImage")));
+            this.btnProductos.Name = "btnProductos";
+            // 
+            // menuEmpresa
+            // 
+            this.menuEmpresa.Caption = "Empresa";
+            this.menuEmpresa.Id = 14;
+            this.menuEmpresa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("menuEmpresa.ImageOptions.SvgImage")));
+            this.menuEmpresa.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnProveedor, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnClientes, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnVentas, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmpleados, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.menuEmpresa.Name = "menuEmpresa";
+            // 
+            // btnProveedor
+            // 
+            this.btnProveedor.Caption = "Proveedores";
+            this.btnProveedor.Id = 15;
+            this.btnProveedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProveedor.ImageOptions.SvgImage")));
+            this.btnProveedor.Name = "btnProveedor";
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Caption = "Clientes";
+            this.btnClientes.Id = 16;
+            this.btnClientes.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClientes.ImageOptions.SvgImage")));
+            this.btnClientes.Name = "btnClientes";
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.Caption = "Ventas";
+            this.btnVentas.Id = 17;
+            this.btnVentas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVentas.ImageOptions.SvgImage")));
+            this.btnVentas.Name = "btnVentas";
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.Caption = "Empleados";
+            this.btnEmpleados.Id = 18;
+            this.btnEmpleados.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmpleados.ImageOptions.SvgImage")));
+            this.btnEmpleados.Name = "btnEmpleados";
+            // 
             // btnLogout
             // 
             this.btnLogout.Caption = "Cerrar Sesion";
             this.btnLogout.Id = 6;
-            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.btnLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.Image")));
+            this.btnLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.LargeImage")));
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
@@ -184,34 +245,34 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlTop.Size = new System.Drawing.Size(873, 35);
+            this.barDockControlTop.Size = new System.Drawing.Size(998, 47);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 534);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 666);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(873, 21);
+            this.barDockControlBottom.Size = new System.Drawing.Size(998, 28);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 35);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 499);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 619);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(873, 35);
+            this.barDockControlRight.Location = new System.Drawing.Point(998, 47);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 499);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 619);
             // 
             // barButtonItem2
             // 
@@ -219,81 +280,20 @@
             this.barButtonItem2.Id = 5;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // btnMarcas
-            // 
-            this.btnMarcas.Caption = "Marcas";
-            this.btnMarcas.Id = 9;
-            this.btnMarcas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMarcas.ImageOptions.SvgImage")));
-            this.btnMarcas.Name = "btnMarcas";
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Caption = "Productos";
-            this.btnProductos.Id = 10;
-            this.btnProductos.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
-            this.btnProductos.Name = "btnProductos";
-            // 
             // barButtonItem7
             // 
             this.barButtonItem7.Id = 13;
             this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // menuEmpresa
+            // xtraTabbedMdiManager1
             // 
-            this.menuEmpresa.Caption = "Empresa";
-            this.menuEmpresa.Id = 14;
-            this.menuEmpresa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("menuEmpresa.ImageOptions.SvgImage")));
-            this.menuEmpresa.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnProveedor, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnClientes, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnVentas, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmpleados, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.menuEmpresa.Name = "menuEmpresa";
-            // 
-            // btnProveedor
-            // 
-            this.btnProveedor.Caption = "Proveedores";
-            this.btnProveedor.Id = 15;
-            this.btnProveedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
-            this.btnProveedor.Name = "btnProveedor";
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Caption = "Clientes";
-            this.btnClientes.Id = 16;
-            this.btnClientes.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
-            this.btnClientes.Name = "btnClientes";
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.Caption = "Ventas";
-            this.btnVentas.Id = 17;
-            this.btnVentas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem9.ImageOptions.SvgImage")));
-            this.btnVentas.Name = "btnVentas";
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.Caption = "Empleados";
-            this.btnEmpleados.Id = 18;
-            this.btnEmpleados.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem6.ImageOptions.SvgImage")));
-            this.btnEmpleados.Name = "btnEmpleados";
-            // 
-            // btnEmpleadoAct
-            // 
-            this.btnEmpleadoAct.Caption = "Empleado Actual";
-            this.btnEmpleadoAct.Id = 19;
-            this.btnEmpleadoAct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmpleado.ImageOptions.SvgImage")));
-            this.btnEmpleadoAct.Name = "btnEmpleadoAct";
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 555);
+            this.ClientSize = new System.Drawing.Size(998, 694);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -305,7 +305,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FerrePAPUS";
+            this.Text = "FerroPAPUS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

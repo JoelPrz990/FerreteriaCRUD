@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using BLL;
+using BOL.Empleado;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,10 +26,20 @@ namespace ViewLayerDevExpress.Login
         private void frmMain_Load(object sender, EventArgs e)
         {
             new frmStart() { MdiParent = this }.Show();
-            frmLogin login = new frmLogin();
-            login.Dispose();
-            //frmSplash splash = new frmSplash();
-            //splash.Dispose();
+
+            EmpleadoBLL empleadoBLL = EmpleadoBLL.Instance();
+            cargo = empleadoBLL.getByName(new Empleado()
+            {
+                Nombre_Usuario = Program.UsuarioActual
+            }).Cargo_Empleado;
+
+            if (!cargo.Equals("ADMINISTRADOR"))
+            {
+                btnEmpleados.Enabled = false;
+            }
+            else
+            {
+            }
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
