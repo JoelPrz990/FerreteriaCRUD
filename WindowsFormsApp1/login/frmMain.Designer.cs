@@ -56,15 +56,15 @@ namespace ViewLayer
             this.eliminarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarProductosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarElementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acutalizarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscMain.SuspendLayout();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -77,14 +77,14 @@ namespace ViewLayer
             // 
             this.tscMain.ContentPanel.BackColor = System.Drawing.Color.Linen;
             this.tscMain.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tscMain.ContentPanel.Size = new System.Drawing.Size(1023, 542);
+            this.tscMain.ContentPanel.Size = new System.Drawing.Size(1023, 678);
             this.tscMain.LeftToolStripPanelVisible = false;
-            this.tscMain.Location = new System.Drawing.Point(0, 30);
+            this.tscMain.Location = new System.Drawing.Point(0, 38);
             this.tscMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tscMain.Name = "tscMain";
-            this.tscMain.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.tscMain.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tscMain.RightToolStripPanelVisible = false;
-            this.tscMain.Size = new System.Drawing.Size(1033, 550);
+            this.tscMain.Size = new System.Drawing.Size(1033, 688);
             this.tscMain.TabIndex = 2;
             // 
             // tscMain.TopToolStripPanel
@@ -107,6 +107,7 @@ namespace ViewLayer
             this.cerrarSesionToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
+            this.menu.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menu.ShowItemToolTips = true;
             this.menu.Size = new System.Drawing.Size(1033, 28);
@@ -280,6 +281,12 @@ namespace ViewLayer
             this.eliminarProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(238, 26);
             this.eliminarProveedoresToolStripMenuItem1.Text = "Eliminar Proveedores";
             // 
+            // eliminarEmpleadoToolStripMenuItem
+            // 
+            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
+            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado";
+            // 
             // actualizarElementosToolStripMenuItem
             // 
             this.actualizarElementosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -324,6 +331,12 @@ namespace ViewLayer
             this.actualizarProveedoresToolStripMenuItem1.Size = new System.Drawing.Size(250, 26);
             this.actualizarProveedoresToolStripMenuItem1.Text = "Actualizar Proveedores";
             // 
+            // actualizarEmpleadoToolStripMenuItem
+            // 
+            this.actualizarEmpleadoToolStripMenuItem.Name = "actualizarEmpleadoToolStripMenuItem";
+            this.actualizarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+            this.actualizarEmpleadoToolStripMenuItem.Text = "Actualizar Empleado";
+            // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.BackColor = System.Drawing.Color.IndianRed;
@@ -333,27 +346,16 @@ namespace ViewLayer
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar &Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
-            // eliminarEmpleadoToolStripMenuItem
-            // 
-            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
-            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado";
-            // 
-            // actualizarEmpleadoToolStripMenuItem
-            // 
-            this.actualizarEmpleadoToolStripMenuItem.Name = "actualizarEmpleadoToolStripMenuItem";
-            this.actualizarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
-            this.actualizarEmpleadoToolStripMenuItem.Text = "Actualizar Empleado";
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 591);
+            this.ClientSize = new System.Drawing.Size(1033, 744);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.tscMain);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmMain.IconOptions.Icon")));
             this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;

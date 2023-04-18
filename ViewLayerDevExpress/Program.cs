@@ -1,27 +1,28 @@
-﻿using System;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
+using System;
+using ViewLayerDevExpress.Login;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ViewLayer;
+using System.Runtime.CompilerServices;
 
-namespace WindowsFormsApp1
+namespace ViewLayerDevExpress
 {
     internal static class Program
     {
-
         public static string UsuarioActual;
         public static DateTime FechaHoy;
-
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// The main entry point for the application.
         /// </summary>
-        [STAThreadAttribute]
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmLogin());
         }
     }
 }

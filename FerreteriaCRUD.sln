@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. View Layer", "1. View La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewLayerCRUD", "WindowsFormsApp1\ViewLayerCRUD.csproj", "{CAC989E3-3844-4CF9-A078-8C96D22D7F5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewLayerDevExpress", "ViewLayerDevExpress\ViewLayerDevExpress.csproj", "{566A610B-2FB2-4E87-8D41-33B439027DD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{CAC989E3-3844-4CF9-A078-8C96D22D7F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAC989E3-3844-4CF9-A078-8C96D22D7F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAC989E3-3844-4CF9-A078-8C96D22D7F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566A610B-2FB2-4E87-8D41-33B439027DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566A610B-2FB2-4E87-8D41-33B439027DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566A610B-2FB2-4E87-8D41-33B439027DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566A610B-2FB2-4E87-8D41-33B439027DD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{1069AB28-CC1E-4AEE-AAD9-B146991EDC73} = {5DA510D2-7B11-48B0-8677-69BF413536B2}
 		{8FABC626-DB12-4C0F-AE97-448A8CC90B2A} = {FC2239CE-8146-406D-BA48-8E67EFAC2AFE}
 		{CAC989E3-3844-4CF9-A078-8C96D22D7F5E} = {8733B36E-A20D-427D-A4E9-83EE25C53177}
+		{566A610B-2FB2-4E87-8D41-33B439027DD0} = {8733B36E-A20D-427D-A4E9-83EE25C53177}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E29250E5-6E65-4B55-8B39-1C29A3E88B9A}

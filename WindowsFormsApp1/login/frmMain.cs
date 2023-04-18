@@ -21,7 +21,7 @@ using WindowsFormsApp1.eliminarList;
 
 namespace ViewLayer
 {
-    public partial class frmMain : Form
+    public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         private bool mostrarMensaje = true;
         private string cargo;
