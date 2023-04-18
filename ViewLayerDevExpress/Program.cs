@@ -14,6 +14,11 @@ namespace ViewLayerDevExpress
     {
         public static string UsuarioActual;
         public static DateTime FechaHoy;
+
+
+        public static frmMain mainfrm;
+        public static frmSplash splashfrm;
+        public static frmLogin loginfrm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,7 +27,12 @@ namespace ViewLayerDevExpress
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+
+            mainfrm = new frmMain();
+            splashfrm = new frmSplash();
+            loginfrm = new frmLogin();
+
+            Application.Run(loginfrm);
         }
     }
 }

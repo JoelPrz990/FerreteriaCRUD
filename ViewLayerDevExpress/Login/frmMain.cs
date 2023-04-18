@@ -72,8 +72,7 @@ namespace ViewLayerDevExpress.Login
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Dispose();
-            frmLogin login = new frmLogin();
-            login.Show();
+            Program.loginfrm.Show();
         }
     }
 }

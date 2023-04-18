@@ -43,6 +43,9 @@ namespace ViewLayerDevExpress.Login
                     frmSplash splashForm = new frmSplash();
                     splashForm.Show();
 
+                    Program.loginfrm.Hide();
+
+                    //splashForm.Show();
                     //Thread splashThread = new Thread(() => Application.Run(splashForm));
                     //splashThread.Start();
                 }
