@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using BLL;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,15 @@ namespace ViewLayerDevExpress.Catalogos
 {
     public partial class frmCategorias : DevExpress.XtraEditors.XtraForm
     {
+        CategoriaBLL categoriaBLL = CategoriaBLL.Instance();
         public frmCategorias()
         {
             InitializeComponent();
+        }
+
+        private void frmCategorias_Load(object sender, EventArgs e)
+        {
+            gcCategorias.DataSource = categoriaBLL.GetAll();
         }
     }
 }

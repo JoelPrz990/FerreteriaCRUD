@@ -31,8 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategorias));
             this.gcCategorias = new DevExpress.XtraGrid.GridControl();
-            this.categoriaBLLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvCategorias = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID_Categoria = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNombre_Categoria = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnNuevoCat = new DevExpress.XtraBars.BarButtonItem();
@@ -43,36 +46,67 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.categoriaBLLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gcCategorias
             // 
-            this.gcCategorias.DataSource = this.categoriaBLLBindingSource1;
+            this.gcCategorias.DataSource = this.categoriasBindingSource;
+            this.gcCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCategorias.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gcCategorias.Location = new System.Drawing.Point(12, 47);
+            this.gcCategorias.Location = new System.Drawing.Point(0, 40);
             this.gcCategorias.MainView = this.gvCategorias;
             this.gcCategorias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcCategorias.Name = "gcCategorias";
-            this.gcCategorias.Size = new System.Drawing.Size(963, 559);
+            this.gcCategorias.Size = new System.Drawing.Size(991, 579);
             this.gcCategorias.TabIndex = 0;
             this.gcCategorias.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCategorias});
             // 
-            // categoriaBLLBindingSource
+            // categoriasBindingSource
             // 
-            this.categoriaBLLBindingSource.DataSource = typeof(BLL.CategoriaBLL);
+            this.categoriasBindingSource.DataSource = typeof(BOL.Categoria.Categorias);
             // 
             // gvCategorias
             // 
+            this.gvCategorias.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID_Categoria,
+            this.colNombre_Categoria,
+            this.colactivo});
             this.gvCategorias.DetailHeight = 437;
             this.gvCategorias.GridControl = this.gcCategorias;
             this.gvCategorias.Name = "gvCategorias";
+            this.gvCategorias.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvCategorias.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvCategorias.OptionsBehavior.AutoPopulateColumns = false;
+            this.gvCategorias.OptionsBehavior.Editable = false;
+            this.gvCategorias.OptionsView.ColumnAutoWidth = false;
+            // 
+            // colID_Categoria
+            // 
+            this.colID_Categoria.FieldName = "ID_Categoria";
+            this.colID_Categoria.MinWidth = 25;
+            this.colID_Categoria.Name = "colID_Categoria";
+            this.colID_Categoria.Width = 86;
+            // 
+            // colNombre_Categoria
+            // 
+            this.colNombre_Categoria.FieldName = "Nombre_Categoria";
+            this.colNombre_Categoria.MinWidth = 25;
+            this.colNombre_Categoria.Name = "colNombre_Categoria";
+            this.colNombre_Categoria.Visible = true;
+            this.colNombre_Categoria.VisibleIndex = 0;
+            this.colNombre_Categoria.Width = 252;
+            // 
+            // colactivo
+            // 
+            this.colactivo.FieldName = "activo";
+            this.colactivo.MinWidth = 25;
+            this.colactivo.Name = "colactivo";
+            this.colactivo.Width = 86;
             // 
             // barManager1
             // 
@@ -167,10 +201,6 @@
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 579);
             // 
-            // categoriaBLLBindingSource1
-            // 
-            this.categoriaBLLBindingSource1.DataSource = typeof(BLL.CategoriaBLL);
-            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -184,12 +214,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCategorias";
-            this.Text = "frmCategorias";
+            this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBLLBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +228,6 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl gcCategorias;
-        private System.Windows.Forms.BindingSource categoriaBLLBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCategorias;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
@@ -210,6 +239,9 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private System.Windows.Forms.BindingSource categoriaBLLBindingSource1;
+        private System.Windows.Forms.BindingSource categoriasBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID_Categoria;
+        private DevExpress.XtraGrid.Columns.GridColumn colNombre_Categoria;
+        private DevExpress.XtraGrid.Columns.GridColumn colactivo;
     }
 }

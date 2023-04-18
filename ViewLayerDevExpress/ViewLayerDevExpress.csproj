@@ -157,6 +157,9 @@
     </Compile>
     <None Include="App.config" />
     <None Include="Properties\DataSources\BLL.CategoriaBLL.datasource" />
+    <None Include="Properties\DataSources\BOL.Categoria.Categoria.datasource" />
+    <None Include="Properties\DataSources\BOL.Categoria.CategoriaDAL.datasource" />
+    <None Include="Properties\DataSources\BOL.Categoria.Categorias.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
