@@ -31,7 +31,6 @@ namespace ViewLayerDevExpress.NewForms
             {
                 XtraMessageBox.Show("Llene el campo", Application.ProductName,
                     MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                return;
             }
             else
             {
@@ -42,7 +41,6 @@ namespace ViewLayerDevExpress.NewForms
                 XtraMessageBox.Show("Categoria Ingresada Correctamente", Application.ProductName,
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDescripcion.Clear();
-                //this.Dispose();
             }
         }
 
