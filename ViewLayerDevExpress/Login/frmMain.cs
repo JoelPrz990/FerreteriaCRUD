@@ -60,7 +60,7 @@ namespace ViewLayerDevExpress.Login
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (mostrarMensaje && MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (mostrarMensaje && XtraMessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true;
             }

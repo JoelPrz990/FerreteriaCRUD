@@ -30,7 +30,7 @@ namespace ViewLayerDevExpress.Catalogos
 
         private void btnEliminarCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (MessageBox.Show("¿Desea Eliminar el Objeto Seleccionado?",
+            if (XtraMessageBox.Show("¿Desea Eliminar el Objeto Seleccionado?",
                 Application.ProductName, MessageBoxButtons.YesNo)== DialogResult.Yes) {
 
                 int IdCategoria = (int)gvCategorias.GetFocusedRowCellValue("ID_Categoria");
@@ -47,7 +47,7 @@ namespace ViewLayerDevExpress.Catalogos
 
         private void btnActualizCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            MessageBox.Show("Actualizado", Application.ProductName, MessageBoxButtons.OK);
+            XtraMessageBox.Show("Actualizado", Application.ProductName, MessageBoxButtons.OK);
             categoriasBindingSource.DataSource = categoriaBLL.GetAll();
             gcCategorias.DataSource = categoriaBLL.GetAll();
         }

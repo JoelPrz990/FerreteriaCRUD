@@ -94,6 +94,7 @@
             // 
             // colNombre_Categoria
             // 
+            this.colNombre_Categoria.Caption = "Nombre de Categoria";
             this.colNombre_Categoria.FieldName = "Nombre_Categoria";
             this.colNombre_Categoria.MinWidth = 31;
             this.colNombre_Categoria.Name = "colNombre_Categoria";

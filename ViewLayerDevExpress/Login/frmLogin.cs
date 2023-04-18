@@ -34,7 +34,7 @@ namespace ViewLayerDevExpress.Login
                 }))
                 {
                     Program.UsuarioActual = txtUsuario.Text;
-                    MessageBox.Show("Accedido correctamente", "Sesion Abierta",
+                    XtraMessageBox.Show("Accedido correctamente", "Sesion Abierta",
                         MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     txtUsuario.Clear();
                     txtPass.Clear();
@@ -52,7 +52,7 @@ namespace ViewLayerDevExpress.Login
                 else
                 {
 
-                    MessageBox.Show("Credenciales incorrectas", "Error de Autenticacion",
+                    XtraMessageBox.Show("Credenciales incorrectas", "Error de Autenticacion",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtPass.Clear();
                     txtPass.Focus();
@@ -127,7 +127,7 @@ namespace ViewLayerDevExpress.Login
 
         private void frmLogin_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            if (mostrarMensaje && MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (mostrarMensaje &&  XtraMessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true; // Cancelar el cierre del formulario
             }
