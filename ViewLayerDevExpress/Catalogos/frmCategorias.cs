@@ -24,5 +24,10 @@ namespace ViewLayerDevExpress.Catalogos
         {
             gcCategorias.DataSource = categoriaBLL.GetAll();
         }
+
+        private void btnEliminarCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

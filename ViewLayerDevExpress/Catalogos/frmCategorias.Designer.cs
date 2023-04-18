@@ -157,6 +157,7 @@
             this.btnEliminarCat.Id = 2;
             this.btnEliminarCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminarCat.ImageOptions.SvgImage")));
             this.btnEliminarCat.Name = "btnEliminarCat";
+            this.btnEliminarCat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarCat_ItemClick);
             // 
             // btnActualizCat
             // 
