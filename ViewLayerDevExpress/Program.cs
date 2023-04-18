@@ -1,6 +1,4 @@
 ﻿using DevExpress.LookAndFeel;
-using DevExpress.Skins;
-using DevExpress.UserSkins;
 using System;
 using ViewLayerDevExpress.Login;
 using System.Collections.Generic;

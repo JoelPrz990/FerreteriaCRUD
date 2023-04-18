@@ -1,4 +1,5 @@
 ﻿using BLL;
+using BOL.Categoria;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewLayerDevExpress.EditForms;
+using ViewLayerDevExpress.NewForms;
 
 namespace ViewLayerDevExpress.Catalogos
 {
@@ -22,12 +25,46 @@ namespace ViewLayerDevExpress.Catalogos
 
         private void frmCategorias_Load(object sender, EventArgs e)
         {
-            gcCategorias.DataSource = categoriaBLL.GetAll();
+            categoriasBindingSource.DataSource = categoriaBLL.GetAll();
         }
 
         private void btnEliminarCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (MessageBox.Show("¿Desea Eliminar el Objeto Seleccionado?",
+                Application.ProductName, MessageBoxButtons.YesNo)== DialogResult.Yes) {
 
+                int IdCategoria = (int)gvCategorias.GetFocusedRowCellValue("ID_Categoria");
+
+                categoriaBLL.Delete(new Categoria()
+                {
+                    ID_Categoria = IdCategoria
+                });
+
+                categoriasBindingSource.DataSource = categoriaBLL.GetAll();
+                gvCategorias.BestFitColumns();
+            }
+        }
+
+        private void btnActualizCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Actualizado", Application.ProductName, MessageBoxButtons.OK);
+            categoriasBindingSource.DataSource = categoriaBLL.GetAll();
+            gcCategorias.DataSource = categoriaBLL.GetAll();
+        }
+
+        private void btnEditCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int IdCategoria = (int)gvCategorias.GetFocusedRowCellValue("ID_Categoria");
+            new frmUCategoria(IdCategoria).ShowDialog();
+            gcCategorias.DataSource = categoriaBLL.GetAll();
+            gvCategorias.BestFitColumns();
+        }
+
+        private void btnNuevoCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmNCategoria().ShowDialog();
+            gcCategorias.DataSource = categoriaBLL.GetAll();
+            gvCategorias.BestFitColumns();
         }
     }
 }

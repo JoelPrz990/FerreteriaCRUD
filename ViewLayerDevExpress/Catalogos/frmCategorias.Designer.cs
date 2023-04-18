@@ -56,10 +56,10 @@
             // 
             this.gcCategorias.DataSource = this.categoriasBindingSource;
             this.gcCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcCategorias.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gcCategorias.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gcCategorias.Location = new System.Drawing.Point(0, 40);
             this.gcCategorias.MainView = this.gvCategorias;
-            this.gcCategorias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gcCategorias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gcCategorias.Name = "gcCategorias";
             this.gcCategorias.Size = new System.Drawing.Size(991, 579);
             this.gcCategorias.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.colID_Categoria,
             this.colNombre_Categoria,
             this.colactivo});
-            this.gvCategorias.DetailHeight = 437;
+            this.gvCategorias.DetailHeight = 546;
             this.gvCategorias.GridControl = this.gcCategorias;
             this.gvCategorias.Name = "gvCategorias";
             this.gvCategorias.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -88,25 +88,26 @@
             // colID_Categoria
             // 
             this.colID_Categoria.FieldName = "ID_Categoria";
-            this.colID_Categoria.MinWidth = 25;
+            this.colID_Categoria.MinWidth = 31;
             this.colID_Categoria.Name = "colID_Categoria";
-            this.colID_Categoria.Width = 86;
+            this.colID_Categoria.Width = 107;
             // 
             // colNombre_Categoria
             // 
             this.colNombre_Categoria.FieldName = "Nombre_Categoria";
-            this.colNombre_Categoria.MinWidth = 25;
+            this.colNombre_Categoria.MinWidth = 31;
             this.colNombre_Categoria.Name = "colNombre_Categoria";
+            this.colNombre_Categoria.OptionsColumn.AllowEdit = false;
             this.colNombre_Categoria.Visible = true;
             this.colNombre_Categoria.VisibleIndex = 0;
-            this.colNombre_Categoria.Width = 252;
+            this.colNombre_Categoria.Width = 315;
             // 
             // colactivo
             // 
             this.colactivo.FieldName = "activo";
-            this.colactivo.MinWidth = 25;
+            this.colactivo.MinWidth = 31;
             this.colactivo.Name = "colactivo";
-            this.colactivo.Width = 86;
+            this.colactivo.Width = 107;
             // 
             // barManager1
             // 
@@ -143,6 +144,7 @@
             this.btnNuevoCat.Id = 0;
             this.btnNuevoCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNuevoCat.ImageOptions.SvgImage")));
             this.btnNuevoCat.Name = "btnNuevoCat";
+            this.btnNuevoCat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoCat_ItemClick);
             // 
             // btnEditCat
             // 
@@ -150,6 +152,7 @@
             this.btnEditCat.Id = 1;
             this.btnEditCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditCat.ImageOptions.SvgImage")));
             this.btnEditCat.Name = "btnEditCat";
+            this.btnEditCat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditCat_ItemClick);
             // 
             // btnEliminarCat
             // 
@@ -165,6 +168,7 @@
             this.btnActualizCat.Id = 3;
             this.btnActualizCat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnActualizCat.ImageOptions.SvgImage")));
             this.btnActualizCat.Name = "btnActualizCat";
+            this.btnActualizCat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizCat_ItemClick);
             // 
             // barDockControlTop
             // 

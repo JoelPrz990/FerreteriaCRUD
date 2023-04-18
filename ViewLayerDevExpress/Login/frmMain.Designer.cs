@@ -60,6 +60,8 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowQuickCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.topBar,
             this.bar3});
@@ -87,6 +89,7 @@
             this.btnEmpleadoAct});
             this.barManager1.MainMenu = this.topBar;
             this.barManager1.MaxItemId = 20;
+            this.barManager1.OptionsLayout.AllowAddNewItems = false;
             this.barManager1.StatusBar = this.bar3;
             // 
             // topBar
@@ -103,6 +106,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.menuEmpresa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLogout, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.topBar.OptionsBar.AllowQuickCustomization = false;
+            this.topBar.OptionsBar.DisableClose = true;
+            this.topBar.OptionsBar.DisableCustomization = true;
             this.topBar.OptionsBar.DrawBorder = false;
             this.topBar.OptionsBar.DrawDragBorder = false;
             this.topBar.OptionsBar.MultiLine = true;

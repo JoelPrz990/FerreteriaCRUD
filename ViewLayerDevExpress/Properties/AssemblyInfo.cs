@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ViewLayerDevExpress")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("FerroPapus")]
+[assembly: AssemblyDescription("Aplicacion de ferreteria inteligente")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ViewLayerDevExpress")]
+[assembly: AssemblyCompany("FerroPapus")]
+[assembly: AssemblyProduct("FerroPapus System")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
