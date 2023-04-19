@@ -42,7 +42,7 @@ namespace ViewLayerDevExpress.EditForms
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             mostrarMensaje = false;
-            if (!categoriaBLL.Update(new Categoria()
+            if (categoriaBLL.Update(new Categoria()
             {
                 ID_Categoria = this.IdCategoria,
                 Nombre_Categoria = txtDescripcion.Text
@@ -51,6 +51,7 @@ namespace ViewLayerDevExpress.EditForms
                 XtraMessageBox.Show("Categoria Modificada Correctamente", Application.ProductName);
                 this.Close();
             };
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

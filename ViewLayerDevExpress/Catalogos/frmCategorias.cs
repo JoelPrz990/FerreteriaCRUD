@@ -56,6 +56,7 @@ namespace ViewLayerDevExpress.Catalogos
         {
             int IdCategoria = (int)gvCategorias.GetFocusedRowCellValue("ID_Categoria");
             new frmUCategoria(IdCategoria).Show();
+            categoriasBindingSource.DataSource = categoriaBLL.GetAll();
             gcCategorias.DataSource = categoriaBLL.GetAll();
             gvCategorias.BestFitColumns();
         }
@@ -64,6 +65,7 @@ namespace ViewLayerDevExpress.Catalogos
         {
             new frmNCategoria().Show();
             gcCategorias.DataSource = categoriaBLL.GetAll();
+            categoriasBindingSource.DataSource = categoriaBLL.GetAll();
             gvCategorias.BestFitColumns();
         }
     }
