@@ -34,28 +34,30 @@
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.rlookMarca = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPrecio = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.rlookCategoria = new DevExpress.XtraEditors.LookUpEdit();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtStock = new DevExpress.XtraEditors.TextEdit();
+            this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookMarca.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rlookCategoria.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(37, 61);
+            this.labelControl1.Location = new System.Drawing.Point(43, 33);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(148, 20);
             this.labelControl1.TabIndex = 0;
@@ -63,7 +65,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(240, 56);
+            this.txtNombre.Location = new System.Drawing.Point(246, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Size = new System.Drawing.Size(213, 30);
@@ -71,7 +73,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(240, 102);
+            this.txtDescripcion.Location = new System.Drawing.Point(246, 69);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Size = new System.Drawing.Size(213, 30);
@@ -79,7 +81,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(37, 107);
+            this.labelControl2.Location = new System.Drawing.Point(43, 79);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(78, 20);
             this.labelControl2.TabIndex = 0;
@@ -87,7 +89,7 @@
             // 
             // rlookMarca
             // 
-            this.rlookMarca.Location = new System.Drawing.Point(240, 149);
+            this.rlookMarca.Location = new System.Drawing.Point(246, 116);
             this.rlookMarca.Name = "rlookMarca";
             this.rlookMarca.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -102,60 +104,60 @@
             this.rlookMarca.Size = new System.Drawing.Size(213, 30);
             this.rlookMarca.TabIndex = 3;
             // 
+            // marcasBindingSource
+            // 
+            this.marcasBindingSource.DataSource = typeof(BOL.Marca.Marcas);
+            // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(37, 154);
+            this.labelControl3.Location = new System.Drawing.Point(43, 126);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(132, 20);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "Marca Del Producto";
             // 
-            // marcasBindingSource
-            // 
-            this.marcasBindingSource.DataSource = typeof(BOL.Marca.Marcas);
-            // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(37, 251);
+            this.labelControl4.Location = new System.Drawing.Point(43, 223);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(41, 20);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Precio";
             // 
-            // textEdit1
+            // txtPrecio
             // 
-            this.textEdit1.Location = new System.Drawing.Point(240, 246);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.textEdit1.Properties.MaskSettings.Set("mask", "c");
-            this.textEdit1.Properties.MaskSettings.Set("culture", "es-MX");
-            this.textEdit1.Size = new System.Drawing.Size(213, 30);
-            this.textEdit1.TabIndex = 4;
+            this.txtPrecio.Location = new System.Drawing.Point(246, 213);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPrecio.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtPrecio.Properties.MaskSettings.Set("mask", "c");
+            this.txtPrecio.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtPrecio.Size = new System.Drawing.Size(213, 30);
+            this.txtPrecio.TabIndex = 4;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(37, 204);
+            this.labelControl5.Location = new System.Drawing.Point(43, 176);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(65, 20);
             this.labelControl5.TabIndex = 5;
             this.labelControl5.Text = "Categoria";
             // 
-            // lookUpEdit1
+            // rlookCategoria
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(240, 199);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.rlookCategoria.Location = new System.Drawing.Point(246, 166);
+            this.rlookCategoria.Name = "rlookCategoria";
+            this.rlookCategoria.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.rlookCategoria.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID_Categoria", "ID_Categoria", 101, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nombre_Categoria", "Nombre_Categoria", 141, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("activo", "activo", 55, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.lookUpEdit1.Properties.DataSource = this.categoriasBindingSource;
-            this.lookUpEdit1.Properties.DisplayMember = "Nombre_Categoria";
-            this.lookUpEdit1.Properties.ValueMember = "ID_Categoria";
-            this.lookUpEdit1.Size = new System.Drawing.Size(213, 30);
-            this.lookUpEdit1.TabIndex = 6;
+            this.rlookCategoria.Properties.DataSource = this.categoriasBindingSource;
+            this.rlookCategoria.Properties.DisplayMember = "Nombre_Categoria";
+            this.rlookCategoria.Properties.ValueMember = "ID_Categoria";
+            this.rlookCategoria.Size = new System.Drawing.Size(213, 30);
+            this.rlookCategoria.TabIndex = 6;
             // 
             // categoriasBindingSource
             // 
@@ -163,33 +165,53 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(37, 293);
+            this.labelControl6.Location = new System.Drawing.Point(43, 269);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(112, 20);
             this.labelControl6.TabIndex = 7;
             this.labelControl6.Text = "Stock Disponible";
             // 
-            // textEdit2
+            // txtStock
             // 
-            this.textEdit2.Location = new System.Drawing.Point(240, 288);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit2.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.textEdit2.Properties.MaskSettings.Set("mask", "d");
-            this.textEdit2.Properties.MaskSettings.Set("culture", "es-MX");
-            this.textEdit2.Size = new System.Drawing.Size(213, 30);
-            this.textEdit2.TabIndex = 8;
+            this.txtStock.Location = new System.Drawing.Point(246, 259);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtStock.Properties.MaskSettings.Set("mask", "d");
+            this.txtStock.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtStock.Size = new System.Drawing.Size(213, 30);
+            this.txtStock.TabIndex = 8;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(59, 331);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(117, 29);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar Nuevo";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(267, 331);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(120, 29);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmNProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 432);
-            this.Controls.Add(this.textEdit2);
+            this.ClientSize = new System.Drawing.Size(481, 404);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.lookUpEdit1);
+            this.Controls.Add(this.rlookCategoria);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.rlookMarca);
@@ -203,10 +225,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookMarca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rlookCategoria.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,11 +244,13 @@
         private System.Windows.Forms.BindingSource marcasBindingSource;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtPrecio;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit rlookCategoria;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtStock;
+        private DevExpress.XtraEditors.SimpleButton btnGuardar;
+        private DevExpress.XtraEditors.SimpleButton btnCancelar;
     }
 }

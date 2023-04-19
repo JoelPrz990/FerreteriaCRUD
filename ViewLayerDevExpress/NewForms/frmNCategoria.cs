@@ -65,7 +65,7 @@ namespace ViewLayerDevExpress.NewForms
             }
             else
             {
-                this.Dispose();
+                this.Close();
             }
 
         }

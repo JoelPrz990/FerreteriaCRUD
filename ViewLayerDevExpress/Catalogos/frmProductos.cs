@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewLayerDevExpress.NewForms;
 
 namespace ViewLayerDevExpress.Catalogos
 {
@@ -41,7 +42,9 @@ namespace ViewLayerDevExpress.Catalogos
 
         private void btnNProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new frmNProducto().ShowDialog();
+            gcProductos.DataSource= productoBLL.GetAll();
+            productosBindingSource.DataSource = productoBLL.GetAll();
         }
 
         private void btnEliminarProd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -63,7 +63,7 @@ namespace ViewLayerDevExpress.EditForms
                 {
                     XtraMessageBox.Show("Marca Modificada Correctamente",
                         Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    this.Dispose();
+                    this.Close();
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace ViewLayerDevExpress.EditForms
             if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName,
                 MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Dispose();
+                this.Close();
             }
         }
     }

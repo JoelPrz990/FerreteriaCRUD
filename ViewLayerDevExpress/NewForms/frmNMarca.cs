@@ -27,7 +27,7 @@ namespace ViewLayerDevExpress.NewForms
         {
             if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName, MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes) {
-                this.Dispose();
+                this.Close();
             }
         }
 
@@ -47,7 +47,7 @@ namespace ViewLayerDevExpress.NewForms
                 });
                 XtraMessageBox.Show("Marca añadida correctamente", Application.ProductName,
                     MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                this.Dispose();
+                this.Close();
             }
 
         }

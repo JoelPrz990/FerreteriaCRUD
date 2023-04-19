@@ -69,7 +69,7 @@ namespace ViewLayerDevExpress.EditForms
                 } 
             else
             {
-                this.Dispose();
+                this.Close();
             }
         }
     }
