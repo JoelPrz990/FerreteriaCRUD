@@ -97,6 +97,15 @@ namespace ViewLayerDevExpress.Login
             Program.loginfrm.Show();
         }
 
-
+        private void btnProductos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmProductos))
+                {
+                    form.Activate();
+                    return;
+                }
+            new frmProductos() { MdiParent = this }.Show();
+        }
     }
 }

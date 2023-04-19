@@ -116,6 +116,7 @@
             this.btnNuevaMarca.Id = 0;
             this.btnNuevaMarca.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNuevaMarca.ImageOptions.SvgImage")));
             this.btnNuevaMarca.Name = "btnNuevaMarca";
+            this.btnNuevaMarca.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevaMarca_ItemClick);
             // 
             // btnEditarMarca
             // 

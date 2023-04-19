@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewLayerDevExpress.EditForms;
+using ViewLayerDevExpress.NewForms;
 
 namespace ViewLayerDevExpress.Catalogos
 {
@@ -68,6 +69,13 @@ namespace ViewLayerDevExpress.Catalogos
                 marcasBindingSource.DataSource = marcaBLL.GetAll();
                 gvMarcas.BestFitColumns();
             }
+        }
+
+        private void btnNuevaMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmNMarca().ShowDialog();
+            gcMarcas.DataSource = marcaBLL.GetAll();
+            marcasBindingSource.DataSource= marcaBLL.GetAll();
         }
     }
 }

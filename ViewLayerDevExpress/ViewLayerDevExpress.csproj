@@ -140,28 +140,28 @@
     <Compile Include="Empresa\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\frmLogin.cs">
+    <Compile Include="Main\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\frmLogin.Designer.cs">
+    <Compile Include="Main\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\frmMain.cs">
+    <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\frmMain.Designer.cs">
+    <Compile Include="Main\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\frmSplash.cs">
+    <Compile Include="Main\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\frmSplash.Designer.cs">
+    <Compile Include="Main\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\frmStart.cs">
+    <Compile Include="Main\frmStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\frmStart.Designer.cs">
+    <Compile Include="Main\frmStart.Designer.cs">
       <DependentUpon>frmStart.cs</DependentUpon>
     </Compile>
     <Compile Include="NewForms\frmNCategoria.cs">
@@ -169,6 +169,18 @@
     </Compile>
     <Compile Include="NewForms\frmNCategoria.Designer.cs">
       <DependentUpon>frmNCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\frmNMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\frmNMarca.Designer.cs">
+      <DependentUpon>frmNMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\frmNProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\frmNProducto.Designer.cs">
+      <DependentUpon>frmNProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -178,26 +190,35 @@
     <EmbeddedResource Include="Catalogos\frmMarcas.resx">
       <DependentUpon>frmMarcas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUCategoria.resx">
       <DependentUpon>frmUCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUMarca.resx">
       <DependentUpon>frmUMarca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\frmLogin.resx">
+    <EmbeddedResource Include="Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\frmMain.resx">
+    <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\frmSplash.resx">
+    <EmbeddedResource Include="Main\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\frmStart.resx">
+    <EmbeddedResource Include="Main\frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNCategoria.resx">
       <DependentUpon>frmNCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\frmNMarca.resx">
+      <DependentUpon>frmNMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\frmNProducto.resx">
+      <DependentUpon>frmNProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -218,6 +239,7 @@
     <None Include="Properties\DataSources\BOL.Marca.Marca.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.MarcaDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.Marcas.datasource" />
+    <None Include="Properties\DataSources\BOL.Producto.Productos.datasource" />
     <None Include="Properties\DataSources\BOL.Proveedor.Proveedor.datasource" />
     <None Include="Properties\DataSources\BOL.Proveedor.ProveedorDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Proveedor.Proveedores.datasource" />

@@ -182,6 +182,7 @@
             this.btnProductos.Id = 10;
             this.btnProductos.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProductos.ImageOptions.SvgImage")));
             this.btnProductos.Name = "btnProductos";
+            this.btnProductos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductos_ItemClick);
             // 
             // menuEmpresa
             // 

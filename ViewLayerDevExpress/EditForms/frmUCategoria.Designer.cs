@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUCategoria));
             this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
@@ -85,6 +86,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmUCategoria.IconOptions.SvgImage")));
             this.MaximizeBox = false;
             this.Name = "frmUCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
