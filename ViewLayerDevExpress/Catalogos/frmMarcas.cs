@@ -1,4 +1,5 @@
 ﻿using BLL;
+using BOL.Categoria;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewLayerDevExpress.EditForms;
 
 namespace ViewLayerDevExpress.Catalogos
 {
@@ -36,6 +38,15 @@ namespace ViewLayerDevExpress.Catalogos
         private void btnActualizarMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void btnEditarMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int IdProveedor = (int)gvMarcas.GetFocusedRowCellValue("ID_Proveedor");
+            new frmUMarca(IdProveedor).Show();
+            marcasBindingSource.DataSource = marcaBLL.GetAll();
+            gcMarcas.DataSource = marcaBLL.GetAll();
+            gvMarcas.BestFitColumns();
         }
     }
 }

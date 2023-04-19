@@ -1,4 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using BLL;
+using BOL.Marca;
+using BOL.Proveedor;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +16,29 @@ namespace ViewLayerDevExpress.EditForms
 {
     public partial class frmUMarca : DevExpress.XtraEditors.XtraForm
     {
+        private int IdMarca;
+        ProveedorBLL proveedorBLL = ProveedorBLL.Instance();
+        MarcaBLL marcaBLL = MarcaBLL.Instance();
+
+        public frmUMarca(int IdMarca)
+        {
+            this.IdMarca = IdMarca;
+            InitializeComponent();
+        }
         public frmUMarca()
         {
             InitializeComponent();
+        }
+
+        private void frmUMarca_Load(object sender, EventArgs e)
+        {
+            proveedorBindingSource.DataSource = proveedorBLL.GetAll();
+            Marca marca = marcaBLL.GetById(new Marca()
+            {
+                ID_Marca = this.IdMarca
+            });
+            rlookProveedor.EditValue = marca.ID_Proveedor;
+            txtMarca.Text = marca.Nombre_Marca;
         }
     }
 }

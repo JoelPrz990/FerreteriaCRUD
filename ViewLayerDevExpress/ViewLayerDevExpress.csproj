@@ -104,6 +104,12 @@
     <Compile Include="EditForms\frmUCategoria.Designer.cs">
       <DependentUpon>frmUCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditForms\frmUMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForms\frmUMarca.Designer.cs">
+      <DependentUpon>frmUMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUCategoria.resx">
       <DependentUpon>frmUCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForms\frmUMarca.resx">
+      <DependentUpon>frmUMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

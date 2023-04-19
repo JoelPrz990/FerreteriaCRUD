@@ -48,9 +48,9 @@
             this.gvMarcas = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID_Marca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colID_Proveedor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rlookProveedores = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colNombre_Marca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rlookProveedores = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
@@ -123,6 +123,7 @@
             this.btnEditarMarca.Id = 1;
             this.btnEditarMarca.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditarMarca.ImageOptions.SvgImage")));
             this.btnEditarMarca.Name = "btnEditarMarca";
+            this.btnEditarMarca.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditarMarca_ItemClick);
             // 
             // btnEliminarMarca
             // 
@@ -223,6 +224,23 @@
             this.colID_Proveedor.VisibleIndex = 1;
             this.colID_Proveedor.Width = 94;
             // 
+            // rlookProveedores
+            // 
+            this.rlookProveedores.AutoHeight = false;
+            this.rlookProveedores.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rlookProveedores.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID_Proveedor", "ID_Proveedor", 104, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nombre_Proveedor", "Nombre_Proveedor", 144, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Direccion_Proveedor", "Direccion_Proveedor", 152, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Telefono_Proveedor", "Telefono_Proveedor", 148, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Email_Proveedor", "Email_Proveedor", 126, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("activo", "activo", 55, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.rlookProveedores.DataSource = this.proveedoresBindingSource;
+            this.rlookProveedores.DisplayMember = "Nombre_Proveedor";
+            this.rlookProveedores.Name = "rlookProveedores";
+            this.rlookProveedores.ValueMember = "ID_Proveedor";
+            // 
             // colNombre_Marca
             // 
             this.colNombre_Marca.FieldName = "Nombre_Marca";
@@ -240,23 +258,6 @@
             this.colactivo.Visible = true;
             this.colactivo.VisibleIndex = 3;
             this.colactivo.Width = 94;
-            // 
-            // rlookProveedores
-            // 
-            this.rlookProveedores.AutoHeight = false;
-            this.rlookProveedores.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rlookProveedores.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID_Proveedor", "ID_Proveedor", 104, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nombre_Proveedor", "Nombre_Proveedor", 144, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Direccion_Proveedor", "Direccion_Proveedor", 152, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Telefono_Proveedor", "Telefono_Proveedor", 148, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Email_Proveedor", "Email_Proveedor", 126, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("activo", "activo", 55, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.rlookProveedores.DataSource = this.proveedoresBindingSource;
-            this.rlookProveedores.DisplayMember = "Nombre_Proveedor";
-            this.rlookProveedores.Name = "rlookProveedores";
-            this.rlookProveedores.ValueMember = "ID_Proveedor";
             // 
             // frmMarcas
             // 
