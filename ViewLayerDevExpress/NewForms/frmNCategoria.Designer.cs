@@ -107,7 +107,7 @@
             this.Controls.Add(this.btnGuardar);
             this.MaximizeBox = false;
             this.Name = "frmNCategoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Categoria";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNCategoria_FormClosing);

@@ -174,6 +174,7 @@
             this.btnMarcas.Id = 9;
             this.btnMarcas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMarcas.ImageOptions.SvgImage")));
             this.btnMarcas.Name = "btnMarcas";
+            this.btnMarcas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMarcas_ItemClick);
             // 
             // btnProductos
             // 

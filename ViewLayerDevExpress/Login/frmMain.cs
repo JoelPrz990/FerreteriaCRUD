@@ -80,11 +80,23 @@ namespace ViewLayerDevExpress.Login
                 }
             new frmCategorias() { MdiParent = this }.Show();
         }
+        private void btnMarcas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmMarcas))
+                {
+                    form.Activate();
+                    return;
+                }
+            new frmMarcas() { MdiParent = this }.Show();
+        }
 
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Dispose();
             Program.loginfrm.Show();
         }
+
+
     }
 }

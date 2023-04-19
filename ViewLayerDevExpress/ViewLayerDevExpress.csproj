@@ -169,6 +169,9 @@
     <EmbeddedResource Include="Catalogos\frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\frmMarcas.resx">
+      <DependentUpon>frmMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUCategoria.resx">
       <DependentUpon>frmUCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +206,12 @@
     <None Include="Properties\DataSources\BOL.Categoria.Categoria.datasource" />
     <None Include="Properties\DataSources\BOL.Categoria.CategoriaDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Categoria.Categorias.datasource" />
+    <None Include="Properties\DataSources\BOL.Marca.Marca.datasource" />
+    <None Include="Properties\DataSources\BOL.Marca.MarcaDAL.datasource" />
+    <None Include="Properties\DataSources\BOL.Marca.Marcas.datasource" />
+    <None Include="Properties\DataSources\BOL.Proveedor.Proveedor.datasource" />
+    <None Include="Properties\DataSources\BOL.Proveedor.ProveedorDAL.datasource" />
+    <None Include="Properties\DataSources\BOL.Proveedor.Proveedores.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
