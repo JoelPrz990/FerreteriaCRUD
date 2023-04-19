@@ -131,6 +131,7 @@
             this.btnEliminarMarca.Id = 2;
             this.btnEliminarMarca.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminarMarca.ImageOptions.SvgImage")));
             this.btnEliminarMarca.Name = "btnEliminarMarca";
+            this.btnEliminarMarca.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarMarca_ItemClick);
             // 
             // btnActualizarMarca
             // 
@@ -204,6 +205,9 @@
             this.colactivo});
             this.gvMarcas.GridControl = this.gcMarcas;
             this.gvMarcas.Name = "gvMarcas";
+            this.gvMarcas.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvMarcas.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvMarcas.OptionsBehavior.Editable = false;
             // 
             // colID_Marca
             // 

@@ -45,10 +45,17 @@
             // 
             // rlookProveedor
             // 
-            this.rlookProveedor.Location = new System.Drawing.Point(262, 69);
+            this.rlookProveedor.Location = new System.Drawing.Point(260, 40);
             this.rlookProveedor.Name = "rlookProveedor";
             this.rlookProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rlookProveedor.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID_Proveedor", "ID_Proveedor", 104, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Nombre_Proveedor", "Nombre_Proveedor", 144, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Direccion_Proveedor", "Direccion_Proveedor", 152, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Telefono_Proveedor", "Telefono_Proveedor", 148, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Email_Proveedor", "Email_Proveedor", 126, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("activo", "activo", 55, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.rlookProveedor.Properties.DataSource = this.proveedoresBindingSource;
             this.rlookProveedor.Properties.DisplayMember = "Nombre_Proveedor";
             this.rlookProveedor.Properties.ValueMember = "ID_Proveedor";
@@ -57,7 +64,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(55, 74);
+            this.labelControl1.Location = new System.Drawing.Point(64, 45);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(68, 20);
             this.labelControl1.TabIndex = 1;
@@ -69,7 +76,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(55, 135);
+            this.labelControl2.Location = new System.Drawing.Point(64, 106);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(137, 20);
             this.labelControl2.TabIndex = 2;
@@ -77,26 +84,29 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(262, 125);
+            this.txtMarca.Location = new System.Drawing.Point(260, 96);
             this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.Size = new System.Drawing.Size(182, 30);
             this.txtMarca.TabIndex = 3;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(104, 235);
+            this.btnGuardar.Location = new System.Drawing.Point(74, 191);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(110, 29);
+            this.btnGuardar.Size = new System.Drawing.Size(152, 29);
             this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar Nuevo";
+            this.btnGuardar.Text = "Guardar Modificado";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(262, 235);
+            this.btnCancelar.Location = new System.Drawing.Point(260, 191);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(110, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(152, 29);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // proveedoresBindingSource
             // 
@@ -106,14 +116,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 327);
+            this.ClientSize = new System.Drawing.Size(477, 265);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.rlookProveedor);
+            this.MaximizeBox = false;
             this.Name = "frmUMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmUMarca";
             this.Load += new System.EventHandler(this.frmUMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rlookProveedor.Properties)).EndInit();

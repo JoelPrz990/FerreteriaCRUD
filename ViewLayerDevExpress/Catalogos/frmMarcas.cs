@@ -1,5 +1,6 @@
 ﻿using BLL;
 using BOL.Categoria;
+using BOL.Marca;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -37,16 +38,36 @@ namespace ViewLayerDevExpress.Catalogos
 
         private void btnActualizarMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            XtraMessageBox.Show("Actualizado", Application.ProductName, MessageBoxButtons.OK);
+            marcasBindingSource.DataSource = marcaBLL.GetAll();
+            gcMarcas.DataSource = marcaBLL.GetAll();
         }
 
         private void btnEditarMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int IdProveedor = (int)gvMarcas.GetFocusedRowCellValue("ID_Proveedor");
-            new frmUMarca(IdProveedor).Show();
+            int IdMarca = (int)gvMarcas.GetFocusedRowCellValue("ID_Marca");
+            new frmUMarca(IdMarca).ShowDialog();
             marcasBindingSource.DataSource = marcaBLL.GetAll();
             gcMarcas.DataSource = marcaBLL.GetAll();
             gvMarcas.BestFitColumns();
+        }
+
+        private void btnEliminarMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea Eliminar el Objeto Seleccionado?",
+                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+                int IdMarca = (int)gvMarcas.GetFocusedRowCellValue("ID_Marca");
+
+                marcaBLL.Delete(new Marca()
+                {
+                    ID_Marca = IdMarca
+                });
+                gcMarcas.DataSource= marcaBLL.GetAll();
+                marcasBindingSource.DataSource = marcaBLL.GetAll();
+                gvMarcas.BestFitColumns();
+            }
         }
     }
 }
