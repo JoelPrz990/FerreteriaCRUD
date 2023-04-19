@@ -55,14 +55,14 @@ namespace ViewLayerDevExpress.Catalogos
         private void btnEditCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int IdCategoria = (int)gvCategorias.GetFocusedRowCellValue("ID_Categoria");
-            new frmUCategoria(IdCategoria).ShowDialog();
+            new frmUCategoria(IdCategoria).Show();
             gcCategorias.DataSource = categoriaBLL.GetAll();
             gvCategorias.BestFitColumns();
         }
 
         private void btnNuevoCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNCategoria().ShowDialog();
+            new frmNCategoria().Show();
             gcCategorias.DataSource = categoriaBLL.GetAll();
             gvCategorias.BestFitColumns();
         }

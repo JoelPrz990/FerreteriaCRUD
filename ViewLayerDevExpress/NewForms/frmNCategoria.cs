@@ -17,6 +17,7 @@ namespace ViewLayerDevExpress.NewForms
     public partial class frmNCategoria : DevExpress.XtraEditors.XtraForm
     {
         private bool mostrarMensaje;
+        private bool mensajeAlerta = false;
         private int ID_Categoria;
         CategoriaBLL categoriaBLL = CategoriaBLL.Instance();
         public frmNCategoria()
@@ -29,8 +30,7 @@ namespace ViewLayerDevExpress.NewForms
             mostrarMensaje = false;
             if (String.IsNullOrEmpty(txtDescripcion.Text))
             {
-                XtraMessageBox.Show("Llene el campo", Application.ProductName,
-                    MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                txtAlerta.Visible = true;
             }
             else
             {
@@ -41,6 +41,7 @@ namespace ViewLayerDevExpress.NewForms
                 XtraMessageBox.Show("Categoria Ingresada Correctamente", Application.ProductName,
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDescripcion.Clear();
+                this.Close();
             }
         }
 
@@ -52,7 +53,12 @@ namespace ViewLayerDevExpress.NewForms
 
         private void frmNCategoria_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (mostrarMensaje && XtraMessageBox.Show("¿Desea no Agregar?", Application.ProductName, MessageBoxButtons.YesNo,
+            if (mensajeAlerta == true)
+            {
+                e.Cancel = true;
+                mensajeAlerta = false;
+            }
+            if (mostrarMensaje && XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName, MessageBoxButtons.YesNo,
             MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
@@ -61,6 +67,12 @@ namespace ViewLayerDevExpress.NewForms
             {
                 this.Dispose();
             }
+
+        }
+
+        private void txtDescripcion_Enter(object sender, EventArgs e)
+        {
+            txtAlerta.Visible = false;
         }
     }
 }

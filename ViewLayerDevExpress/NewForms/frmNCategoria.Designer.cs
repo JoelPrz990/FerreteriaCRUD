@@ -34,6 +34,7 @@
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.txtAlerta = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             this.txtDescripcion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Size = new System.Drawing.Size(213, 30);
             this.txtDescripcion.TabIndex = 6;
+            this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter);
             // 
             // btnCancelar
             // 
@@ -78,6 +80,19 @@
             this.btnGuardar.Text = "Guardar Nuevo";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // txtAlerta
+            // 
+            this.txtAlerta.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlerta.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.txtAlerta.Appearance.Options.UseFont = true;
+            this.txtAlerta.Appearance.Options.UseForeColor = true;
+            this.txtAlerta.Location = new System.Drawing.Point(225, 13);
+            this.txtAlerta.Name = "txtAlerta";
+            this.txtAlerta.Size = new System.Drawing.Size(107, 20);
+            this.txtAlerta.TabIndex = 8;
+            this.txtAlerta.Text = "Llene el campo";
+            this.txtAlerta.Visible = false;
+            // 
             // frmNCategoria
             // 
             this.AcceptButton = this.btnGuardar;
@@ -85,6 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(494, 211);
+            this.Controls.Add(this.txtAlerta);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnCancelar);
@@ -109,5 +125,6 @@
         private DevExpress.XtraEditors.SimpleButton btnCancelar;
         private DevExpress.XtraEditors.SimpleButton btnGuardar;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.LabelControl txtAlerta;
     }
 }

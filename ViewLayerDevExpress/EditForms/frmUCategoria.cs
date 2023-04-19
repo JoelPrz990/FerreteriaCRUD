@@ -49,6 +49,7 @@ namespace ViewLayerDevExpress.EditForms
             }))
             {
                 XtraMessageBox.Show("Categoria Modificada Correctamente", Application.ProductName);
+                this.Close();
             };
         }
 
