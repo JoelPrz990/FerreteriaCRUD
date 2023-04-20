@@ -202,6 +202,7 @@
             this.btnProveedor.Id = 15;
             this.btnProveedor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProveedor.ImageOptions.SvgImage")));
             this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProveedor_ItemClick);
             // 
             // btnClientes
             // 
@@ -217,6 +218,7 @@
             this.btnVentas.Id = 17;
             this.btnVentas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVentas.ImageOptions.SvgImage")));
             this.btnVentas.Name = "btnVentas";
+            this.btnVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVentas_ItemClick);
             // 
             // btnEmpleados
             // 
@@ -224,6 +226,7 @@
             this.btnEmpleados.Id = 18;
             this.btnEmpleados.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmpleados.ImageOptions.SvgImage")));
             this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmpleados_ItemClick);
             // 
             // btnLogout
             // 

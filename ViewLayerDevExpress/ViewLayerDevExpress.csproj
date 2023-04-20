@@ -110,6 +110,12 @@
     <Compile Include="EditForms\frmUCliente.Designer.cs">
       <DependentUpon>frmUCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditForms\frmUEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForms\frmUEmpleado.Designer.cs">
+      <DependentUpon>frmUEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditForms\frmUMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     <Compile Include="NewForms\frmNCliente.Designer.cs">
       <DependentUpon>frmNCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewForms\frmNEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\frmNEmpleado.Designer.cs">
+      <DependentUpon>frmNEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewForms\frmNMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +229,9 @@
     <EmbeddedResource Include="EditForms\frmUCliente.resx">
       <DependentUpon>frmUCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditForms\frmUEmpleado.resx">
+      <DependentUpon>frmUEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUMarca.resx">
       <DependentUpon>frmUMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empresa\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa\frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -243,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNCliente.resx">
       <DependentUpon>frmNCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\frmNEmpleado.resx">
+      <DependentUpon>frmNEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNMarca.resx">
       <DependentUpon>frmNMarca.cs</DependentUpon>
@@ -267,6 +288,7 @@
     <None Include="Properties\DataSources\BOL.Categoria.CategoriaDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Categoria.Categorias.datasource" />
     <None Include="Properties\DataSources\BOL.Cliente.Clientes.datasource" />
+    <None Include="Properties\DataSources\BOL.Empleado.Empleados.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.Marca.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.MarcaDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.Marcas.datasource" />

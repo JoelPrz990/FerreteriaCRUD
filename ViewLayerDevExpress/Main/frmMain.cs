@@ -119,5 +119,38 @@ namespace ViewLayerDevExpress.Login
                 }
             new frmClientes() { MdiParent = this }.Show();
         }
+
+        private void btnEmpleados_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmEmpleados))
+                {
+                    form.Activate();
+                    return;
+                }
+            new frmEmpleados() { MdiParent = this }.Show();
+        }
+
+        private void btnVentas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmVentas))
+                {
+                    form.Activate();
+                    return;
+                }
+            new frmVentas() { MdiParent = this }.Show();
+        }
+
+        private void btnProveedor_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmProveedores))
+                {
+                    form.Activate();
+                    return;
+                }
+            new frmProveedores() { MdiParent = this }.Show();
+        }
     }
 }
