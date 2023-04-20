@@ -39,10 +39,10 @@
             this.txtdireccion = new DevExpress.XtraEditors.TextEdit();
             this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.txtContraseña = new DevExpress.XtraEditors.TextEdit();
             this.text = new DevExpress.XtraEditors.LabelControl();
-            this.txtUsuario = new DevExpress.XtraEditors.LabelControl();
+            this.lbl = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.cboxCargo = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -50,7 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdireccion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(46, 193);
+            this.labelControl4.Location = new System.Drawing.Point(29, 179);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(37, 20);
             this.labelControl4.TabIndex = 19;
@@ -67,7 +67,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(46, 135);
+            this.labelControl3.Location = new System.Drawing.Point(29, 121);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(59, 20);
             this.labelControl3.TabIndex = 18;
@@ -75,7 +75,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(46, 83);
+            this.labelControl2.Location = new System.Drawing.Point(29, 69);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(63, 20);
             this.labelControl2.TabIndex = 17;
@@ -83,7 +83,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(536, 231);
+            this.btnCancelar.Location = new System.Drawing.Point(519, 217);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(135, 29);
             this.btnCancelar.TabIndex = 16;
@@ -92,7 +92,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(382, 231);
+            this.btnGuardar.Location = new System.Drawing.Point(365, 217);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(135, 29);
             this.btnGuardar.TabIndex = 15;
@@ -101,7 +101,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(128, 188);
+            this.txtEmail.Location = new System.Drawing.Point(111, 174);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmail.Size = new System.Drawing.Size(197, 30);
@@ -109,7 +109,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(128, 135);
+            this.txtTelefono.Location = new System.Drawing.Point(111, 121);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelefono.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
@@ -120,7 +120,7 @@
             // 
             // txtdireccion
             // 
-            this.txtdireccion.Location = new System.Drawing.Point(128, 83);
+            this.txtdireccion.Location = new System.Drawing.Point(111, 69);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtdireccion.Size = new System.Drawing.Size(197, 30);
@@ -128,7 +128,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(128, 35);
+            this.txtNombre.Location = new System.Drawing.Point(111, 21);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Size = new System.Drawing.Size(197, 30);
@@ -136,19 +136,19 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(46, 40);
+            this.labelControl1.Location = new System.Drawing.Point(29, 26);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(55, 20);
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Nombre";
             // 
-            // textEdit1
+            // txtUsuario
             // 
-            this.textEdit1.Location = new System.Drawing.Point(157, 40);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit1.Size = new System.Drawing.Size(185, 30);
-            this.textEdit1.TabIndex = 6;
+            this.txtUsuario.Location = new System.Drawing.Point(157, 40);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUsuario.Size = new System.Drawing.Size(185, 30);
+            this.txtUsuario.TabIndex = 6;
             // 
             // txtContraseña
             // 
@@ -166,21 +166,21 @@
             this.text.TabIndex = 22;
             this.text.Text = "Contraseña";
             // 
-            // txtUsuario
+            // lbl
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(11, 50);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(130, 20);
-            this.txtUsuario.TabIndex = 23;
-            this.txtUsuario.Text = "Nombre de Usuario";
+            this.lbl.Location = new System.Drawing.Point(11, 50);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(130, 20);
+            this.lbl.TabIndex = 23;
+            this.lbl.Text = "Nombre de Usuario";
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.txtUsuario);
+            this.groupControl1.Controls.Add(this.lbl);
             this.groupControl1.Controls.Add(this.txtContraseña);
             this.groupControl1.Controls.Add(this.text);
-            this.groupControl1.Location = new System.Drawing.Point(342, 40);
+            this.groupControl1.Location = new System.Drawing.Point(325, 26);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(347, 144);
             this.groupControl1.TabIndex = 24;
@@ -188,7 +188,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(46, 240);
+            this.labelControl5.Location = new System.Drawing.Point(29, 226);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(40, 20);
             this.labelControl5.TabIndex = 25;
@@ -196,7 +196,7 @@
             // 
             // cboxCargo
             // 
-            this.cboxCargo.Location = new System.Drawing.Point(128, 234);
+            this.cboxCargo.Location = new System.Drawing.Point(111, 220);
             this.cboxCargo.Name = "cboxCargo";
             this.cboxCargo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -229,11 +229,12 @@
             this.MaximizeBox = false;
             this.Name = "frmNEmpleado";
             this.Text = "Nuevo Empleado";
+            this.Load += new System.EventHandler(this.frmNEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -256,10 +257,10 @@
         private DevExpress.XtraEditors.TextEdit txtdireccion;
         private DevExpress.XtraEditors.TextEdit txtNombre;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtUsuario;
         private DevExpress.XtraEditors.TextEdit txtContraseña;
         private DevExpress.XtraEditors.LabelControl text;
-        private DevExpress.XtraEditors.LabelControl txtUsuario;
+        private DevExpress.XtraEditors.LabelControl lbl;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.ComboBoxEdit cboxCargo;

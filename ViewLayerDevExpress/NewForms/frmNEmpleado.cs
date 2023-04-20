@@ -54,5 +54,10 @@ namespace ViewLayerDevExpress.NewForms
                 }
             }
         }
+
+        private void frmNEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

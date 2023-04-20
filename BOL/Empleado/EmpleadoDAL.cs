@@ -117,7 +117,7 @@ namespace BOL.Empleado
                         Cargo_Empleado = (string)resultado.Rows[0]["Cargo_Empleado"],
                         activo = (bool)resultado.Rows[0]["activo"],
                         password = (string)resultado.Rows[0]["password"],
-                        Nombre_Usuario = (string)resultado.Rows[0]["Nombre_Empleado"]
+                        Nombre_Usuario = (string)resultado.Rows[0]["Nombre_Usuario"]
                     };
                 }
                 return empleado;

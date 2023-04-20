@@ -111,6 +111,7 @@
             this.btnEliminarEmpleado.Id = 2;
             this.btnEliminarEmpleado.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEliminarEmpleado.ImageOptions.SvgImage")));
             this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
+            this.btnEliminarEmpleado.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarEmpleado_ItemClick);
             // 
             // btnActualizar
             // 
@@ -118,6 +119,7 @@
             this.btnActualizar.Id = 3;
             this.btnActualizar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnActualizar.ImageOptions.SvgImage")));
             this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizar_ItemClick);
             // 
             // barDockControlTop
             // 

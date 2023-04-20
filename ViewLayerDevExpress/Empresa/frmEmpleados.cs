@@ -1,4 +1,5 @@
 ﻿using BLL;
+using BOL.Cliente;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,30 @@ namespace ViewLayerDevExpress.Empresa
         {
             int IdEmpleado = (int)gvEmpleados.GetFocusedRowCellValue("ID_Empleado");
             new frmUEmpleado(IdEmpleado).ShowDialog();
+            gcEmpleados.DataSource = empleadoBLL.GetAll();
+            gvEmpleados.BestFitColumns();
+        }
+
+        private void btnEliminarEmpleado_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea Eliminar el Cliente Seleccionado?",
+                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                int IdEmpleado = (int)gvEmpleados.GetFocusedRowCellValue("ID_Empleado");
+                empleadoBLL.Delete(new BOL.Empleado.Empleado()
+                {
+                    ID_Empleado = IdEmpleado
+                });
+                gcEmpleados.DataSource = empleadoBLL.GetAll();
+                gvEmpleados.BestFitColumns();
+            }
+        }
+
+        private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show("Actualizado", Application.ProductName, MessageBoxButtons.OK);
+            gcEmpleados.DataSource = empleadoBLL.GetAll();
+            gvEmpleados.BestFitColumns();
         }
     }
 }
