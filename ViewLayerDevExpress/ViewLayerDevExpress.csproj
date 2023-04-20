@@ -214,6 +214,9 @@
     <EmbeddedResource Include="EditForms\frmUCategoria.resx">
       <DependentUpon>frmUCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditForms\frmUCliente.resx">
+      <DependentUpon>frmUCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUMarca.resx">
       <DependentUpon>frmUMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNCategoria.resx">
       <DependentUpon>frmNCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\frmNCliente.resx">
+      <DependentUpon>frmNCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNMarca.resx">
       <DependentUpon>frmNMarca.cs</DependentUpon>

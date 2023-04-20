@@ -124,9 +124,9 @@ namespace BOL.Cliente
         {
             try
             {
-                SqlParameter[] parameters = new SqlParameter[4];
+                SqlParameter[] parameters = new SqlParameter[5];
                 parameters[0] = new SqlParameter("@ID_Cliente", cliente.ID_Cliente);
-                parameters[1] = new SqlParameter("@Nombre_Categoria", cliente.Nombre_Cliente);
+                parameters[1] = new SqlParameter("@Nombre_Cliente", cliente.Nombre_Cliente);
                 parameters[2] = new SqlParameter("@Direccion_Cliente", cliente.Direccion_Cliente);
                 parameters[3] = new SqlParameter("@Telefono_Cliente", cliente.Telefono_Cliente);
                 parameters[4] = new SqlParameter("@Email_Cliente", cliente.Email_Cliente);

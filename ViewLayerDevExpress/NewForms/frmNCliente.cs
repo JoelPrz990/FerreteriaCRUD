@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using BLL;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,41 @@ namespace ViewLayerDevExpress.NewForms
 {
     public partial class frmNCliente : DevExpress.XtraEditors.XtraForm
     {
+        ClienteBLL clienteBLL = ClienteBLL.Instance();
         public frmNCliente()
         {
             InitializeComponent();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName,
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtdireccion.Text) || String.IsNullOrEmpty(txtNombre.Text)
+                || String.IsNullOrEmpty(txtEmail.Text) || String.IsNullOrEmpty(txtTelefono.Text))
+            {
+                XtraMessageBox.Show("Llene todos los campos", Application.ProductName, MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+            }
+            else {
+                if (clienteBLL.Add(new BOL.Cliente.Cliente() { 
+                    Nombre_Cliente= txtNombre.Text,
+                    Direccion_Cliente = txtdireccion.Text,
+                    Telefono_Cliente= txtTelefono.Text,
+                    Email_Cliente= txtEmail.Text
+                })) {
+                    XtraMessageBox.Show("Cliente Añadido Correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        MessageBoxIcon.Asterisk);
+                    this.Close();
+                }
+            }
         }
     }
 }
