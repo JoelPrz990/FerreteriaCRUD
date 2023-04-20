@@ -94,8 +94,11 @@ namespace ViewLayerDevExpress.Login
 
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            this.Dispose();
-            Program.loginfrm.Show();
+            if (XtraMessageBox.Show("¿Desea Cerrar Sesion?", Application.ProductName,
+                MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes) {
+                this.Dispose();
+                Program.loginfrm.Show();
+            }
         }
 
         private void btnProductos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

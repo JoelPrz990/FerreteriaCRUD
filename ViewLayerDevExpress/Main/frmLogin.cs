@@ -64,6 +64,7 @@ namespace ViewLayerDevExpress.Login
             }
         }
 
+        #region no se
         private void btnAcc_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
@@ -71,7 +72,7 @@ namespace ViewLayerDevExpress.Login
                 e.Handled = true;
             }
         }
-
+        #endregion
         #region no se que pedo
         private void btnCan_Click(object sender, EventArgs e)
         {
@@ -99,6 +100,7 @@ namespace ViewLayerDevExpress.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            txtUsuario.Focus();
             IniciarSesion();
         }
 

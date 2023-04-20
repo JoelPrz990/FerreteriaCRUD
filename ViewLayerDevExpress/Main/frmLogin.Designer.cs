@@ -53,37 +53,37 @@
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(534, 108);
+            this.pictureEdit1.Size = new System.Drawing.Size(534, 89);
             this.pictureEdit1.TabIndex = 0;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(93, 215);
+            this.txtUsuario.Location = new System.Drawing.Point(127, 215);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Properties.Appearance.Options.UseFont = true;
             this.txtUsuario.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUsuario.Size = new System.Drawing.Size(332, 34);
+            this.txtUsuario.Size = new System.Drawing.Size(277, 34);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(93, 299);
+            this.txtPass.Location = new System.Drawing.Point(127, 299);
             this.txtPass.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Properties.Appearance.Options.UseFont = true;
             this.txtPass.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPass.Properties.UseSystemPasswordChar = true;
-            this.txtPass.Size = new System.Drawing.Size(332, 34);
+            this.txtPass.Size = new System.Drawing.Size(277, 34);
             this.txtPass.TabIndex = 2;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(153, 138);
+            this.labelControl1.Location = new System.Drawing.Point(154, 119);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(230, 24);
@@ -94,7 +94,7 @@
             // 
             this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnLogin.Appearance.Options.UseFont = true;
-            this.btnLogin.Location = new System.Drawing.Point(93, 389);
+            this.btnLogin.Location = new System.Drawing.Point(99, 389);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(127, 46);
@@ -106,7 +106,7 @@
             // 
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.Location = new System.Drawing.Point(298, 389);
+            this.btnCancel.Location = new System.Drawing.Point(300, 389);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(127, 46);

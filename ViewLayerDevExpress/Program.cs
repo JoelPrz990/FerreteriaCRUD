@@ -30,7 +30,7 @@ namespace ViewLayerDevExpress
             splashfrm = new frmSplash();
             loginfrm = new frmLogin();
 
-            Application.Run(mainfrm);
+            Application.Run(loginfrm);
         }
     }
 }
