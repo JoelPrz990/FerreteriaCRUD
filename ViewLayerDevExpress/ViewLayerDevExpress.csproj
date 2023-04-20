@@ -104,6 +104,12 @@
     <Compile Include="EditForms\frmUCategoria.Designer.cs">
       <DependentUpon>frmUCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditForms\frmUCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForms\frmUCliente.Designer.cs">
+      <DependentUpon>frmUCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditForms\frmUMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,12 @@
     <Compile Include="NewForms\frmNCategoria.Designer.cs">
       <DependentUpon>frmNCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewForms\frmNCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\frmNCliente.Designer.cs">
+      <DependentUpon>frmNCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewForms\frmNMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUProducto.resx">
       <DependentUpon>frmUProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -245,6 +260,7 @@
     <None Include="Properties\DataSources\BOL.Categoria.Categoria.datasource" />
     <None Include="Properties\DataSources\BOL.Categoria.CategoriaDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Categoria.Categorias.datasource" />
+    <None Include="Properties\DataSources\BOL.Cliente.Clientes.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.Marca.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.MarcaDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Marca.Marcas.datasource" />

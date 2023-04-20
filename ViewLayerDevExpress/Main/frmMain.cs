@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViewLayerDevExpress.Catalogos;
+using ViewLayerDevExpress.Empresa;
 
 namespace ViewLayerDevExpress.Login
 {
@@ -106,6 +107,17 @@ namespace ViewLayerDevExpress.Login
                     return;
                 }
             new frmProductos() { MdiParent = this }.Show();
+        }
+
+        private void btnClientes_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmClientes))
+                {
+                    form.Activate();
+                    return;
+                }
+            new frmClientes() { MdiParent = this }.Show();
         }
     }
 }
