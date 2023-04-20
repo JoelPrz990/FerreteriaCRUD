@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNProducto));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
@@ -133,7 +134,7 @@
             this.txtPrecio.Properties.MaskSettings.Set("mask", "c");
             this.txtPrecio.Properties.MaskSettings.Set("culture", "es-MX");
             this.txtPrecio.Size = new System.Drawing.Size(213, 30);
-            this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.TabIndex = 6;
             // 
             // labelControl5
             // 
@@ -157,7 +158,7 @@
             this.rlookCategoria.Properties.DisplayMember = "Nombre_Categoria";
             this.rlookCategoria.Properties.ValueMember = "ID_Categoria";
             this.rlookCategoria.Size = new System.Drawing.Size(213, 30);
-            this.rlookCategoria.TabIndex = 6;
+            this.rlookCategoria.TabIndex = 5;
             // 
             // categoriasBindingSource
             // 
@@ -219,8 +220,11 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelControl1);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmNProducto.IconOptions.SvgImage")));
             this.Name = "frmNProducto";
-            this.Text = "frmNProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Nuevo Producto";
+            this.Load += new System.EventHandler(this.frmNProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookMarca.Properties)).EndInit();

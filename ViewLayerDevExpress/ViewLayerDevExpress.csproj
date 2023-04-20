@@ -110,6 +110,12 @@
     <Compile Include="EditForms\frmUMarca.Designer.cs">
       <DependentUpon>frmUMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditForms\frmUProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForms\frmUProducto.Designer.cs">
+      <DependentUpon>frmUProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empresa\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditForms\frmUMarca.resx">
       <DependentUpon>frmUMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForms\frmUProducto.resx">
+      <DependentUpon>frmUProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

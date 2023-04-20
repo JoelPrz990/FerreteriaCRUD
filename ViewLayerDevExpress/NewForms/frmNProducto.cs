@@ -1,4 +1,5 @@
 ﻿using BLL;
+using BOL.Marca;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace ViewLayerDevExpress.NewForms
     public partial class frmNProducto : DevExpress.XtraEditors.XtraForm
     {
         ProductoBLL productoBLL = ProductoBLL.Instance();
+        MarcaBLL marcaBLL = MarcaBLL.Instance();
+        CategoriaBLL categoriaBLL = CategoriaBLL.Instance();
         public frmNProducto()
         {
             InitializeComponent();
@@ -29,11 +32,28 @@ namespace ViewLayerDevExpress.NewForms
                     MessageBoxIcon.Exclamation);
             }
             else {
-                if (productoBLL.Add(new BOL.Producto.Producto() { 
+                decimal precio = Convert.ToDecimal(txtPrecio.Text);
+                int idCategoria = Convert.ToInt32(rlookCategoria.EditValue);
+                int stockD = Convert.ToInt32(txtStock.Text);
+
+                int idMarca = marcaBLL.getByName(new Marca()
+                {
+                    Nombre_Marca = rlookMarca.Text
+                }).ID_Marca;
+
+                if (productoBLL.Add(new BOL.Producto.Producto()
+                {
                     Nombre_Producto = txtNombre.Text,
-                    Descripcion_Producto = txtDescripcion.Text
-                })) { 
-                
+                    Descripcion_Producto = txtDescripcion.Text,
+                    Marca_Producto = rlookMarca.Text,
+                    Precio_Producto = precio,
+                    ID_Categoria = idCategoria,
+                    Stock_Disponible = stockD,
+                    ID_Marca = idMarca
+                })) {
+                    XtraMessageBox.Show("Producto añadido correctamente", Application.ProductName,
+                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    this.Close();
                 }
             }
         }
@@ -45,6 +65,12 @@ namespace ViewLayerDevExpress.NewForms
             {
                 this.Close();    
             }
+        }
+
+        private void frmNProducto_Load(object sender, EventArgs e)
+        {
+            marcasBindingSource.DataSource = marcaBLL.GetAll();
+            categoriasBindingSource.DataSource = categoriaBLL.GetAll();
         }
     }
 }

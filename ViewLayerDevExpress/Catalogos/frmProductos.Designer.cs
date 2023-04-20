@@ -64,6 +64,9 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowCustomization = false;
+            this.barManager1.AllowQuickCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);

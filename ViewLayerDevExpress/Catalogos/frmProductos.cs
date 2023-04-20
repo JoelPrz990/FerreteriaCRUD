@@ -37,7 +37,7 @@ namespace ViewLayerDevExpress.Catalogos
 
         private void btnUProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new frmUP
         }
 
         private void btnNProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
