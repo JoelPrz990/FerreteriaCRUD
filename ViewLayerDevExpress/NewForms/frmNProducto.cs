@@ -71,6 +71,8 @@ namespace ViewLayerDevExpress.NewForms
         {
             marcasBindingSource.DataSource = marcaBLL.GetAll();
             categoriasBindingSource.DataSource = categoriaBLL.GetAll();
+            rlookMarca.EditValue = -1;
+            rlookCategoria.EditValue = -1;
         }
     }
 }

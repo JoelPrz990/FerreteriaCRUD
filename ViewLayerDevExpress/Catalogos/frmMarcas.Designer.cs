@@ -209,6 +209,7 @@
             this.gvMarcas.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvMarcas.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvMarcas.OptionsBehavior.Editable = false;
+            this.gvMarcas.OptionsMenu.EnableColumnMenu = false;
             // 
             // colID_Marca
             // 

@@ -37,6 +37,7 @@ namespace ViewLayerDevExpress.EditForms
         private void frmUProducto_Load(object sender, EventArgs e)
         {
             marcasBindingSource.DataSource = marcaBLL.GetAll();
+            marcasBindingSource.DataSource = marcaBLL.GetAll();
             categoriasBindingSource.DataSource = categoriaBLL.GetAll();
 
             Producto producto = productoBLL.GetById(new Producto()
@@ -47,12 +48,11 @@ namespace ViewLayerDevExpress.EditForms
             String stock = Convert.ToString(producto.Stock_Disponible);
 
             rlookCategoria.EditValue = producto.ID_Categoria;
-            rlookMarca.EditValue = producto.ID_Marca;
+            rlookMarcas.EditValue = producto.ID_Marca;
             txtDescripcion.Text = producto.Descripcion_Producto;
             txtNombre.Text = producto.Nombre_Producto;
             txtPrecio.Text = precio;
             txtStock.Text = stock;
-
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -70,14 +70,14 @@ namespace ViewLayerDevExpress.EditForms
 
                 int idMarca = marcaBLL.getByName(new Marca()
                 {
-                    Nombre_Marca = rlookMarca.Text
+                    Nombre_Marca = rlookMarcas.Text
                 }).ID_Marca;
 
                 if (productoBLL.Update(new BOL.Producto.Producto() {
                     ID_Producto = this.IdProducto,
                     Nombre_Producto = txtNombre.Text,
                     Descripcion_Producto = txtDescripcion.Text,
-                    Marca_Producto = rlookMarca.Text,
+                    Marca_Producto = rlookMarcas.Text,
                     Precio_Producto = precio,
                     ID_Categoria = idCategoria,
                     Stock_Disponible = stockD,

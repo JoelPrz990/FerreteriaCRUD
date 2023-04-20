@@ -83,6 +83,7 @@
             this.gvCategorias.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvCategorias.OptionsBehavior.AutoPopulateColumns = false;
             this.gvCategorias.OptionsBehavior.Editable = false;
+            this.gvCategorias.OptionsMenu.EnableColumnMenu = false;
             this.gvCategorias.OptionsView.ColumnAutoWidth = false;
             // 
             // colID_Categoria
