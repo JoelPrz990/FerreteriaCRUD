@@ -48,7 +48,7 @@ namespace ViewLayerDevExpress.Empresa
         private void btnECliente_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Desea Eliminar el Cliente Seleccionado?",
-                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.ProductName, MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int IdCliente = (int)gvClientes.GetFocusedRowCellValue("ID_Cliente");
                 clienteBLL.Delete(new Cliente()

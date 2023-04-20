@@ -41,17 +41,23 @@ namespace ViewLayerDevExpress.EditForms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            mostrarMensaje = false;
-            if (categoriaBLL.Update(new Categoria()
+            if (String.IsNullOrEmpty(txtDescripcion.Text))
             {
-                ID_Categoria = this.IdCategoria,
-                Nombre_Categoria = txtDescripcion.Text
-            }))
-            {
-                XtraMessageBox.Show("Categoria Modificada Correctamente", Application.ProductName);
-                this.Close();
-            };
-
+                XtraMessageBox.Show("Llene el Campo", Application.ProductName,MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else {
+                mostrarMensaje = false;
+                if (categoriaBLL.Update(new Categoria()
+                {
+                    ID_Categoria = this.IdCategoria,
+                    Nombre_Categoria = txtDescripcion.Text
+                }))
+                {
+                    XtraMessageBox.Show("Categoria Modificada Correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        MessageBoxIcon.Asterisk);
+                    this.Close();
+                };
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -62,12 +68,21 @@ namespace ViewLayerDevExpress.EditForms
 
         private void frmUCategoria_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (mostrarMensaje && XtraMessageBox.Show("¿Desea Cancelar la Modificacion?", Application.ProductName, MessageBoxButtons.YesNo,
+            /*if (mostrarMensaje && XtraMessageBox.Show("¿Desea Cancelar la Modificacion?", Application.ProductName, MessageBoxButtons.YesNo,
             MessageBoxIcon.Question) == DialogResult.No)
                 {
                     e.Cancel = true;
                 } 
             else
+            {
+                this.Close();
+            }*/
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName,
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

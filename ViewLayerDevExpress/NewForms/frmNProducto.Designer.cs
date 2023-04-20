@@ -35,25 +35,25 @@
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.rlookMarca = new DevExpress.XtraEditors.LookUpEdit();
+            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrecio = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.rlookCategoria = new DevExpress.XtraEditors.LookUpEdit();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtStock = new DevExpress.XtraEditors.TextEdit();
             this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookMarca.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookCategoria.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -104,6 +104,10 @@
             this.rlookMarca.Properties.ValueMember = "ID_Marca";
             this.rlookMarca.Size = new System.Drawing.Size(213, 30);
             this.rlookMarca.TabIndex = 3;
+            // 
+            // marcasBindingSource
+            // 
+            this.marcasBindingSource.DataSource = typeof(BOL.Marca.Marcas);
             // 
             // labelControl3
             // 
@@ -156,6 +160,10 @@
             this.rlookCategoria.Size = new System.Drawing.Size(213, 30);
             this.rlookCategoria.TabIndex = 5;
             // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(BOL.Categoria.Categorias);
+            // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(43, 269);
@@ -193,16 +201,9 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(BOL.Categoria.Categorias);
-            // 
-            // marcasBindingSource
-            // 
-            this.marcasBindingSource.DataSource = typeof(BOL.Marca.Marcas);
-            // 
             // frmNProducto
             // 
+            this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 404);
@@ -229,11 +230,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookMarca.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookCategoria.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -56,7 +56,7 @@ namespace ViewLayerDevExpress.Catalogos
         private void btnEliminarMarca_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Desea Eliminar el Objeto Seleccionado?",
-                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.ProductName, MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
                 int IdMarca = (int)gvMarcas.GetFocusedRowCellValue("ID_Marca");

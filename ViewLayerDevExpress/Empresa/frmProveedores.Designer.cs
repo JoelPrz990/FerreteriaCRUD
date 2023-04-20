@@ -58,6 +58,7 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1,
             this.bar3});
@@ -85,6 +86,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditarProv, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEliminarProv, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnActualizar, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar1.OptionsBar.AllowQuickCustomization = false;
+            this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.Text = "Tools";
             // 
             // btnNuevoProv
@@ -192,7 +195,9 @@
             this.gvProveedores.GridControl = this.gcProveedores;
             this.gvProveedores.Name = "gvProveedores";
             this.gvProveedores.OptionsBehavior.Editable = false;
+            this.gvProveedores.OptionsCustomization.AllowColumnMoving = false;
             this.gvProveedores.OptionsMenu.EnableColumnMenu = false;
+            this.gvProveedores.OptionsView.ShowGroupPanel = false;
             // 
             // colID_Proveedor
             // 

@@ -188,6 +188,12 @@
     <Compile Include="Main\frmStart.Designer.cs">
       <DependentUpon>frmStart.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewForms\cantidadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\cantidadDialog.Designer.cs">
+      <DependentUpon>cantidadDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewForms\frmNCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,12 @@
     </Compile>
     <Compile Include="NewForms\frmNProveedor.Designer.cs">
       <DependentUpon>frmNProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewForms\frmNVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewForms\frmNVenta.Designer.cs">
+      <DependentUpon>frmNVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -277,6 +289,9 @@
     <EmbeddedResource Include="Main\frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\cantidadDialog.resx">
+      <DependentUpon>cantidadDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNCategoria.resx">
       <DependentUpon>frmNCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewForms\frmNProveedor.resx">
       <DependentUpon>frmNProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewForms\frmNVenta.resx">
+      <DependentUpon>frmNVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -320,6 +338,7 @@
     <None Include="Properties\DataSources\BOL.Proveedor.Proveedor.datasource" />
     <None Include="Properties\DataSources\BOL.Proveedor.ProveedorDAL.datasource" />
     <None Include="Properties\DataSources\BOL.Proveedor.Proveedores.datasource" />
+    <None Include="Properties\DataSources\BOL.Venta.Ventas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

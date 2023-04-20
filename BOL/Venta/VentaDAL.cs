@@ -139,5 +139,33 @@ namespace BOL.Venta
             }
         }
         #endregion
+        #region
+        public Ventas getArchivo()
+        {
+            try
+            {
+                string query = "stp_venta_getarchivo";
+                DataTable resultado = dataAccess.Query(query);
+                Ventas venta = new Ventas();
+                foreach (DataRow item in resultado.Rows)
+                {
+                    venta.Add(new Venta()
+                    {
+                        ID_Venta = (int)item["ID_Venta"],
+                        Fecha_Venta = (DateTime)item["Fecha_Venta"],
+                        Total_Venta = (decimal)item["Total_Venta"],
+                        ID_Cliente = (int)item["ID_Cliente"],
+                        ID_Empleado = (int)item["ID_Empleado"],
+                        activo = (bool)item["activo"]
+                    });
+                }
+                return venta;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error " + ex.Message);
+            }
+        }
+        #endregion
     }
 }

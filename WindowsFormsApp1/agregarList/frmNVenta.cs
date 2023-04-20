@@ -69,6 +69,8 @@ namespace ViewLayer.agregarList
                 {
                     Nombre_Usuario = Program.UsuarioActual
                 }).ID_Empleado;
+                
+                
 
                 DateTime.TryParseExact(txtFecha.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out fecha);
                 if (ventaBLL.Add(new Venta()
@@ -93,7 +95,7 @@ namespace ViewLayer.agregarList
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // e.ColumnIndex == dgvProductos.Columns["Precio_Producto"].Index && 
+
             if (e.RowIndex >= 0)
             {
                 int stock = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells["Stock_Disponible"].Value);

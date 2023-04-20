@@ -31,7 +31,7 @@ namespace ViewLayerDevExpress.Catalogos
         private void btnEliminarCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Desea Eliminar el Objeto Seleccionado?",
-                Application.ProductName, MessageBoxButtons.YesNo)== DialogResult.Yes) {
+                Application.ProductName, MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes) {
 
                 int IdCategoria = (int)gvCategorias.GetFocusedRowCellValue("ID_Categoria");
 

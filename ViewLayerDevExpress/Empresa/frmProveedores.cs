@@ -27,7 +27,7 @@ namespace ViewLayerDevExpress.Empresa
         private void btnEliminarProv_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Desea Eliminar el Proveedor Seleccionado?",
-                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int IdProveedor = (int)gvProveedores.GetFocusedRowCellValue("ID_Proveedor");
                 proveedorBLL.Delete(new Proveedor()

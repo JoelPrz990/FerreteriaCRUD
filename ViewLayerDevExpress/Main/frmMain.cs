@@ -61,7 +61,8 @@ namespace ViewLayerDevExpress.Login
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (mostrarMensaje && XtraMessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (mostrarMensaje && XtraMessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -94,11 +95,12 @@ namespace ViewLayerDevExpress.Login
 
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (XtraMessageBox.Show("¿Desea Cerrar Sesion?", Application.ProductName,
+            logout();
+            /*if (XtraMessageBox.Show("¿Desea Cerrar Sesion?", Application.ProductName,
                 MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes) {
                 this.Dispose();
                 Program.loginfrm.Show();
-            }
+            }*/
         }
 
         private void btnProductos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -154,6 +156,14 @@ namespace ViewLayerDevExpress.Login
                     return;
                 }
             new frmProveedores() { MdiParent = this }.Show();
+        }
+        public void logout() {
+            if (XtraMessageBox.Show("¿Desea Cerrar Sesion?", Application.ProductName,
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+                Program.loginfrm.Show();
+            }
         }
     }
 }

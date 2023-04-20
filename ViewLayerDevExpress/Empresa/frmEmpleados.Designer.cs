@@ -60,6 +60,9 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowCustomization = false;
+            this.barManager1.AllowQuickCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -185,7 +188,9 @@
             this.gvEmpleados.GridControl = this.gcEmpleados;
             this.gvEmpleados.Name = "gvEmpleados";
             this.gvEmpleados.OptionsBehavior.Editable = false;
+            this.gvEmpleados.OptionsCustomization.AllowColumnMoving = false;
             this.gvEmpleados.OptionsMenu.EnableColumnMenu = false;
+            this.gvEmpleados.OptionsView.ShowGroupPanel = false;
             // 
             // colID_Empleado
             // 

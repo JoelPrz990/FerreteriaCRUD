@@ -32,6 +32,7 @@
             this.cboxCargo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtUser = new DevExpress.XtraEditors.TextEdit();
             this.lbl = new DevExpress.XtraEditors.LabelControl();
             this.txtContraseña = new DevExpress.XtraEditors.TextEdit();
             this.text = new DevExpress.XtraEditors.LabelControl();
@@ -45,16 +46,15 @@
             this.txtdireccion = new DevExpress.XtraEditors.TextEdit();
             this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtUser = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.cboxCargo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdireccion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cboxCargo
@@ -89,6 +89,13 @@
             this.groupControl1.Size = new System.Drawing.Size(347, 144);
             this.groupControl1.TabIndex = 37;
             this.groupControl1.Text = "Detalles de Inicio de Sesion";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(157, 45);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(185, 30);
+            this.txtUser.TabIndex = 24;
             // 
             // lbl
             // 
@@ -199,15 +206,9 @@
             this.labelControl1.TabIndex = 31;
             this.labelControl1.Text = "Nombre";
             // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(157, 45);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(185, 30);
-            this.txtUser.TabIndex = 24;
-            // 
             // frmUEmpleado
             // 
+            this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 307);
@@ -234,12 +235,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

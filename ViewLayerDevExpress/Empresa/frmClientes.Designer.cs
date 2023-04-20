@@ -57,6 +57,8 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -179,7 +181,11 @@
             this.gvClientes.GridControl = this.gcClientes;
             this.gvClientes.Name = "gvClientes";
             this.gvClientes.OptionsBehavior.Editable = false;
+            this.gvClientes.OptionsCustomization.AllowColumnMoving = false;
             this.gvClientes.OptionsMenu.EnableColumnMenu = false;
+            this.gvClientes.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvClientes.OptionsView.ShowAutoFilterRow = true;
+            this.gvClientes.OptionsView.ShowGroupPanel = false;
             // 
             // colID_Cliente
             // 

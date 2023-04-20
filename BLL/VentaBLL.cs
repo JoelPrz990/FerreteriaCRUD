@@ -49,5 +49,9 @@ namespace BLL
             else
                 return false;
         }
+        public Ventas GetArchivo()
+        {
+            return ventaDAL.getArchivo();
+        }
     }
 }

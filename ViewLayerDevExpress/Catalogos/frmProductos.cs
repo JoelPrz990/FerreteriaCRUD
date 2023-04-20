@@ -64,7 +64,7 @@ namespace ViewLayerDevExpress.Catalogos
         private void btnEliminarProd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Desea Eliminar el Producto Seleccionado?",
-                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.ProductName, MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
                 int IdProducto = (int)gvProductos.GetFocusedRowCellValue("ID_Producto");

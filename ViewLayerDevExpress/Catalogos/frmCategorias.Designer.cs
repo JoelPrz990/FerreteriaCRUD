@@ -55,7 +55,6 @@
             // gcCategorias
             // 
             this.gcCategorias.DataSource = this.categoriasBindingSource;
-            this.gcCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCategorias.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gcCategorias.Location = new System.Drawing.Point(0, 40);
             this.gcCategorias.MainView = this.gvCategorias;
@@ -83,8 +82,12 @@
             this.gvCategorias.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvCategorias.OptionsBehavior.AutoPopulateColumns = false;
             this.gvCategorias.OptionsBehavior.Editable = false;
+            this.gvCategorias.OptionsCustomization.AllowColumnMoving = false;
             this.gvCategorias.OptionsMenu.EnableColumnMenu = false;
             this.gvCategorias.OptionsView.ColumnAutoWidth = false;
+            this.gvCategorias.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvCategorias.OptionsView.ShowAutoFilterRow = true;
+            this.gvCategorias.OptionsView.ShowGroupPanel = false;
             // 
             // colID_Categoria
             // 
@@ -113,6 +116,9 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowCustomization = false;
+            this.barManager1.AllowQuickCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -138,6 +144,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditCat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEliminarCat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnActualizCat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar1.OptionsBar.AllowQuickCustomization = false;
+            this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.Text = "Tools";
             // 
             // btnNuevoCat

@@ -54,7 +54,6 @@
             this.colStock_Disponible = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colID_Marca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.spinCantidad = new DevExpress.XtraGrid.Columns.GridColumn();
             this.spinCantidad1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProductos)).BeginInit();
@@ -194,13 +193,16 @@
             this.colID_Categoria,
             this.colStock_Disponible,
             this.colID_Marca,
-            this.colactivo,
-            this.spinCantidad});
+            this.colactivo});
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvProductos.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvProductos.OptionsCustomization.AllowColumnMoving = false;
             this.gvProductos.OptionsMenu.EnableColumnMenu = false;
+            this.gvProductos.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvProductos.OptionsView.ShowAutoFilterRow = true;
+            this.gvProductos.OptionsView.ShowGroupPanel = false;
             // 
             // colID_Producto
             // 
@@ -308,16 +310,6 @@
             this.colactivo.Name = "colactivo";
             this.colactivo.Width = 94;
             // 
-            // spinCantidad
-            // 
-            this.spinCantidad.Caption = "Cantidad";
-            this.spinCantidad.ColumnEdit = this.spinCantidad1;
-            this.spinCantidad.MinWidth = 25;
-            this.spinCantidad.Name = "spinCantidad";
-            this.spinCantidad.Visible = true;
-            this.spinCantidad.VisibleIndex = 6;
-            this.spinCantidad.Width = 94;
-            // 
             // spinCantidad1
             // 
             this.spinCantidad1.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -382,7 +374,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colactivo;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rlookCategorias;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn spinCantidad;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spinCantidad1;
     }
 }

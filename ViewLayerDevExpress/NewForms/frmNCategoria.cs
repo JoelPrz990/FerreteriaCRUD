@@ -16,8 +16,8 @@ namespace ViewLayerDevExpress.NewForms
 {
     public partial class frmNCategoria : DevExpress.XtraEditors.XtraForm
     {
-        private bool mostrarMensaje;
-        private bool mensajeAlerta = false;
+
+
         private int ID_Categoria;
         CategoriaBLL categoriaBLL = CategoriaBLL.Instance();
         public frmNCategoria()
@@ -27,52 +27,31 @@ namespace ViewLayerDevExpress.NewForms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            mostrarMensaje = false;
             if (String.IsNullOrEmpty(txtDescripcion.Text))
             {
-                txtAlerta.Visible = true;
+                XtraMessageBox.Show("Llene el campo", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
-                categoriaBLL.Add(new Categoria()
-                {
-                    Nombre_Categoria = txtDescripcion.Text
-                });
+                if (categoriaBLL.Add(new Categoria()
+                    {
+                        Nombre_Categoria = txtDescripcion.Text
+                    })) {
+                
                 XtraMessageBox.Show("Categoria Ingresada Correctamente", Application.ProductName,
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDescripcion.Clear();
                 this.Close();
+                }
             }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            mostrarMensaje = true;
-            this.Close();
-        }
-
-        private void frmNCategoria_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (mensajeAlerta == true)
-            {
-                e.Cancel = true;
-                mensajeAlerta = false;
-            }
-            if (mostrarMensaje && XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName, MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
+            if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName,
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
-
-        }
-
-        private void txtDescripcion_Enter(object sender, EventArgs e)
-        {
-            txtAlerta.Visible = false;
         }
     }
 }

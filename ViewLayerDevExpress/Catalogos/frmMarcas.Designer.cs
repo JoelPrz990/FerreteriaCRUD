@@ -79,6 +79,9 @@
             // 
             // barManager1
             // 
+            this.barManager1.AllowCustomization = false;
+            this.barManager1.AllowQuickCustomization = false;
+            this.barManager1.AllowShowToolbarsPopup = false;
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar3});
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -209,7 +212,11 @@
             this.gvMarcas.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvMarcas.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvMarcas.OptionsBehavior.Editable = false;
+            this.gvMarcas.OptionsCustomization.AllowColumnMoving = false;
             this.gvMarcas.OptionsMenu.EnableColumnMenu = false;
+            this.gvMarcas.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvMarcas.OptionsView.ShowAutoFilterRow = true;
+            this.gvMarcas.OptionsView.ShowGroupPanel = false;
             // 
             // colID_Marca
             // 
@@ -222,6 +229,7 @@
             // 
             // colID_Proveedor
             // 
+            this.colID_Proveedor.Caption = "Nombre del Proveedor";
             this.colID_Proveedor.ColumnEdit = this.rlookProveedores;
             this.colID_Proveedor.FieldName = "ID_Proveedor";
             this.colID_Proveedor.MinWidth = 25;
@@ -249,6 +257,7 @@
             // 
             // colNombre_Marca
             // 
+            this.colNombre_Marca.Caption = "Nombre de la marca";
             this.colNombre_Marca.FieldName = "Nombre_Marca";
             this.colNombre_Marca.MinWidth = 25;
             this.colNombre_Marca.Name = "colNombre_Marca";

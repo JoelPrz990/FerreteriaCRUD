@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUMarca));
             this.rlookProveedor = new DevExpress.XtraEditors.LookUpEdit();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtMarca = new DevExpress.XtraEditors.TextEdit();
             this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.rlookProveedor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMarca.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMarca.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,10 @@
             this.rlookProveedor.Properties.ValueMember = "ID_Proveedor";
             this.rlookProveedor.Size = new System.Drawing.Size(182, 30);
             this.rlookProveedor.TabIndex = 0;
+            // 
+            // proveedoresBindingSource
+            // 
+            this.proveedoresBindingSource.DataSource = typeof(BOL.Proveedor.Proveedores);
             // 
             // labelControl1
             // 
@@ -93,7 +97,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(152, 29);
             this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar Modificado";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
@@ -105,16 +109,13 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // proveedoresBindingSource
-            // 
-            this.proveedoresBindingSource.DataSource = typeof(BOL.Proveedor.Proveedores);
-            // 
             // proveedorBindingSource
             // 
             this.proveedorBindingSource.DataSource = typeof(BOL.Proveedor.Proveedor);
             // 
             // frmUMarca
             // 
+            this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 258);
@@ -131,8 +132,8 @@
             this.Text = "Modificar Marca";
             this.Load += new System.EventHandler(this.frmUMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rlookProveedor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMarca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMarca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

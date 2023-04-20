@@ -22,11 +22,7 @@ namespace ViewLayerDevExpress.NewForms
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName,
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-            }
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -48,6 +44,15 @@ namespace ViewLayerDevExpress.NewForms
                         MessageBoxIcon.Asterisk);
                     this.Close();
                 }
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("¿Desea Cancelar?", Application.ProductName,
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }

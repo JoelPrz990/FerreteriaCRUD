@@ -33,7 +33,6 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.topBar = new DevExpress.XtraBars.Bar();
             this.menuArchivo = new DevExpress.XtraBars.BarSubItem();
-            this.btnEmpleadoAct = new DevExpress.XtraBars.BarButtonItem();
             this.btnSalir = new DevExpress.XtraBars.BarButtonItem();
             this.btnInicio = new DevExpress.XtraBars.BarButtonItem();
             this.menuCatalogo = new DevExpress.XtraBars.BarSubItem();
@@ -85,8 +84,7 @@
             this.btnProveedor,
             this.btnClientes,
             this.btnVentas,
-            this.btnEmpleados,
-            this.btnEmpleadoAct});
+            this.btnEmpleados});
             this.barManager1.MainMenu = this.topBar;
             this.barManager1.MaxItemId = 20;
             this.barManager1.OptionsLayout.AllowAddNewItems = false;
@@ -120,16 +118,8 @@
             this.menuArchivo.Id = 1;
             this.menuArchivo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("menuArchivo.ImageOptions.SvgImage")));
             this.menuArchivo.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmpleadoAct, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSalir, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.menuArchivo.Name = "menuArchivo";
-            // 
-            // btnEmpleadoAct
-            // 
-            this.btnEmpleadoAct.Caption = "Empleado Actual";
-            this.btnEmpleadoAct.Id = 19;
-            this.btnEmpleadoAct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmpleadoAct.ImageOptions.SvgImage")));
-            this.btnEmpleadoAct.Name = "btnEmpleadoAct";
             // 
             // btnSalir
             // 
@@ -344,7 +334,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btnCategorias;
         private DevExpress.XtraBars.BarButtonItem btnMarcas;
-        private DevExpress.XtraBars.BarButtonItem btnEmpleadoAct;
         private DevExpress.XtraBars.BarButtonItem btnProductos;
         private DevExpress.XtraBars.BarSubItem menuEmpresa;
         private DevExpress.XtraBars.BarButtonItem btnProveedor;

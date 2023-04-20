@@ -44,7 +44,7 @@ namespace ViewLayerDevExpress.EditForms
                     Telefono_Cliente= txtTelefono.Text,
                     Email_Cliente= txtEmail.Text
                 })) {
-                    XtraMessageBox.Show("Cliente Modificado Correctamente");
+                    XtraMessageBox.Show("Cliente Modificado Correctamente",ProductName,MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                     this.Close();
                 }
             }

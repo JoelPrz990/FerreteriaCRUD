@@ -47,7 +47,7 @@ namespace ViewLayerDevExpress.Empresa
         private void btnEliminarEmpleado_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Desea Eliminar el Cliente Seleccionado?",
-                Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int IdEmpleado = (int)gvEmpleados.GetFocusedRowCellValue("ID_Empleado");
                 empleadoBLL.Delete(new BOL.Empleado.Empleado()
