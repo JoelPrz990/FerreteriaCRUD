@@ -17,5 +17,10 @@ namespace ViewLayerDevExpress.Empresa
         {
             InitializeComponent();
         }
+
+        private void frmVentas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

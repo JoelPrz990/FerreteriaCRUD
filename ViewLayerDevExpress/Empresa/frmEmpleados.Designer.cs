@@ -184,6 +184,7 @@
             this.colNombre_Usuario});
             this.gvEmpleados.GridControl = this.gcEmpleados;
             this.gvEmpleados.Name = "gvEmpleados";
+            this.gvEmpleados.OptionsBehavior.Editable = false;
             this.gvEmpleados.OptionsMenu.EnableColumnMenu = false;
             // 
             // colID_Empleado

@@ -178,6 +178,8 @@
             this.colactivo});
             this.gvClientes.GridControl = this.gcClientes;
             this.gvClientes.Name = "gvClientes";
+            this.gvClientes.OptionsBehavior.Editable = false;
+            this.gvClientes.OptionsMenu.EnableColumnMenu = false;
             // 
             // colID_Cliente
             // 
