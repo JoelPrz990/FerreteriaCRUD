@@ -54,12 +54,15 @@
             this.colStock_Disponible = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colID_Marca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.spinCantidad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.spinCantidad1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinCantidad1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -169,7 +172,8 @@
             this.gcProductos.MenuManager = this.barManager1;
             this.gcProductos.Name = "gcProductos";
             this.gcProductos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rlookCategorias});
+            this.rlookCategorias,
+            this.spinCantidad1});
             this.gcProductos.Size = new System.Drawing.Size(991, 539);
             this.gcProductos.TabIndex = 4;
             this.gcProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -190,12 +194,13 @@
             this.colID_Categoria,
             this.colStock_Disponible,
             this.colID_Marca,
-            this.colactivo});
+            this.colactivo,
+            this.spinCantidad});
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvProductos.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
-            this.gvProductos.OptionsBehavior.Editable = false;
+            this.gvProductos.OptionsMenu.EnableColumnMenu = false;
             // 
             // colID_Producto
             // 
@@ -210,6 +215,7 @@
             this.colNombre_Producto.FieldName = "Nombre_Producto";
             this.colNombre_Producto.MinWidth = 25;
             this.colNombre_Producto.Name = "colNombre_Producto";
+            this.colNombre_Producto.OptionsColumn.AllowEdit = false;
             this.colNombre_Producto.Visible = true;
             this.colNombre_Producto.VisibleIndex = 0;
             this.colNombre_Producto.Width = 94;
@@ -220,6 +226,7 @@
             this.colDescripcion_Producto.FieldName = "Descripcion_Producto";
             this.colDescripcion_Producto.MinWidth = 25;
             this.colDescripcion_Producto.Name = "colDescripcion_Producto";
+            this.colDescripcion_Producto.OptionsColumn.AllowEdit = false;
             this.colDescripcion_Producto.Visible = true;
             this.colDescripcion_Producto.VisibleIndex = 1;
             this.colDescripcion_Producto.Width = 94;
@@ -230,6 +237,7 @@
             this.colMarca_Producto.FieldName = "Marca_Producto";
             this.colMarca_Producto.MinWidth = 25;
             this.colMarca_Producto.Name = "colMarca_Producto";
+            this.colMarca_Producto.OptionsColumn.AllowEdit = false;
             this.colMarca_Producto.Visible = true;
             this.colMarca_Producto.VisibleIndex = 2;
             this.colMarca_Producto.Width = 94;
@@ -240,6 +248,7 @@
             this.colPrecio_Producto.FieldName = "Precio_Producto";
             this.colPrecio_Producto.MinWidth = 25;
             this.colPrecio_Producto.Name = "colPrecio_Producto";
+            this.colPrecio_Producto.OptionsColumn.AllowEdit = false;
             this.colPrecio_Producto.Visible = true;
             this.colPrecio_Producto.VisibleIndex = 3;
             this.colPrecio_Producto.Width = 94;
@@ -251,6 +260,7 @@
             this.colID_Categoria.FieldName = "ID_Categoria";
             this.colID_Categoria.MinWidth = 25;
             this.colID_Categoria.Name = "colID_Categoria";
+            this.colID_Categoria.OptionsColumn.AllowEdit = false;
             this.colID_Categoria.Visible = true;
             this.colID_Categoria.VisibleIndex = 4;
             this.colID_Categoria.Width = 94;
@@ -279,6 +289,7 @@
             this.colStock_Disponible.FieldName = "Stock_Disponible";
             this.colStock_Disponible.MinWidth = 25;
             this.colStock_Disponible.Name = "colStock_Disponible";
+            this.colStock_Disponible.OptionsColumn.AllowEdit = false;
             this.colStock_Disponible.Visible = true;
             this.colStock_Disponible.VisibleIndex = 5;
             this.colStock_Disponible.Width = 94;
@@ -296,6 +307,27 @@
             this.colactivo.MinWidth = 25;
             this.colactivo.Name = "colactivo";
             this.colactivo.Width = 94;
+            // 
+            // spinCantidad
+            // 
+            this.spinCantidad.Caption = "Cantidad";
+            this.spinCantidad.ColumnEdit = this.spinCantidad1;
+            this.spinCantidad.MinWidth = 25;
+            this.spinCantidad.Name = "spinCantidad";
+            this.spinCantidad.Visible = true;
+            this.spinCantidad.VisibleIndex = 6;
+            this.spinCantidad.Width = 94;
+            // 
+            // spinCantidad1
+            // 
+            this.spinCantidad1.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.spinCantidad1.AutoHeight = false;
+            this.spinCantidad1.BeepOnError = true;
+            this.spinCantidad1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinCantidad1.HideSelection = false;
+            this.spinCantidad1.MaskSettings.Set("mask", "d");
+            this.spinCantidad1.Name = "spinCantidad1";
             // 
             // frmProductos
             // 
@@ -318,6 +350,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlookCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinCantidad1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,5 +382,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colactivo;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rlookCategorias;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn spinCantidad;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spinCantidad1;
     }
 }

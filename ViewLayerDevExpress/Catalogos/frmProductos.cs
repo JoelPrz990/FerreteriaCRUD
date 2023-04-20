@@ -3,6 +3,8 @@ using BOL.Categoria;
 using BOL.Marca;
 using BOL.Producto;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,12 @@ namespace ViewLayerDevExpress.Catalogos
         public frmProductos()
         {
             InitializeComponent();
+            gvProductos.Columns.Add(new GridColumn()
+            {
+                FieldName = "CantidadProducto",
+                Caption = "Cantidad",
+                ColumnEdit = new RepositoryItemSpinEdit()
+            });
         }
 
         private void frmProductos_Load(object sender, EventArgs e)
@@ -34,6 +42,8 @@ namespace ViewLayerDevExpress.Catalogos
             gcProductos.DataSource = productoBLL.GetAll();
             productosBindingSource.DataSource = productoBLL.GetAll();
             gvProductos.BestFitColumns();
+
+
         }
 
         private void btnUProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
