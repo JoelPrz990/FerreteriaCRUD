@@ -50,6 +50,7 @@ namespace ViewLayerDevExpress.Catalogos
             XtraMessageBox.Show("Actualizado", Application.ProductName, MessageBoxButtons.OK);
             categoriasBindingSource.DataSource = categoriaBLL.GetAll();
             gcCategorias.DataSource = categoriaBLL.GetAll();
+            gvCategorias.BestFitColumns();
         }
 
         private void btnEditCat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
